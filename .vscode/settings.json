@@ -3,5 +3,10 @@
     "files.associations": {
         "*.projbuild": "cmake",
         "arduino.h": "c"
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#063433",
+        "titleBar.activeBackground": "#084847",
+        "titleBar.activeForeground": "#EFFDFD"
     }
 }
