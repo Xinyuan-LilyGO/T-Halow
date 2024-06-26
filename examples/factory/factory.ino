@@ -93,15 +93,15 @@ int8_t waitResponse(uint32_t timeouts, String &data, const char *r1 = "OK", cons
             data.reserve(1024);
             data += static_cast<char>(a);
 
-            SerialMon.println(data.c_str());
+            // SerialMon.println(data.c_str());
 
             if(data.endsWith(r1)){
                 index = AH_Rx00P_RESPONE_OK;
-                // SerialMon.println(data.c_str());
+                SerialMon.println(data.c_str());
                 goto finish;
             } else if(data.endsWith(r2)){
                 index = AH_Rx00P_RESPONE_ERROR;
-                // SerialMon.println(data.c_str());
+                SerialMon.println(data.c_str());
                 goto finish;
             }
         }
@@ -160,13 +160,13 @@ bool TX_AH_init(void)
         SerialMon.println("AT+BSS_BW FAILD");
     }
 
-    sendAT("+MODE=sta");
+    sendAT("+MODE=AP");
     if (waitResponse() == AH_Rx00P_RESPONE_OK)
-        SerialMon.println("AT+MODE=ap SUCCEED");
+        SerialMon.println("AT+MODE=AP SUCCEED");
     else
     {
         at_cnt++;
-        SerialMon.println("AT+MODE=ap FAILD");
+        SerialMon.println("AT+MODE=AP FAILD");
     }
 
     return (at_cnt == 0);
@@ -237,35 +237,48 @@ char *line_align(char *buf, const char *str1, const char *str2)
 }
 
 bool tx_ah_conn_status = false;
-int tx_ah_rssi = 0;
 char rssi_buf[16];
 
 void lcd_info_show(void)
 {
-    // Clear the buffer.
-    display.clearDisplay();
-    display.display();
-    display.setTextSize(1);
-    display.setTextColor(SSD1306_WHITE);
-    display.setCursor(0, 0);
-    display.println(line_align(buf, "LCD:", (ssd1306_ret == true ? "PASS" : "---")));
-    display.println(line_align(buf, "SD:", (sdcard_ret == true ? "PASS" : "---")));
-    display.println(line_align(buf, "CAM:", (camera_ret == true ? "PASS" : "---")));
-    display.println(line_align(buf, "AH:", (tx_ah_ret == true ? "PASS" : "---")));
-    display.println(" ");
+    if (ssd1306_ret == false)
+    {
+        Serial.println("******************************");
+        Serial.println((tx_ah_ret == true ? "TX-AH   PASS" : "TX-AH    ---"));
+        Serial.println((ssd1306_ret == true ? "SSD1306 PASS" : "SSD1306  ---"));
+        Serial.println((sdcard_ret == true ? "SDCard  PASS" : "SDCard   ---"));
+        Serial.println((camera_ret == true ? "CAMERA  PASS" : "CAMERA   ---"));
+        Serial.println(" ");
 
-    display.println(line_align(buf, "Role:", "STA "));
+        Serial.println(line_align(buf, "Role:", "AP "));
 
-    if (tx_ah_conn_status) {
-        
-        tx_ah_rssi--;
-        // snprintf(rssi_buf, 16, "%d", tx_ah_rssi);
-        display.println(line_align(buf, "RSSI:", rssi_buf));
+        if (tx_ah_conn_status) {
+            Serial.println(line_align(buf, "RSSI:", rssi_buf));
+        } else {
+            Serial.println("Disconnect!!!");
+        }
     } else {
-        display.println("Disconnect!!!");
-    }
+        // Clear the buffer.
+        display.clearDisplay();
+        display.display();
+        display.setTextSize(1);
+        display.setTextColor(SSD1306_WHITE);
+        display.setCursor(0, 0);
+        display.println(line_align(buf, "LCD:", (ssd1306_ret == true ? "PASS" : "---")));
+        display.println(line_align(buf, "SD:", (sdcard_ret == true ? "PASS" : "---")));
+        display.println(line_align(buf, "CAM:", (camera_ret == true ? "PASS" : "---")));
+        display.println(line_align(buf, "AH:", (tx_ah_ret == true ? "PASS" : "---")));
+        display.println(" ");
 
-    display.display();
+        display.println(line_align(buf, "Role:", "AP "));
+
+        if (tx_ah_conn_status) {
+            display.println(line_align(buf, "RSSI:", rssi_buf));
+        } else {
+            display.println("Disconnect!!!");
+        }
+        display.display();
+    }
 }
 
 void setup()
@@ -287,10 +300,10 @@ void setup()
     sdcard_ret = sdcard_init();
     tx_ah_ret = TX_AH_init();
 
-    if (ssd1306_ret)
-    {
+    // if (ssd1306_ret)
+    // {
         lcd_info_show();
-    }
+    // }
 }
 
 uint32_t last_tick = 0;
@@ -304,14 +317,7 @@ void loop()
     if (millis() - last_tick > 5000)
     {
         last_tick = millis();
-        if (ssd1306_ret == false)
-        {
-            Serial.println("******************************");
-            Serial.println((tx_ah_ret == true ? "TX-AH   PASS" : "TX-AH    XXX"));
-            Serial.println((ssd1306_ret == true ? "SSD1306 PASS" : "SSD1306  XXX"));
-            Serial.println((sdcard_ret == true ? "SDCard  PASS" : "SDCard   XXX"));
-            Serial.println((camera_ret == true ? "CAMERA  PASS" : "CAMERA   XXX"));
-        }
+        
     }
 
     if (millis() - rssi_tick > 3000)
@@ -336,25 +342,18 @@ void loop()
                 String substr = rssi_data.substring(startIndex + 1, endIndex);
                 strcpy(rssi_buf, substr.c_str());
             }
-
         }
 
         lcd_info_show();
     }
 
-    // if(xSemaphoreTake(debuglock, portMAX_DELAY) == pdTRUE) {
-        while (SerialAT.available())
-        {
-            SerialMon.write(SerialAT.read());
-        }
-        while (SerialMon.available())
-        {
-            SerialAT.write(SerialMon.read());
-        }
-    //     xSemaphoreGive(debuglock);
-    // }
-
-    
-
+    while (SerialAT.available())
+    {
+        SerialMon.write(SerialAT.read());
+    }
+    while (SerialMon.available())
+    {
+        SerialAT.write(SerialMon.read());
+    }
     delay(1);
 }
