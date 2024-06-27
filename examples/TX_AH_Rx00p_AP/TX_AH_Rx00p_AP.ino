@@ -310,7 +310,7 @@ uint32_t last_tick = 0;
 uint32_t rssi_tick = 0;
 
 String str;
-int indx = 0;
+int send_indx = 1;
 
 void loop()
 {
@@ -342,6 +342,21 @@ void loop()
                 String substr = rssi_data.substring(startIndex + 1, endIndex);
                 strcpy(rssi_buf, substr.c_str());
             }
+
+            String send_data = "11111100000000";
+            String data = String(send_indx);
+            int len = send_data.length() + data.length();
+            String cmd = "+TXDATA=" + String(len);
+
+            send_data = send_data + data;
+            Serial.printf("len=%d, send_data=%s, cmd=%s\n", len, send_data.c_str(), cmd.c_str());
+
+            sendAT(cmd);
+            if (waitResponse() == AH_Rx00P_RESPONE_OK) {
+                SerialAT.write(send_data.c_str());
+            }
+
+            send_indx++;
         }
 
         lcd_info_show();

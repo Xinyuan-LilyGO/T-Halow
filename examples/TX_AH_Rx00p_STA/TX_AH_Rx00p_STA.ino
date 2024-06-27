@@ -21,6 +21,7 @@ bool camera_ret = false;
 bool sdcard_ret = false;
 bool tx_ah_ret = false;
 char buf[BUF_MAX_LEN] = {0};
+char recv_data[128] = {0};
 
 camera_config_t config;
 Adafruit_SSD1306 display = Adafruit_SSD1306(128, 64, &Wire);
@@ -160,13 +161,13 @@ bool TX_AH_init(void)
         SerialMon.println("AT+BSS_BW FAILD");
     }
 
-    sendAT("+MODE=AP");
+    sendAT("+MODE=STA");
     if (waitResponse() == AH_Rx00P_RESPONE_OK)
-        SerialMon.println("AT+MODE=AP SUCCEED");
+        SerialMon.println("AT+MODE=STA SUCCEED");
     else
     {
         at_cnt++;
-        SerialMon.println("AT+MODE=AP FAILD");
+        SerialMon.println("AT+MODE=STA FAILD");
     }
 
     return (at_cnt == 0);
@@ -250,7 +251,7 @@ void lcd_info_show(void)
         Serial.println((camera_ret == true ? "CAMERA  PASS" : "CAMERA   ---"));
         Serial.println(" ");
 
-        Serial.println(line_align(buf, "Role:", "AP "));
+        Serial.println(line_align(buf, "Role:", "STA "));
 
         if (tx_ah_conn_status) {
             Serial.println(line_align(buf, "RSSI:", rssi_buf));
@@ -268,15 +269,17 @@ void lcd_info_show(void)
         display.println(line_align(buf, "SD:", (sdcard_ret == true ? "PASS" : "---")));
         display.println(line_align(buf, "CAM:", (camera_ret == true ? "PASS" : "---")));
         display.println(line_align(buf, "AH:", (tx_ah_ret == true ? "PASS" : "---")));
-        display.println(" ");
+        display.println("---------------------");
 
-        display.println(line_align(buf, "Role:", "AP "));
+        display.println(line_align(buf, "Role:", "STA"));
 
         if (tx_ah_conn_status) {
             display.println(line_align(buf, "RSSI:", rssi_buf));
+            display.println(line_align(buf, "Recv:", recv_data));
         } else {
             display.println("Disconnect!!!");
         }
+        
         display.display();
     }
 }
@@ -309,7 +312,7 @@ void setup()
 uint32_t last_tick = 0;
 uint32_t rssi_tick = 0;
 
-String str;
+String recv_str = "";
 int indx = 0;
 
 void loop()
@@ -339,7 +342,7 @@ void loop()
             if (waitResponse(1000, rssi_data) == AH_Rx00P_RESPONE_OK) {
                 int startIndex = rssi_data.indexOf(':');
                 int endIndex = rssi_data.lastIndexOf('\n');
-                String substr = rssi_data.substring(startIndex + 1, endIndex);
+                String substr = rssi_data.substring(startIndex + 1, endIndex -1);
                 strcpy(rssi_buf, substr.c_str());
             }
         }
@@ -349,11 +352,31 @@ void loop()
 
     while (SerialAT.available())
     {
-        SerialMon.write(SerialAT.read());
+        // SerialMon.write(SerialAT.read());
+
+        recv_str += (char)SerialAT.read();
+        // SerialMon.write(recv_str.c_str());
     }
     while (SerialMon.available())
     {
         SerialAT.write(SerialMon.read());
+    }
+
+    if(recv_str.equals("") == 0) {
+        if(recv_str.startsWith("+RXDATA:")) {
+            char *p = (char *)recv_str.c_str();
+
+            while (*p != '\n')
+            {
+                *p++;
+            }
+            
+            Serial.print("recv:");
+            Serial.println((p+15));
+            memcpy(recv_data, (p+15), 128);
+        }
+        SerialMon.write(recv_str.c_str());
+        recv_str = "";
     }
     delay(1);
 }
