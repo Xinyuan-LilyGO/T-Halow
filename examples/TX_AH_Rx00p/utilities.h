@@ -28,6 +28,9 @@
 #define SerialAT      Serial1
 #define SERIAL_AT_RXD 5
 #define SERIAL_AT_TXD 4
+
+#define BOARD_I2C_SDA  42
+#define BOARD_I2C_SCL  41
 //
 
 

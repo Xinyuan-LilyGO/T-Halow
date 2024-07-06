@@ -12,3 +12,4 @@ firmware/测试说明.pdf
 hardware/SCH_ESP32-Ethernet-Kit_A_V1.2_20200528.pdf
 firmware.zip
 .vscode/
+build/
