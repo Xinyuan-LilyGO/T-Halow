@@ -15,7 +15,7 @@
 T-Halow 是作为物联网设备的优化 Wi-Fi 解决方案 WiFi Halow，在提供 2.4GHz、5GHz 相同的发射功率下有着更远的传输距离。T-Halow 搭载 TX-AH 模组，该模组可以工作在 730M-950MHz 频段，模组可工作的信道宽度为 1/2/4/8MHz，可提供 150 Kbps 到 32.5Mbps 的物理吞吐量。
 
 T-Halow 的两种工作模式：
-![alt text](hardware\image\image.png)
+![alt text](./hardware/image/image.png)
 
 固件烧录：
 ~~~
@@ -27,7 +27,7 @@ MODE2：通过 micro-USB 发送 AT 指令控制
     TX-AH：下载 huge-ic-ah_v1.6.3.3-26347_2023.11.29_TAIXIN-WNB.bin
     ESP32：不用下载固件
 ~~~
-![alt text](hardware\image\image-1.png)
+![alt text](./hardware/image/image-1.png)
 
 
 ## 1、TX-AH 模组测试
@@ -40,41 +40,41 @@ MODE2：通过 micro-USB 发送 AT 指令控制
 
 下载器使用的 硕飞SP10B，[软件下载地址](https://www.sflytech.com/Download/Software/)，下载软件 [FlyPRO Ⅱ](https://www.sflytech.com/html/3128973325.html)，将 Flash 芯片按如下放置；然后将下载器连接到电脑；
 
-![alt text](hardware\image\image-2.png)
+![alt text](./hardware/image/image-2.png)
 
 
 打开 FlyPRO Ⅱ，点击 芯片 -> 识别芯片型号 -> 然后选择对应的Flash芯片型号；
 
-![alt text](hardware\image\image-3.png)
+![alt text](./hardware/image/image-3.png)
 
-![alt text](hardware\image\image-4.png)
+![alt text](./hardware/image/image-4.png)
 
 用下载器下载网桥固件 `huge-ic-ah_v1.6.3.3-26347_2023.11.29_TAIXIN-WNB.bin` 到 Flash 中；下载完成后，将 Flash 芯片放置到 T-Halow 座子上；
 
-![alt text](hardware\image\image-5.png)
+![alt text](./hardware/image/image-5.png)
 
-![alt text](hardware\image\image-6.png)
+![alt text](./hardware/image/image-6.png)
 
 固件下载完成后，插上 Type-C 和 Micro-USB，然后使用串口打开 Micro-USB 所在的 COM 口，然后发送 `AT+` 测试 TX-AH 固件是否下载成功；
 
-![alt text](hardware\image\image-7.png)
+![alt text](./hardware/image/image-7.png)
 
 ### 1.2、ESP32 与 TX-AH 测试
 用下载器下载 usb固件 `huge-ic-ah_v1.6.3.5-25403_2023.10.20_TAIXIN-usb.bin` 到 Flash 中；下载完成后，将 Flash 芯片放置到 T-Halow 座子上；
 
-![alt text](hardware\image\image-8.png)
+![alt text](./hardware/image/image-8.png)
 
 然后用 esp32 下载工具烧录固件；一个板子下载 AP 固件，一个下载 STA 固件；在户外测试通信距离时，建议在 STA 上接入屏幕；
 
-![alt text](hardware\image\image-9.png)
+![alt text](./hardware/image/image-9.png)
 
 然后将板子连接电脑，发送配对命令；先同时点第一个命令，等一会(大概3~5s)，在同时点第二个命令；
 
-![alt text](hardware\image\image-10.png)
+![alt text](./hardware/image/image-10.png)
 
 配对成功后，会打印如下内容；
 
-![alt text](hardware\image\image-11.png)
+![alt text](./hardware/image/image-11.png)
 
 
 ## 2、TX-AH 型号对比
