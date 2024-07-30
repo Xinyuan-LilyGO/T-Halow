@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+2009-05 Nicolas Richasse <nicolas.richasse@gmail.com>
+
+* import/export feature implemented
+* WaitWindow behavior and UI improved (the one displayed when stopping iperf)
+* System Look'n feel used under windows
+* UI improvements
+* Code improvements
+* SwingX library updated to 0.9.6
+
+-------------------------------------------------------------------------------
+2009-04-17 Nicolas Richasse <nicolas.richasse@gmail.com>
+
+* URL of the project updated to http://iperf.sourceforge.net/iperf
+* UI Improvements
+* It is now possible to specify values in bits and bytes to setup the packets size (specifically with UDP)
+
+-------------------------------------------------------------------------------
+2008-03-21 Nicolas Richasse <nicolas.richasse@gmail.com> 
+
+* The project is compiled for the JRE 1.5, so that we have benefit of enumerations, generics, etc.
+* Complete UI refactoring
+   * the iperf command-line reflecting the selected configuration is displayed and updated live while changing a parameter into the UI
+   * use java libraries such as SwingX and Forms
+   * network options are associated by layer
+   * the new "Quick Start" panel contains all essential parameters for a quick start
+   * New charts look and feel
+   * real time update of JFreeChart charts
+   * the output panel is scrolling automatically
+   * "Load default configuration" button
+* Better management of iperf processes
+* Improvements on the "About JPerf" dialog box
+* Some bug fixes
+* Code refactoring
