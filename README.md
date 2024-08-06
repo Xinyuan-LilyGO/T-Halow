@@ -7,8 +7,8 @@
   <a href=""> <img src="https://img.shields.io/badge/language-c++-brightgreen" height="20px"></a>
 </p>
 
-* [切换到中文版](./README_CN.md)
 
+* [切换到中文版](./README_CN.md)
 
 ❗❗❗ More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)；❗❗❗ 
 
@@ -31,51 +31,11 @@ MODE2: Send AT command control via micro-USB
 
 ![alt text](./hardware/image/image-1.png)
 
-## 1. TX-AH module test
+## 1. TX-AH module firmware Download
 
-❗❗❗ More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)；❗❗❗ 
+1、Download firmware through the downloader，[click](./docs/Firmware_burn_1.md) ;
 
-### 1.1 TX-AH module test
-
-The first time to use the module, you need to use the Flash burner to burn the firmware to Flash, here download `huge-ic-ah_v1.6.3.3-26347_2023.11.29_TAIXIN-WNB.bin` as an example.
-
-Downloader using FLY SP10B, [software download address](https://www.sflytech.com/Download/Software/), Download software [FlyPRO Ⅱ](https://www.sflytech.com/html/3128973325.html), place the Flash chip as follows; Then connect the downloader to your computer;
-
-![alt text](./hardware/image/image-2.png)
-
-Open FlyPRO II, click Chip -> Identify chip model -> Then select the corresponding Flash chip model;
-
-![alt text](./hardware/image/image-3.png)
-
-![alt text](./hardware/image/image-4.png)
-
-Download bridge firmware `huge-ic-ah_v1.6.3.3-26347_2023.11.29_TAIXIN-WNB.bin` to Flash with downloader; After downloading, place the Flash chip on the T-Halow seat;
-
-![alt text](./hardware/image/image-5.png)
-
-![alt text](./hardware/image/image-6.png)
-
-After the firmware download is complete, plug in Type-C and Micro-USB, and then use the serial port to open the COM port where the Micro-USB is located, and then send `AT+` to test whether the TX-AH firmware is downloaded successfully;
-
-![alt text](./hardware/image/image-7.png)
-
-### 1.2 ESP32 and TX-AH test
-
-Download usb firmware `huge-ic-ah_v1.6.3.5-25403_2023.10.20_TAIXIN-usb.bin` to Flash with downloader; After downloading, place the Flash chip on the T-Halow seat;
-
-![alt text](./hardware/image/image-8.png)
-
-Then burn the firmware with the esp32 download tool; One board downloads AP firmware, and one board downloads STA firmware; When testing the communication distance outdoors, it is recommended to access the screen on the STA;
-
-![alt text](./hardware/image/image-9.png)
-
-Then connect the board to the computer and send the pairing command; Click the first command at the same time, wait a while (about 3~5s), click the second command at the same time;
-
-![alt text](./hardware/image/image-10.png)
-
-After the pairing is successful, the following content will be printed;
-
-![alt text](./hardware/image/image-11.png)
+2、Download firmware via esp32，[click](./docs/Firmware_burn_1.md) ;
 
 ## 2. TX-AH model comparison
 
@@ -94,14 +54,26 @@ remark:
 
 2. The module does not have a Shield by default. The name of the module with a shield is suffix-s, where S indicates shield.
 
-## 3. TX-AH pairing instructions
+## 3. TX-AH documents
 
-To pair two TX-AH-RX00Ps, follow the following steps:
+Official document;
 
-1. Check the screen printing on the lower right corner of the module. 7P means 700M, 868 means 868M, and 9P means 900M. Only modules with the same transmission frequency can be successfully equipped.
+More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)
 
-2. Suppose to use two modules that have downloaded USB firmware 7P of the development board, connect the two modules to the serial port, use the `AT+MODE=ap` command to set one device to ap mode, and use the `AT+mode=sta` command to set the other device to sta mode
+|           Frequency setting description           | [docs](./hardware/TX_AH/泰芯802.11AH%20Frequency%20setting%20description_20231130110312.pdf)                       |
+|:-------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------ |
+| TX-AH-Rx00P Series module technical specification | [docs](./hardware/TX_AH/泰芯802.11ah TX-AH-Rx00P%20Series%20module%20technical%20specification_20231116174457.pdf) |
+|          TX-AH-Rx00P Bridge instructions          | [docs](./hardware/TX_AH//泰芯AH%20Bridge%20instructions_20230908122753.pdf)                                        |
+|    AH Module AT instruction development guide     | [docs](./hardware/TX_AH/泰芯AH%20Module%20AT%20instruction%20development%20guide_20230524100503.pdf)               |
+|     AH Module development board instructions      | [docs](./hardware/TX_AH/泰芯AH%20Module%20development%20board%20instructions_20230621205234.pdf)                   |
+|          AH Module hardware Design Guide          | [docs](./hardware/TX_AH/泰芯AH%20Module%20hardware%20Design%20Guide_20230621170639.pdf)                            |
+|            AH Performance test method             | [docs](./hardware/TX_AH/泰芯AH%20Performance%20test%20method_20230908122816.pdf)                                   |
+|           AH-RF EMC Certification guide           | [docs](./hardware/TX_AH/泰芯AH-RF EMC%20Certification%20guide_20230720140052.pdf)                                  |
 
-3. When pairing, the AP device and STA device need to use the `AT+PAIR=1` command `AT+PAIR=0` command to stop the pairing
+Other documents;
 
-4. Note: The print serial port of USB firmware is A10/A11, and the print serial port of other firmware is A12/A13
+| T-Halow mode_1 test  |     |
+| -------------------- | --- |
+| T-Halow mode_2 test  |     |
+| TX-AH module pairing |[docs](./docs/module_pair.md)|
+
