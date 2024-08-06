@@ -35,7 +35,7 @@ MODE2: Send AT command control via micro-USB
 
 1、Download firmware through the downloader，[click](./docs/Firmware_burn_1.md) ;
 
-2、Download firmware via esp32，[click](./docs/Firmware_burn_1.md) ;
+2、Download firmware via esp32，[click](./docs/Firmware_burn_2.md) ;
 
 ## 2. TX-AH model comparison
 
