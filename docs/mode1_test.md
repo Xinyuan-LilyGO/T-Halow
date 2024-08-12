@@ -1,17 +1,32 @@
-### 1.2 ESP32 and TX-AH test
+# Mode1: ESP32 and TX-AH test
 
-Download usb firmware `huge-ic-ah_v1.6.3.5-25403_2023.10.20_TAIXIN-usb.bin` to Flash with downloader; After downloading, place the Flash chip on the T-Halow seat;
+![alt text](image/image-40.png)
 
-![alt text](image/image-30.png)
+Download usb firmware `huge-ic-ah_xxxxxxxxx_TAIXIN-usb.bin` to Flash, Note that the firmware ends in `-usb.bin`;
 
-Then burn the firmware with the esp32 download tool; One board downloads AP firmware, and one board downloads STA firmware; When testing the communication distance outdoors, it is recommended to access the screen on the STA;
+https://github.com/Xinyuan-LilyGO/T-Halow/tree/master/firmware
 
-![alt text](image/image-31.png)
+![alt text](image/image-41.png)
 
-Then connect the board to the computer and send the pairing command; Click the first command at the same time, wait a while (about 3~5s), click the second command at the same time;
+If Flash does not have the firmware, you can download firmware to Flash in either [Method 1](Firmware_burn_1.md) or [Method 2](Firmware_burn_2.md);
 
-![alt text](image/image-32.png)
+After downloading, place the Flash chip on the T-Halow seat;
+Note the dot of the flash chip and the arrow on the T-Halow seat son against it;
 
-After the pairing is successful, the following content will be printed;
+![alt text](image/image-42.png)
+
+If there are two T-Halow boards with the same frequency of TX-AH module, one can download the esp32 AP firmware and the other can download the esp32 STA firmware through Type-C download;
+
+![alt text](image/image-43.png)
+
+Plug the two boards into Type-C and open the serial port; The TX-AH module is successfully initialized;
+
+During the initialization process, esp32 sends several AT instructions to TX-AH: `AT+SYSDBG=LMAC,0`, `AT+BSS_BW=8`, `AT+MODE=AP/STA`; [More AT](AT_cmd.md);
+
+![alt text](image/image-44.png)
+
+Start pairing, send pairing command; Send the `AT+PAIR=1` pairing command AT the same time. Wait for 3 to 5s. After the pairing succeeds, send the `AT+PAIR=0` command to cancel the pairing.
+
+Print the test sending and receiving data after successful pairing;
 
 ![alt text](image/image-33.png)

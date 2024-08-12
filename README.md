@@ -18,26 +18,53 @@ T-Halow operates in two modes:
 
 ![alt text](./hardware/image/image.png)
 
-Firmware download:
+The two modes differ：
+
 ~~~
 MODE1: Send AT command control to TX-AH via ESP32
-    TX-AH: download huge-ic-ah_v1.6.3.5-25403_2023.10.20_TAIXIN-usb.bin
+    TX-AH: Download huge-ic-ah_xxxxxxxxx_TAIXIN-usb.bin
     ESP32: Download AP or STA
+    Notice：Debug using Type-C
 
 MODE2: Send AT command control via micro-USB
-    TX-AH: download huge-ic-ah_v1.6.3.3-26347_2023.11.29_TAIXIN-WNB.bin
+    TX-AH: download huge-ic-ah_xxxxxxxxx_TAIXIN-WNB.bin
     ESP32: No firmware download required
+    Notice：Debug using Micro-USB
 ~~~
 
 ![alt text](./hardware/image/image-1.png)
 
-## 1. TX-AH module firmware Download
+## TX-AH documents
 
-1、Download firmware through the downloader，[click](./docs/Firmware_burn_1.md) ;
+### Other documents;
 
-2、Download firmware via esp32，[click](./docs/Firmware_burn_2.md) ;
+| T-Halow mode_1 test  |[docs](./docs/mode1_test.md)|
+| -------------------- | --- |
+| T-Halow mode_2 test  |[docs](./docs/mode2_test.md)|
+| TX-AH module pairing |[docs](./docs/module_pair.md)|
 
-## 2. TX-AH model comparison
+If you need to download the TX AH firmware, you can use the following two methods:
+
+| Download firmware via downloader  |[docs](./docs/Firmware_burn_1.md)|
+| -------------------- | --- |
+| Download firmware via esp32 flash_download_tool  | [docs](./docs/Firmware_burn_2.md) |
+
+### Official document;
+TX-AH module official documentation is in Chinese, if you can speak Chinese, this may help you;
+
+More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)
+
+|           Frequency setting description           | [docs](./hardware/TX_AH/泰芯802.11AH%20Frequency%20setting%20description_20231130110312.pdf)                       |
+|:-------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------ |
+| TX-AH-Rx00P Series module technical specification | [docs](./hardware/TX_AH/泰芯802.11ah TX-AH-Rx00P%20Series%20module%20technical%20specification_20231116174457.pdf) |
+|          TX-AH-Rx00P Bridge instructions          | [docs](./hardware/TX_AH//泰芯AH%20Bridge%20instructions_20230908122753.pdf)                                        |
+|    AH Module AT instruction development guide     | [docs](./hardware/TX_AH/泰芯AH%20Module%20AT%20instruction%20development%20guide_20230524100503.pdf)               |
+|     AH Module development board instructions      | [docs](./hardware/TX_AH/泰芯AH%20Module%20development%20board%20instructions_20230621205234.pdf)                   |
+|          AH Module hardware Design Guide          | [docs](./hardware/TX_AH/泰芯AH%20Module%20hardware%20Design%20Guide_20230621170639.pdf)                            |
+|            AH Performance test method             | [docs](./hardware/TX_AH/泰芯AH%20Performance%20test%20method_20230908122816.pdf)                                   |
+|           AH-RF EMC Certification guide           | [docs](./hardware/TX_AH/泰芯AH-RF EMC%20Certification%20guide_20230720140052.pdf)                                  |
+
+## TX-AH model comparison
 
 |        Module name       |     Front screen distinction     |    Overcertified condition     |                       remark                        |
 | :----------------: | :------------: | :----------: | :---------------------------------------------: |
@@ -53,27 +80,3 @@ remark:
 (2) P series PIN4/5 needs power supply, A series does not;
 
 2. The module does not have a Shield by default. The name of the module with a shield is suffix-s, where S indicates shield.
-
-## 3. TX-AH documents
-
-Official document;
-
-More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)
-
-|           Frequency setting description           | [docs](./hardware/TX_AH/泰芯802.11AH%20Frequency%20setting%20description_20231130110312.pdf)                       |
-|:-------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------ |
-| TX-AH-Rx00P Series module technical specification | [docs](./hardware/TX_AH/泰芯802.11ah TX-AH-Rx00P%20Series%20module%20technical%20specification_20231116174457.pdf) |
-|          TX-AH-Rx00P Bridge instructions          | [docs](./hardware/TX_AH//泰芯AH%20Bridge%20instructions_20230908122753.pdf)                                        |
-|    AH Module AT instruction development guide     | [docs](./hardware/TX_AH/泰芯AH%20Module%20AT%20instruction%20development%20guide_20230524100503.pdf)               |
-|     AH Module development board instructions      | [docs](./hardware/TX_AH/泰芯AH%20Module%20development%20board%20instructions_20230621205234.pdf)                   |
-|          AH Module hardware Design Guide          | [docs](./hardware/TX_AH/泰芯AH%20Module%20hardware%20Design%20Guide_20230621170639.pdf)                            |
-|            AH Performance test method             | [docs](./hardware/TX_AH/泰芯AH%20Performance%20test%20method_20230908122816.pdf)                                   |
-|           AH-RF EMC Certification guide           | [docs](./hardware/TX_AH/泰芯AH-RF EMC%20Certification%20guide_20230720140052.pdf)                                  |
-
-Other documents;
-
-| T-Halow mode_1 test  |     |
-| -------------------- | --- |
-| T-Halow mode_2 test  |     |
-| TX-AH module pairing |[docs](./docs/module_pair.md)|
-
