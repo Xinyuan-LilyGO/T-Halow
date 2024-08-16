@@ -1,0 +1,16 @@
+memset(ibuf, ff);
+read(hex, project.hex);
+remap(v_ax, 0, v_lx);
+memmode(obuf, 32, lit);
+write(bin, huge-ic-ah.bin);
+
+reset(ibuf);
+reset(obuf);
+read(bin, huge-ic-ah.bin);
+def16_at(v_param_len, 100);
+read(bin, parameter.cfg);
+memmode(ibuf, 32, lit);
+remap(210, 0, v_param_len);
+setbuf16(0, v_param_len);
+outrange(0, v_param_len, 10);
+write(bin, param.bin);

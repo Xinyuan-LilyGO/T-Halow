@@ -1,0 +1,10 @@
+# disable wdt
+set *(unsigned int *)0x40013004=0xdddd
+# open sys_key
+set *(unsigned int *)0x4002602C=0x3fac87e4
+# sel hosc
+set *(unsigned int *)0x4002600C=0x00000001
+# en dac ldo
+set *(unsigned int *)0x40026004=0x00000a50
+# set dac sw control
+set *(unsigned int *)0x40026054=0xd8080200

@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.csky.cds.peripheral>
+  <config Version="0.0.1">
+    <Peripheral Name="ADKEY">
+      <Register Address="0x4001A000" Authority="RW" Description="ADKEY Control register" Name="ADKEY_CON" Width="32"/>
+      <Register Address="0x4001A004" Authority="RW" Description="ADKEY Baud register" Name="ADKEY_BAUD" Width="32"/>
+      <Register Address="0x4001A008" Authority="RW" Description="ADKEY Data register" Name="ADKEY_DATA" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SYSCTRL">
+      <Register Address="0x40026000" Authority="RW" Description="IO Mapping register" Name="IO_MAP" Width="32"/>
+      <Register Address="0x40026004" Authority="RW" Description="System Control register 0" Name="SYS_CON0" Width="32"/>
+      <Register Address="0x40026008" Authority="RW" Description="System Control register 1" Name="SYS_CON1" Width="32"/>
+      <Register Address="0x4002600C" Authority="RW" Description="Clock Control register 0" Name="CLK_CON0" Width="32"/>
+      <Register Address="0x40026010" Authority="RW" Description="Clock Control register 1" Name="CLK_CON1" Width="32"/>
+      <Register Address="0x40026014" Authority="RW" Description="Clock Control register 2" Name="CLK_CON2" Width="32"/>
+      <Register Address="0x40026018" Authority="RW" Description="Clock Control register 3" Name="CLK_CON3" Width="32"/>
+      <Register Address="0x4002601C" Authority="RW" Description="System Control register 2" Name="SYS_CON2" Width="32"/>
+      <Register Address="0x40026020" Authority="RW" Description="For future usage" Name="RESERVED" Width="32"/>
+      <Register Address="0x40026024" Authority="RW" Description="Clock Control register 4" Name="CLK_CON4" Width="32"/>
+      <Register Address="0x40026028" Authority="RW" Description="System Control register 11" Name="SYS_CON11" Width="32"/>
+      <Register Address="0x4002602C" Authority="RW" Description="System Key register, set 0x3FAC87E4 to unlock system control registers" Name="SYS_KEY" Width="32"/>
+      <Register Address="0x40026030" Authority="RW" Description="System Control register 9" Name="SYS_CON9" Width="32"/>
+      <Register Address="0x40026034" Authority="RW" Description="High Oscillator Monitor" Name="HOSC_MNT" Width="32"/>
+      <Register Address="0x40026038" Authority="RW" Description="RFADC Control register 0" Name="AIP_CON0" Width="32"/>
+      <Register Address="0x4002603C" Authority="RW" Description="RFADC Control register 1" Name="AIP_CON1" Width="32"/>
+      <Register Address="0x40026040" Authority="RW" Description="System Control register 3" Name="SYS_CON3" Width="32"/>
+      <Register Address="0x40026044" Authority="RW" Description="System Control register 4" Name="SYS_CON4" Width="32"/>
+      <Register Address="0x40026048" Authority="RW" Description="System Control register 5" Name="SYS_CON5" Width="32"/>
+      <Register Address="0x4002604C" Authority="RW" Description="System Control register 6" Name="SYS_CON6" Width="32"/>
+      <Register Address="0x40026050" Authority="RW" Description="System Control register 7" Name="SYS_CON7" Width="32"/>
+      <Register Address="0x40026054" Authority="RW" Description="System Control register 8" Name="SYS_CON8" Width="32"/>
+      <Register Address="0x40026058" Authority="RW" Description="System Error register 0" Name="SYS_ERR0" Width="32"/>
+      <Register Address="0x4002605C" Authority="RW" Description="System Error register 1" Name="SYS_ERR1" Width="32"/>
+      <Register Address="0x40026060" Authority="RW" Description="Wakeup Control register" Name="WK_CTRL" Width="32"/>
+      <Register Address="0x40026064" Authority="RW" Description="Low Power Control register" Name="LP_CTRL" Width="32"/>
+      <Register Address="0x40026068" Authority="RW" Description="MBIST Control register" Name="MBIST_CTRL" Width="32"/>
+      <Register Address="0x4002606C" Authority="RO" Description="MBIST test Result register" Name="MBIST_MISR" Width="32"/>
+      <Register Address="0x40026070" Authority="RW" Description="Chip ID register" Name="CHIP_ID" Width="32"/>
+      <Register Address="0x40026074" Authority="RW" Description="Mode register" Name="MODE_REG" Width="32"/>
+      <Register Address="0x40026078" Authority="RO" Description="Efuse Lock register" Name="EFUSE_LOCK" Width="32"/>
+      <Register Address="0x4002607C" Authority="RW" Description="System Control register 10" Name="SYS_CON10" Width="32"/>
+      <Register Address="0x40026080" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR1" Width="32"/>
+      <Register Address="0x40026084" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR2" Width="32"/>
+      <Register Address="0x40026088" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR3" Width="32"/>
+      <Register Address="0x4002608C" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR4" Width="32"/>
+      <Register Address="0x40026090" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR5" Width="32"/>
+      <Register Address="0x40026094" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR6" Width="32"/>
+      <Register Address="0x40026098" Authority="RO" Description="MBIST test Result register 1" Name="MBIST_MISR7" Width="32"/>
+      <Register Address="0x4002609C" Authority="RW" Description="Memory Protect Enable register 0" Name="MPE0" Width="32"/>
+      <Register Address="0x400260A0" Authority="RW" Description="Memory Protect Enable register 1" Name="MPE1" Width="32"/>
+      <Register Address="0x400260A4" Authority="RW" Description="Memory Protect Enable register 2" Name="MPE2" Width="32"/>
+      <Register Address="0x400260A8" Authority="RW" Description="Memory Protect Enable register 3" Name="MPE3" Width="32"/>
+      <Register Address="0x400260AC" Authority="RW" Description="Memory Protect Enable register 4" Name="MPE4" Width="32"/>
+      <Register Address="0x400260B0" Authority="RW" Description="Memory Protect Enable register 5" Name="MPE5" Width="32"/>
+      <Register Address="0x400260B4" Authority="RW" Description="Memory Protect Pending register 0" Name="MPE0_PND" Width="32"/>
+      <Register Address="0x400260B8" Authority="RW" Description="Memory Protect Pending register 1" Name="MPE1_PND" Width="32"/>
+      <Register Address="0x400260BC" Authority="RW" Description="Memory Protect Pending register 2" Name="MPE2_PND" Width="32"/>
+      <Register Address="0x400260C0" Authority="RW" Description="Memory Protect Pending register 3" Name="MPE3_PND" Width="32"/>
+      <Register Address="0x400260C4" Authority="RW" Description="Memory Protect Pending register 4" Name="MPE4_PND" Width="32"/>
+      <Register Address="0x400260C8" Authority="RW" Description="Memory Protect Pending register 5" Name="MPE5_PND" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SPI0">
+      <Register Address="0x40006000" Authority="RW" Description="SPI Configuration register 0" Name="CTRLR0" Width="32"/>
+      <Register Address="0x40006004" Authority="RW" Description="SPI Configuration register 1" Name="CTRLR1" Width="32"/>
+      <Register Address="0x40006008" Authority="RW" Description="SPI Enable Register" Name="SSIENR" Width="32"/>
+      <Register Address="0x4000600C" Authority="RW" Description="SPI Microwire Control Register" Name="MWCR" Width="32"/>
+      <Register Address="0x40006010" Authority="RW" Description="SPI Slave Enable Register" Name="SER" Width="32"/>
+      <Register Address="0x40006014" Authority="RW" Description="SPI Baud Rate register" Name="BAUDR" Width="32"/>
+      <Register Address="0x40006018" Authority="RW" Description="SPI Transmit FIFO Threshold Level Register" Name="TXFTLR" Width="32"/>
+      <Register Address="0x4000601C" Authority="RW" Description="SPI Receive FIFO Threshold Level Register" Name="RXFTLR" Width="32"/>
+      <Register Address="0x40006020" Authority="RW" Description="SPI Transmit FIFO Level Register" Name="TXFLR" Width="32"/>
+      <Register Address="0x40006024" Authority="RW" Description="SPI Receive FIFO Level Register" Name="RXFLR" Width="32"/>
+      <Register Address="0x40006028" Authority="RW" Description="SPI Status Register" Name="SR" Width="32"/>
+      <Register Address="0x4000602C" Authority="RW" Description="SPI Interrupt Mask Register" Name="IMR" Width="32"/>
+      <Register Address="0x40006030" Authority="RW" Description="SPI Interrupt Status Register" Name="ISR" Width="32"/>
+      <Register Address="0x40006034" Authority="RW" Description="SPI Raw Interrupt Status Register" Name="RISR" Width="32"/>
+      <Register Address="0x40006038" Authority="RW" Description="SPI Transmit FIFO Overflow Interrupt Clear Register" Name="TXOICR" Width="32"/>
+      <Register Address="0x4000603C" Authority="RW" Description="SPI Receive FIFO Overflow Interrupt Clear Register" Name="RXOICR" Width="32"/>
+      <Register Address="0x40006040" Authority="RW" Description="SPI Receive FIFO Underflow Interrupt Clear Register" Name="RXUICR" Width="32"/>
+      <Register Address="0x40006044" Authority="RW" Description="SPI Multi-Master Interrupt Clear Register" Name="MSTICR" Width="32"/>
+      <Register Address="0x40006048" Authority="RW" Description="SPI Interrupt Clear Register" Name="ICR" Width="32"/>
+      <Register Address="0x4000604C" Authority="RW" Description="SPI DMA Control Register" Name="DMACR" Width="32"/>
+      <Register Address="0x40006050" Authority="RW" Description="SPI DMA Transmit Data Level Register" Name="DMATDLR" Width="32"/>
+      <Register Address="0x40006054" Authority="RW" Description="SPI DMA Receive Data Level Register" Name="DMARDLR" Width="32"/>
+      <Register Address="0x40006058" Authority="RW" Description="SPI Identification Register" Name="IDR" Width="32"/>
+      <Register Address="0x4000605C" Authority="RW" Description="SPI CoreKit ID Register" Name="SSI_VER_ID" Width="32"/>
+      <Register Address="0x40006060" Authority="RW" Description="SPI Data Register for both read and write" Name="DATAREG" Width="32"/>
+      <Register Address="0x40006064" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[1]" Width="32"/>
+      <Register Address="0x40006068" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[2]" Width="32"/>
+      <Register Address="0x4000606C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[3]" Width="32"/>
+      <Register Address="0x40006070" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[4]" Width="32"/>
+      <Register Address="0x40006074" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[5]" Width="32"/>
+      <Register Address="0x40006078" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[6]" Width="32"/>
+      <Register Address="0x4000607C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[7]" Width="32"/>
+      <Register Address="0x40006080" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[8]" Width="32"/>
+      <Register Address="0x40006084" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[9]" Width="32"/>
+      <Register Address="0x40006088" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[10]" Width="32"/>
+      <Register Address="0x4000608C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[11]" Width="32"/>
+      <Register Address="0x40006090" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[12]" Width="32"/>
+      <Register Address="0x40006094" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[13]" Width="32"/>
+      <Register Address="0x40006098" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[14]" Width="32"/>
+      <Register Address="0x4000609C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[15]" Width="32"/>
+      <Register Address="0x400060A0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[16]" Width="32"/>
+      <Register Address="0x400060A4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[17]" Width="32"/>
+      <Register Address="0x400060A8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[18]" Width="32"/>
+      <Register Address="0x400060AC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[19]" Width="32"/>
+      <Register Address="0x400060B0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[20]" Width="32"/>
+      <Register Address="0x400060B4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[21]" Width="32"/>
+      <Register Address="0x400060B8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[22]" Width="32"/>
+      <Register Address="0x400060BC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[23]" Width="32"/>
+      <Register Address="0x400060C0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[24]" Width="32"/>
+      <Register Address="0x400060C4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[25]" Width="32"/>
+      <Register Address="0x400060C8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[26]" Width="32"/>
+      <Register Address="0x400060CC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[27]" Width="32"/>
+      <Register Address="0x400060D0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[28]" Width="32"/>
+      <Register Address="0x400060D4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[29]" Width="32"/>
+      <Register Address="0x400060D8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[30]" Width="32"/>
+      <Register Address="0x400060DC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[31]" Width="32"/>
+      <Register Address="0x400060E0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[32]" Width="32"/>
+      <Register Address="0x400060E4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[33]" Width="32"/>
+      <Register Address="0x400060E8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[34]" Width="32"/>
+      <Register Address="0x400060EC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[35]" Width="32"/>
+      <Register Address="0x400060F4" Authority="RW" Description="SPI Rx sample delay register" Name="RX_SAMPLE_DLY" Width="32"/>
+      <Register Address="0x400060F8" Authority="RW" Description="SPI Control Register 0" Name="SPICTRLR0" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SPI1">
+      <Register Address="0x40007000" Authority="RW" Description="SPI Configuration register 0" Name="CTRLR0" Width="32"/>
+      <Register Address="0x40007004" Authority="RW" Description="SPI Configuration register 1" Name="CTRLR1" Width="32"/>
+      <Register Address="0x40007008" Authority="RW" Description="SPI Enable Register" Name="SSIENR" Width="32"/>
+      <Register Address="0x4000700C" Authority="RW" Description="SPI Microwire Control Register" Name="MWCR" Width="32"/>
+      <Register Address="0x40007010" Authority="RW" Description="SPI Slave Enable Register" Name="SER" Width="32"/>
+      <Register Address="0x40007014" Authority="RW" Description="SPI Baud Rate register" Name="BAUDR" Width="32"/>
+      <Register Address="0x40007018" Authority="RW" Description="SPI Transmit FIFO Threshold Level Register" Name="TXFTLR" Width="32"/>
+      <Register Address="0x4000701C" Authority="RW" Description="SPI Receive FIFO Threshold Level Register" Name="RXFTLR" Width="32"/>
+      <Register Address="0x40007020" Authority="RW" Description="SPI Transmit FIFO Level Register" Name="TXFLR" Width="32"/>
+      <Register Address="0x40007024" Authority="RW" Description="SPI Receive FIFO Level Register" Name="RXFLR" Width="32"/>
+      <Register Address="0x40007028" Authority="RW" Description="SPI Status Register" Name="SR" Width="32"/>
+      <Register Address="0x4000702C" Authority="RW" Description="SPI Interrupt Mask Register" Name="IMR" Width="32"/>
+      <Register Address="0x40007030" Authority="RW" Description="SPI Interrupt Status Register" Name="ISR" Width="32"/>
+      <Register Address="0x40007034" Authority="RW" Description="SPI Raw Interrupt Status Register" Name="RISR" Width="32"/>
+      <Register Address="0x40007038" Authority="RW" Description="SPI Transmit FIFO Overflow Interrupt Clear Register" Name="TXOICR" Width="32"/>
+      <Register Address="0x4000703C" Authority="RW" Description="SPI Receive FIFO Overflow Interrupt Clear Register" Name="RXOICR" Width="32"/>
+      <Register Address="0x40007040" Authority="RW" Description="SPI Receive FIFO Underflow Interrupt Clear Register" Name="RXUICR" Width="32"/>
+      <Register Address="0x40007044" Authority="RW" Description="SPI Multi-Master Interrupt Clear Register" Name="MSTICR" Width="32"/>
+      <Register Address="0x40007048" Authority="RW" Description="SPI Interrupt Clear Register" Name="ICR" Width="32"/>
+      <Register Address="0x4000704C" Authority="RW" Description="SPI DMA Control Register" Name="DMACR" Width="32"/>
+      <Register Address="0x40007050" Authority="RW" Description="SPI DMA Transmit Data Level Register" Name="DMATDLR" Width="32"/>
+      <Register Address="0x40007054" Authority="RW" Description="SPI DMA Receive Data Level Register" Name="DMARDLR" Width="32"/>
+      <Register Address="0x40007058" Authority="RW" Description="SPI Identification Register" Name="IDR" Width="32"/>
+      <Register Address="0x4000705C" Authority="RW" Description="SPI CoreKit ID Register" Name="SSI_VER_ID" Width="32"/>
+      <Register Address="0x40007060" Authority="RW" Description="SPI Data Register for both read and write" Name="DATAREG" Width="32"/>
+      <Register Address="0x40007064" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[1]" Width="32"/>
+      <Register Address="0x40007068" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[2]" Width="32"/>
+      <Register Address="0x4000706C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[3]" Width="32"/>
+      <Register Address="0x40007070" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[4]" Width="32"/>
+      <Register Address="0x40007074" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[5]" Width="32"/>
+      <Register Address="0x40007078" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[6]" Width="32"/>
+      <Register Address="0x4000707C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[7]" Width="32"/>
+      <Register Address="0x40007080" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[8]" Width="32"/>
+      <Register Address="0x40007084" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[9]" Width="32"/>
+      <Register Address="0x40007088" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[10]" Width="32"/>
+      <Register Address="0x4000708C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[11]" Width="32"/>
+      <Register Address="0x40007090" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[12]" Width="32"/>
+      <Register Address="0x40007094" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[13]" Width="32"/>
+      <Register Address="0x40007098" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[14]" Width="32"/>
+      <Register Address="0x4000709C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[15]" Width="32"/>
+      <Register Address="0x400070A0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[16]" Width="32"/>
+      <Register Address="0x400070A4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[17]" Width="32"/>
+      <Register Address="0x400070A8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[18]" Width="32"/>
+      <Register Address="0x400070AC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[19]" Width="32"/>
+      <Register Address="0x400070B0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[20]" Width="32"/>
+      <Register Address="0x400070B4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[21]" Width="32"/>
+      <Register Address="0x400070B8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[22]" Width="32"/>
+      <Register Address="0x400070BC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[23]" Width="32"/>
+      <Register Address="0x400070C0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[24]" Width="32"/>
+      <Register Address="0x400070C4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[25]" Width="32"/>
+      <Register Address="0x400070C8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[26]" Width="32"/>
+      <Register Address="0x400070CC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[27]" Width="32"/>
+      <Register Address="0x400070D0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[28]" Width="32"/>
+      <Register Address="0x400070D4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[29]" Width="32"/>
+      <Register Address="0x400070D8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[30]" Width="32"/>
+      <Register Address="0x400070DC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[31]" Width="32"/>
+      <Register Address="0x400070E0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[32]" Width="32"/>
+      <Register Address="0x400070E4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[33]" Width="32"/>
+      <Register Address="0x400070E8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[34]" Width="32"/>
+      <Register Address="0x400070EC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[35]" Width="32"/>
+      <Register Address="0x400070F4" Authority="RW" Description="SPI Rx sample delay register" Name="RX_SAMPLE_DLY" Width="32"/>
+      <Register Address="0x400070F8" Authority="RW" Description="SPI Control Register 0" Name="SPICTRLR0" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SPI3">
+      <Register Address="0x40009000" Authority="RW" Description="SPI Configuration register 0" Name="CTRLR0" Width="32"/>
+      <Register Address="0x40009004" Authority="RW" Description="SPI Configuration register 1" Name="CTRLR1" Width="32"/>
+      <Register Address="0x40009008" Authority="RW" Description="SPI Enable Register" Name="SSIENR" Width="32"/>
+      <Register Address="0x4000900C" Authority="RW" Description="SPI Microwire Control Register" Name="MWCR" Width="32"/>
+      <Register Address="0x40009010" Authority="RW" Description="SPI Slave Enable Register" Name="SER" Width="32"/>
+      <Register Address="0x40009014" Authority="RW" Description="SPI Baud Rate register" Name="BAUDR" Width="32"/>
+      <Register Address="0x40009018" Authority="RW" Description="SPI Transmit FIFO Threshold Level Register" Name="TXFTLR" Width="32"/>
+      <Register Address="0x4000901C" Authority="RW" Description="SPI Receive FIFO Threshold Level Register" Name="RXFTLR" Width="32"/>
+      <Register Address="0x40009020" Authority="RW" Description="SPI Transmit FIFO Level Register" Name="TXFLR" Width="32"/>
+      <Register Address="0x40009024" Authority="RW" Description="SPI Receive FIFO Level Register" Name="RXFLR" Width="32"/>
+      <Register Address="0x40009028" Authority="RW" Description="SPI Status Register" Name="SR" Width="32"/>
+      <Register Address="0x4000902C" Authority="RW" Description="SPI Interrupt Mask Register" Name="IMR" Width="32"/>
+      <Register Address="0x40009030" Authority="RW" Description="SPI Interrupt Status Register" Name="ISR" Width="32"/>
+      <Register Address="0x40009034" Authority="RW" Description="SPI Raw Interrupt Status Register" Name="RISR" Width="32"/>
+      <Register Address="0x40009038" Authority="RW" Description="SPI Transmit FIFO Overflow Interrupt Clear Register" Name="TXOICR" Width="32"/>
+      <Register Address="0x4000903C" Authority="RW" Description="SPI Receive FIFO Overflow Interrupt Clear Register" Name="RXOICR" Width="32"/>
+      <Register Address="0x40009040" Authority="RW" Description="SPI Receive FIFO Underflow Interrupt Clear Register" Name="RXUICR" Width="32"/>
+      <Register Address="0x40009044" Authority="RW" Description="SPI Multi-Master Interrupt Clear Register" Name="MSTICR" Width="32"/>
+      <Register Address="0x40009048" Authority="RW" Description="SPI Interrupt Clear Register" Name="ICR" Width="32"/>
+      <Register Address="0x4000904C" Authority="RW" Description="SPI DMA Control Register" Name="DMACR" Width="32"/>
+      <Register Address="0x40009050" Authority="RW" Description="SPI DMA Transmit Data Level Register" Name="DMATDLR" Width="32"/>
+      <Register Address="0x40009054" Authority="RW" Description="SPI DMA Receive Data Level Register" Name="DMARDLR" Width="32"/>
+      <Register Address="0x40009058" Authority="RW" Description="SPI Identification Register" Name="IDR" Width="32"/>
+      <Register Address="0x4000905C" Authority="RW" Description="SPI CoreKit ID Register" Name="SSI_VER_ID" Width="32"/>
+      <Register Address="0x40009060" Authority="RW" Description="SPI Data Register for both read and write" Name="DATAREG" Width="32"/>
+      <Register Address="0x40009064" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[1]" Width="32"/>
+      <Register Address="0x40009068" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[2]" Width="32"/>
+      <Register Address="0x4000906C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[3]" Width="32"/>
+      <Register Address="0x40009070" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[4]" Width="32"/>
+      <Register Address="0x40009074" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[5]" Width="32"/>
+      <Register Address="0x40009078" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[6]" Width="32"/>
+      <Register Address="0x4000907C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[7]" Width="32"/>
+      <Register Address="0x40009080" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[8]" Width="32"/>
+      <Register Address="0x40009084" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[9]" Width="32"/>
+      <Register Address="0x40009088" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[10]" Width="32"/>
+      <Register Address="0x4000908C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[11]" Width="32"/>
+      <Register Address="0x40009090" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[12]" Width="32"/>
+      <Register Address="0x40009094" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[13]" Width="32"/>
+      <Register Address="0x40009098" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[14]" Width="32"/>
+      <Register Address="0x4000909C" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[15]" Width="32"/>
+      <Register Address="0x400090A0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[16]" Width="32"/>
+      <Register Address="0x400090A4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[17]" Width="32"/>
+      <Register Address="0x400090A8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[18]" Width="32"/>
+      <Register Address="0x400090AC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[19]" Width="32"/>
+      <Register Address="0x400090B0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[20]" Width="32"/>
+      <Register Address="0x400090B4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[21]" Width="32"/>
+      <Register Address="0x400090B8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[22]" Width="32"/>
+      <Register Address="0x400090BC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[23]" Width="32"/>
+      <Register Address="0x400090C0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[24]" Width="32"/>
+      <Register Address="0x400090C4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[25]" Width="32"/>
+      <Register Address="0x400090C8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[26]" Width="32"/>
+      <Register Address="0x400090CC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[27]" Width="32"/>
+      <Register Address="0x400090D0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[28]" Width="32"/>
+      <Register Address="0x400090D4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[29]" Width="32"/>
+      <Register Address="0x400090D8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[30]" Width="32"/>
+      <Register Address="0x400090DC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[31]" Width="32"/>
+      <Register Address="0x400090E0" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[32]" Width="32"/>
+      <Register Address="0x400090E4" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[33]" Width="32"/>
+      <Register Address="0x400090E8" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[34]" Width="32"/>
+      <Register Address="0x400090EC" Authority="RW" Description="SPI Data FIFO Register" Name="FIFO[35]" Width="32"/>
+      <Register Address="0x400090F4" Authority="RW" Description="SPI Rx sample delay register" Name="RX_SAMPLE_DLY" Width="32"/>
+      <Register Address="0x400090F8" Authority="RW" Description="SPI Control Register 0" Name="SPICTRLR0" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="ZH_RFSPI">
+      <Register Address="0x4001B000" Authority="RW" Description="SPI Configuration register" Name="SPI_CFG" Width="32"/>
+      <Register Address="0x4001B004" Authority="RW" Description="SPI Control register" Name="SPI_CTL" Width="32"/>
+      <Register Address="0x4001B008" Authority="RW" Description="SPI Rx Byte Count register" Name="SPI_RX_BC" Width="32"/>
+      <Register Address="0x4001B00C" Authority="RW" Description="SPI Status register" Name="SPI_STA" Width="32"/>
+      <Register Address="0x4001B010" Authority="RW" Description="SPI Write Data register" Name="SPI_WDATA" Width="32"/>
+      <Register Address="0x4001B014" Authority="RO" Description="SPI Read Data register" Name="SPI_RDATA" Width="32"/>
+      <Register Address="0x4001B018" Authority="RW" Description="DAM Tx base Address register" Name="SPI_DMA_TX_ADDR" Width="32"/>
+      <Register Address="0x4001B01C" Authority="RW" Description="DAM Rx base Address register" Name="SPI_DMA_RX_ADDR" Width="32"/>
+      <Register Address="0x4001B020" Authority="RW" Description="SPI Tx Byte Count register" Name="SPI_TX_BC" Width="32"/>
+      <Register Address="0x4001B024" Authority="RW" Description="SPI Tx Start register, The bits of this register have no physical function, but the value of SPI_TX_BC is saved by writing to this register" Name="SPI_TX_START" Width="32"/>
+      <Register Address="0x4001B028" Authority="RW" Description="SPI Rx Start register, The bits of this register have no physical function, but the value of SPI_RX_BC is saved by writing to this register" Name="SPI_RX_START" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="DBGPATH">
+      <Register Address="0x40005000" Authority="RW" Description="Debug Path Configuration register" Name="DBGPATH_CFG" Width="32"/>
+      <Register Address="0x4000500C" Authority="RO" Description="Debug Path Counter register" Name="DBG_COUNTER" Width="32"/>
+      <Register Address="0x40005010" Authority="RW" Description="External SPI Tx Power Command register" Name="EXTSPI_TX_PWR_CMD" Width="32"/>
+      <Register Address="0x40005014" Authority="RW" Description="External SPI Rx Power Command register" Name="RFSPI_TX_POWER_CMD" Width="32"/>
+      <Register Address="0x40005018" Authority="RW" Description="External SPI Rx DPD Power Command register" Name="RFSPI_RX_POWER_CMD" Width="32"/>
+      <Register Address="0x4000501C" Authority="RW" Description="RF enable control register 0" Name="RFENCTL0" Width="32"/>
+      <Register Address="0x40005020" Authority="RW" Description="RF enable control register 1" Name="RFENCTL1" Width="32"/>
+      <Register Address="0x40005024" Authority="RW" Description="RF enable control register 2" Name="RFENCTL2" Width="32"/>
+      <Register Address="0x40005028" Authority="RW" Description="Debug Path Output Control 0" Name="DBGOUT_CTL0" Width="32"/>
+      <Register Address="0x4000502C" Authority="RW" Description="Debug Path Output Control 1" Name="DBGOUT_CTL1" Width="32"/>
+      <Register Address="0x40005030" Authority="RW" Description="MIPI Control 0" Name="MIPICTL0" Width="32"/>
+      <Register Address="0x40005034" Authority="RW" Description="MIPI Write Data 0" Name="MIPIWDATA0" Width="32"/>
+      <Register Address="0x40005038" Authority="RW" Description="MIPI Control 1" Name="MIPICTL1" Width="32"/>
+      <Register Address="0x4000503C" Authority="RW" Description="MIPI Write Data 1" Name="MIPIWDATA1" Width="32"/>
+      <Register Address="0x40005040" Authority="RW" Description="MIPI Control 2" Name="MIPICTL2" Width="32"/>
+      <Register Address="0x40005044" Authority="RW" Description="MIPI Write Data 2" Name="MIPIWDATA2" Width="32"/>
+      <Register Address="0x40005048" Authority="RW" Description="MIPI Control 3" Name="MIPICTL3" Width="32"/>
+      <Register Address="0x4000504C" Authority="RW" Description="MIPI Write Data 3" Name="MIPIWDATA3" Width="32"/>
+      <Register Address="0x40005050" Authority="RW" Description="MIPI Control 4" Name="MIPICTL4" Width="32"/>
+      <Register Address="0x40005054" Authority="RW" Description="MIPI Write Data 4" Name="MIPIWDATA4" Width="32"/>
+      <Register Address="0x40005058" Authority="RW" Description="MIPI Control 5" Name="MIPICTL5" Width="32"/>
+      <Register Address="0x4000505C" Authority="RW" Description="MIPI Write Data 5" Name="MIPIWDATA5" Width="32"/>
+      <Register Address="0x40005070" Authority="RW" Description="RF SPI Write Data" Name="RFSPIWDATA" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="RFADCDIG">
+      <Register Address="0x40014000" Authority="RW" Description="RF ADC Digtal Control register" Name="CON" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="RFDIGCAL">
+      <Register Address="0x4001D000" Authority="RW" Description="RF DCOC control register 0" Name="RFDCOCCON0" Width="32"/>
+      <Register Address="0x4001D004" Authority="RW" Description="RF DCOC control register 1" Name="RFDCOCCON1" Width="32"/>
+      <Register Address="0x4001D008" Authority="RW" Description="RF DCOC control register 2" Name="RFDCOCCON2" Width="32"/>
+      <Register Address="0x4001D00C" Authority="RW" Description="RF DCOC control register 3" Name="RFDCOCCON3" Width="32"/>
+      <Register Address="0x4001D010" Authority="RW" Description="RF DCOC control register 4" Name="RFDCOCCON4" Width="32"/>
+      <Register Address="0x4001D014" Authority="RW" Description="RF Power control register 0" Name="RFPWRCON0" Width="32"/>
+      <Register Address="0x4001D018" Authority="RW" Description="RF Power control register 1" Name="RFPWRCON1" Width="32"/>
+      <Register Address="0x4001D01C" Authority="RW" Description="RF Power control register 2" Name="RFPWRCON2" Width="32"/>
+      <Register Address="0x4001D020" Authority="RW" Description="XOSC DFM control register 0" Name="XOSCDFMCON0" Width="32"/>
+      <Register Address="0x4001D024" Authority="RW" Description="XOSC DFM control register 1" Name="XOSCDFMCON1" Width="32"/>
+      <Register Address="0x4001D028" Authority="RW" Description="XOSC DFM control register 2" Name="XOSCDFMCON2" Width="32"/>
+      <Register Address="0x4001D02C" Authority="RW" Description="Tx Power Index register" Name="TXPWRIDX" Width="32"/>
+      <Register Address="0x4001D030" Authority="RW" Description="Tx DC register" Name="TXDC0" Width="32"/>
+      <Register Address="0x4001D034" Authority="RW" Description="Tx DC register" Name="TXDC1" Width="32"/>
+      <Register Address="0x4001D038" Authority="RW" Description="Tx DC register" Name="TXDC2" Width="32"/>
+      <Register Address="0x4001D03C" Authority="RW" Description="Tx DC register" Name="TXDC3" Width="32"/>
+      <Register Address="0x4001D040" Authority="RW" Description="Tx DC register" Name="TXDC4" Width="32"/>
+      <Register Address="0x4001D044" Authority="RW" Description="Tx DC register" Name="TXDC5" Width="32"/>
+      <Register Address="0x4001D048" Authority="RW" Description="Tx IMB register" Name="TXIMB0" Width="32"/>
+      <Register Address="0x4001D04C" Authority="RW" Description="Tx IMB register" Name="TXIMB1" Width="32"/>
+      <Register Address="0x4001D050" Authority="RW" Description="Tx IMB register" Name="TXIMB2" Width="32"/>
+      <Register Address="0x4001D054" Authority="RW" Description="Tx IMB register" Name="TXIMB3" Width="32"/>
+      <Register Address="0x4001D058" Authority="RW" Description="Tx IMB register" Name="TXIMB4" Width="32"/>
+      <Register Address="0x4001D05C" Authority="RW" Description="Tx IMB register" Name="TXIMB5" Width="32"/>
+      <Register Address="0x4001D060" Authority="RW" Description="Rx Power Index register" Name="RXPWRIDX" Width="32"/>
+      <Register Address="0x4001D064" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC0" Width="32"/>
+      <Register Address="0x4001D068" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC1" Width="32"/>
+      <Register Address="0x4001D06C" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC2" Width="32"/>
+      <Register Address="0x4001D070" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC3" Width="32"/>
+      <Register Address="0x4001D074" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC4" Width="32"/>
+      <Register Address="0x4001D078" Authority="RW" Description="Rx in 1M rata DC register" Name="RX1MDC5" Width="32"/>
+      <Register Address="0x4001D07C" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB0" Width="32"/>
+      <Register Address="0x4001D080" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB1" Width="32"/>
+      <Register Address="0x4001D084" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB2" Width="32"/>
+      <Register Address="0x4001D088" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB3" Width="32"/>
+      <Register Address="0x4001D08C" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB4" Width="32"/>
+      <Register Address="0x4001D090" Authority="RW" Description="Rx in 1M rata IMB register" Name="RX1MIMB5" Width="32"/>
+      <Register Address="0x4001D094" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC0" Width="32"/>
+      <Register Address="0x4001D098" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC1" Width="32"/>
+      <Register Address="0x4001D09C" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC2" Width="32"/>
+      <Register Address="0x4001D0A0" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC3" Width="32"/>
+      <Register Address="0x4001D0A4" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC4" Width="32"/>
+      <Register Address="0x4001D0A8" Authority="RW" Description="Rx in 2M rata DC register" Name="RX2MDC5" Width="32"/>
+      <Register Address="0x4001D0AC" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB0" Width="32"/>
+      <Register Address="0x4001D0B0" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB1" Width="32"/>
+      <Register Address="0x4001D0B4" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB2" Width="32"/>
+      <Register Address="0x4001D0B8" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB3" Width="32"/>
+      <Register Address="0x4001D0BC" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB4" Width="32"/>
+      <Register Address="0x4001D0C0" Authority="RW" Description="Rx in 2M rata IMB register" Name="RX2MIMB5" Width="32"/>
+      <Register Address="0x4001D0C4" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC0" Width="32"/>
+      <Register Address="0x4001D0C8" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC1" Width="32"/>
+      <Register Address="0x4001D0CC" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC2" Width="32"/>
+      <Register Address="0x4001D0D0" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC3" Width="32"/>
+      <Register Address="0x4001D0D4" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC4" Width="32"/>
+      <Register Address="0x4001D0D8" Authority="RW" Description="Rx in 4M rata DC register" Name="RX4MDC5" Width="32"/>
+      <Register Address="0x4001D0DC" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB0" Width="32"/>
+      <Register Address="0x4001D0E0" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB1" Width="32"/>
+      <Register Address="0x4001D0E4" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB2" Width="32"/>
+      <Register Address="0x4001D0E8" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB3" Width="32"/>
+      <Register Address="0x4001D0EC" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB4" Width="32"/>
+      <Register Address="0x4001D0F0" Authority="RW" Description="Rx in 4M rata IMB register" Name="RX4MIMB5" Width="32"/>
+      <Register Address="0x4001D0F4" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC0" Width="32"/>
+      <Register Address="0x4001D0F8" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC1" Width="32"/>
+      <Register Address="0x4001D0FC" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC2" Width="32"/>
+      <Register Address="0x4001D100" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC3" Width="32"/>
+      <Register Address="0x4001D104" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC4" Width="32"/>
+      <Register Address="0x4001D108" Authority="RW" Description="Rx in 8M rata DC register" Name="RX8MDC5" Width="32"/>
+      <Register Address="0x4001D10C" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB0" Width="32"/>
+      <Register Address="0x4001D110" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB1" Width="32"/>
+      <Register Address="0x4001D114" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB2" Width="32"/>
+      <Register Address="0x4001D118" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB3" Width="32"/>
+      <Register Address="0x4001D11C" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB4" Width="32"/>
+      <Register Address="0x4001D120" Authority="RW" Description="Rx in 8M rata IMB register" Name="RX8MIMB5" Width="32"/>
+      <Register Address="0x4001D124" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC0" Width="32"/>
+      <Register Address="0x4001D128" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC1" Width="32"/>
+      <Register Address="0x4001D12C" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC2" Width="32"/>
+      <Register Address="0x4001D130" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC3" Width="32"/>
+      <Register Address="0x4001D134" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC4" Width="32"/>
+      <Register Address="0x4001D138" Authority="RW" Description="Rx Feedback DC register" Name="RXFBDC5" Width="32"/>
+      <Register Address="0x4001D13C" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB0" Width="32"/>
+      <Register Address="0x4001D140" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB1" Width="32"/>
+      <Register Address="0x4001D144" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB2" Width="32"/>
+      <Register Address="0x4001D148" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB3" Width="32"/>
+      <Register Address="0x4001D14C" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB4" Width="32"/>
+      <Register Address="0x4001D150" Authority="RW" Description="Rx Feedback IMB register" Name="RXFBIMB5" Width="32"/>
+      <Register Address="0x4001D154" Authority="RW" Description="Rx Filter register" Name="RXFILTER" Width="32"/>
+      <Register Address="0x4001D158" Authority="RW" Description="Tx Digtal Power register 0_1" Name="TXDIGPWR01" Width="32"/>
+      <Register Address="0x4001D15C" Authority="RW" Description="Tx Digtal Power register 2_3" Name="TXDIGPWR23" Width="32"/>
+      <Register Address="0x4001D160" Authority="RW" Description="Tx Digtal Power register 4_5" Name="TXDIGPWR45" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="GPIOA">
+      <Register Address="0x40022000" Authority="RW" Description="GPIO Mode register 0" Name="GPIOA_MODE0" Width="32"/>
+      <Register Address="0x40022004" Authority="RW" Description="GPIO Mode register 1" Name="GPIOA_MODE1" Width="32"/>
+      <Register Address="0x40022008" Authority="RW" Description="GPIO Alternate Function register 0, for GPIO[7:0]" Name="GPIOA_AFR0" Width="32"/>
+      <Register Address="0x4002200C" Authority="RW" Description="GPIO Alternate Function register 1, for GPIO[15:8]" Name="GPIOA_AFR1" Width="32"/>
+      <Register Address="0x40022010" Authority="RW" Description="GPIO Alternate Function register 2, for GPIO[23:16]" Name="GPIOA_AFR2" Width="32"/>
+      <Register Address="0x40022014" Authority="RW" Description="GPIO Alternate Function register 3, for GPIO[31:24]" Name="GPIOA_AFR3" Width="32"/>
+      <Register Address="0x40022018" Authority="RW" Description="GPIO Data register, read and write data for GPIO[31:0]" Name="GPIOA_DATA" Width="32"/>
+      <Register Address="0x4002201C" Authority="RW" Description="GPIO Debouce Enable register for GPIO[31:0]" Name="GPIOA_DEBEN" Width="32"/>
+      <Register Address="0x40022020" Authority="RW" Description="GPIO Interrupt Mask register for GPIO[31:0]" Name="GPIOA_INTMASK" Width="32"/>
+      <Register Address="0x40022024" Authority="RW" Description="GPIO Pull Up register 0, for GPIO[7:0]" Name="GPIOA_PULLUP0" Width="32"/>
+      <Register Address="0x40022028" Authority="RW" Description="GPIO Pull up register 1, for GPIO[15:8]" Name="GPIOA_PULLUP1" Width="32"/>
+      <Register Address="0x4002202C" Authority="RW" Description="GPIO Pull up register 2, for GPIO[23:16]" Name="GPIOA_PULLUP2" Width="32"/>
+      <Register Address="0x40022030" Authority="RW" Description="GPIO Pull up register 3, for GPIO[31:24]" Name="GPIOA_PULLUP3" Width="32"/>
+      <Register Address="0x40022034" Authority="RW" Description="GPIO Pull Down register 0, for GPIO[7:0]" Name="GPIOA_PULLDOWN0" Width="32"/>
+      <Register Address="0x40022038" Authority="RW" Description="GPIO Pull Down register 1, for GPIO[15:8]" Name="GPIOA_PULLDOWN1" Width="32"/>
+      <Register Address="0x4002203C" Authority="RW" Description="GPIO Pull Down register 2, for GPIO[23:16]" Name="GPIOA_PULLDOWN2" Width="32"/>
+      <Register Address="0x40022040" Authority="RW" Description="GPIO Pull Down register 3, for GPIO[31:24]" Name="GPIOA_PULLDOWN3" Width="32"/>
+      <Register Address="0x40022044" Authority="RW" Description="GPIO Drive capability register 0, for GPIO[7:0]" Name="GPIOA_DR0" Width="32"/>
+      <Register Address="0x40022048" Authority="RW" Description="GPIO Drive capability register 1, for GPIO[15:8]" Name="GPIOA_DR1" Width="32"/>
+      <Register Address="0x4002204C" Authority="RW" Description="GPIO Drive capability register 2, for GPIO[23:16]" Name="GPIOA_DR2" Width="32"/>
+      <Register Address="0x40022050" Authority="RW" Description="GPIO Drive capability register 3, for GPIO[31:24]" Name="GPIOA_DR3" Width="32"/>
+      <Register Address="0x40022054" Authority="RW" Description="GPIO Hysteresis window Enable register for GPIO[31:0]" Name="GPIOA_HY" Width="32"/>
+      <Register Address="0x40022058" Authority="RW" Description="GPIO Open Drain Enable register for GPIO[31:0]" Name="GPIOA_OD" Width="32"/>
+      <Register Address="0x4002205C" Authority="RW" Description="GPIO Slew Rate Enable register for GPIO[31:0]" Name="GPIOA_SR" Width="32"/>
+      <Register Address="0x40022060" Authority="RW" Description="GPIO IE Mode register for GPIO[31:0]" Name="GPIOA_IEM" Width="32"/>
+      <Register Address="0x40022064" Authority="RW" Description="GPIO input toggle pending register for GPIO[31:0]" Name="GPIOA_PND" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="GPIOB">
+      <Register Address="0x40025000" Authority="RW" Description="GPIO Mode register 0" Name="GPIOB_MODE0" Width="32"/>
+      <Register Address="0x40025004" Authority="RW" Description="GPIO Mode register 1" Name="GPIOB_MODE1" Width="32"/>
+      <Register Address="0x40025008" Authority="RW" Description="GPIO Alternate Function register 0, for GPIO[7:0]" Name="GPIOB_AFR0" Width="32"/>
+      <Register Address="0x4002500C" Authority="RW" Description="GPIO Alternate Function register 1, for GPIO[15:8]" Name="GPIOB_AFR1" Width="32"/>
+      <Register Address="0x40025010" Authority="RW" Description="GPIO Alternate Function register 2, for GPIO[23:16]" Name="GPIOB_AFR2" Width="32"/>
+      <Register Address="0x40025014" Authority="RW" Description="GPIO Alternate Function register 3, for GPIO[31:24]" Name="GPIOB_AFR3" Width="32"/>
+      <Register Address="0x40025018" Authority="RW" Description="GPIO Data register, read and write data for GPIO[31:0]" Name="GPIOB_DATA" Width="32"/>
+      <Register Address="0x4002501C" Authority="RW" Description="GPIO Debouce Enable register for GPIO[31:0]" Name="GPIOB_DEBEN" Width="32"/>
+      <Register Address="0x40025020" Authority="RW" Description="GPIO Interrupt Mask register for GPIO[31:0]" Name="GPIOB_INTMASK" Width="32"/>
+      <Register Address="0x40025024" Authority="RW" Description="GPIO Pull Up register 0, for GPIO[7:0]" Name="GPIOB_PULLUP0" Width="32"/>
+      <Register Address="0x40025028" Authority="RW" Description="GPIO Pull up register 1, for GPIO[15:8]" Name="GPIOB_PULLUP1" Width="32"/>
+      <Register Address="0x4002502C" Authority="RW" Description="GPIO Pull up register 2, for GPIO[23:16]" Name="GPIOB_PULLUP2" Width="32"/>
+      <Register Address="0x40025030" Authority="RW" Description="GPIO Pull up register 3, for GPIO[31:24]" Name="GPIOB_PULLUP3" Width="32"/>
+      <Register Address="0x40025034" Authority="RW" Description="GPIO Pull Down register 0, for GPIO[7:0]" Name="GPIOB_PULLDOWN0" Width="32"/>
+      <Register Address="0x40025038" Authority="RW" Description="GPIO Pull Down register 1, for GPIO[15:8]" Name="GPIOB_PULLDOWN1" Width="32"/>
+      <Register Address="0x4002503C" Authority="RW" Description="GPIO Pull Down register 2, for GPIO[23:16]" Name="GPIOB_PULLDOWN2" Width="32"/>
+      <Register Address="0x40025040" Authority="RW" Description="GPIO Pull Down register 3, for GPIO[31:24]" Name="GPIOB_PULLDOWN3" Width="32"/>
+      <Register Address="0x40025044" Authority="RW" Description="GPIO Drive capability register 0, for GPIO[7:0]" Name="GPIOB_DR0" Width="32"/>
+      <Register Address="0x40025048" Authority="RW" Description="GPIO Drive capability register 1, for GPIO[15:8]" Name="GPIOB_DR1" Width="32"/>
+      <Register Address="0x4002504C" Authority="RW" Description="GPIO Drive capability register 2, for GPIO[23:16]" Name="GPIOB_DR2" Width="32"/>
+      <Register Address="0x40025050" Authority="RW" Description="GPIO Drive capability register 3, for GPIO[31:24]" Name="GPIOB_DR3" Width="32"/>
+      <Register Address="0x40025054" Authority="RW" Description="GPIO Hysteresis window Enable register for GPIO[31:0]" Name="GPIOB_HY" Width="32"/>
+      <Register Address="0x40025058" Authority="RW" Description="GPIO Open Drain Enable register for GPIO[31:0]" Name="GPIOB_OD" Width="32"/>
+      <Register Address="0x4002505C" Authority="RW" Description="GPIO Slew Rate Enable register for GPIO[31:0]" Name="GPIOB_SR" Width="32"/>
+      <Register Address="0x40025060" Authority="RW" Description="GPIO IE Mode register for GPIO[31:0]" Name="GPIOB_IEM" Width="32"/>
+      <Register Address="0x40025064" Authority="RW" Description="GPIO input toggle pending register for GPIO[31:0]" Name="GPIOB_PND" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="CRC">
+      <Register Address="0x40017000" Authority="RW" Description="CRC Configuration register" Name="CRC_CFG" Width="32"/>
+      <Register Address="0x40017004" Authority="RW" Description="CRC Initialization register" Name="CRC_INIT" Width="32"/>
+      <Register Address="0x40017008" Authority="RW" Description="CRC Inversion register" Name="CRC_INV" Width="32"/>
+      <Register Address="0x4001700C" Authority="RW" Description="CRC Polynomial register, default is 32 ploy value" Name="CRC_POLY" Width="32"/>
+      <Register Address="0x40017010" Authority="RW" Description="CRC pending clear kick start" Name="CRC_KST" Width="32"/>
+      <Register Address="0x40017014" Authority="RO" Description="CRC pending status" Name="CRC_STA" Width="32"/>
+      <Register Address="0x4001701C" Authority="RW" Description="CRC DMA start Address, align in word" Name="CRC_ADDR" Width="32"/>
+      <Register Address="0x40017020" Authority="RW" Description="CRC DMA word Length (unit: byte)" Name="CRC_LEN" Width="32"/>
+      <Register Address="0x40017024" Authority="RO" Description="CRC result Output" Name="CRC_OUT" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="MIPI">
+      <Register Address="0x40011000" Authority="RW" Description="MIPI Control register" Name="RFFE_CTL" Width="32"/>
+      <Register Address="0x40011004" Authority="RW" Description="MIPI DATA register" Name="RFFE_DATA0" Width="32"/>
+      <Register Address="0x40011008" Authority="RW" Description="MIPI DATA register" Name="RFFE_DATA1" Width="32"/>
+      <Register Address="0x4001100C" Authority="RW" Description="MIPI DATA register" Name="RFFE_DATA2" Width="32"/>
+      <Register Address="0x40011010" Authority="RW" Description="MIPI DATA register" Name="RFFE_DATA3" Width="32"/>
+      <Register Address="0x40011014" Authority="RW" Description="MIPI differnet Interrput Enable register" Name="RFFE_INTE" Width="32"/>
+      <Register Address="0x40011018" Authority="RW" Description="MIPI differnet Interrput pending register" Name="RFFE_STA" Width="32"/>
+      <Register Address="0x4001101C" Authority="RW" Description="MIPI Delay Control register, change this register by software only when MIPI RFFE is at idle state" Name="RFFE_DCTL" Width="32"/>
+      <Register Address="0x40011020" Authority="RW" Description="MIPI TEST register, change this register by software only when MIPI RFFE is at idle state" Name="RFFE_TEST" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="GMAC">
+      <Register Address="0x40028000" Authority="RW" Description="GMAC bus mode register" Name="CSR0" Width="32"/>
+      <Register Address="0x40028008" Authority="RW" Description="GMAC transmit poll demand register" Name="CSR1" Width="32"/>
+      <Register Address="0x40028010" Authority="RW" Description="GMAC receive poll demand register" Name="CSR2" Width="32"/>
+      <Register Address="0x40028018" Authority="RW" Description="GMAC receive list base address register" Name="CSR3" Width="32"/>
+      <Register Address="0x40028020" Authority="RW" Description="GMAC transmit list base address register" Name="CSR4" Width="32"/>
+      <Register Address="0x40028028" Authority="RW" Description="GMAC status register" Name="CSR5" Width="32"/>
+      <Register Address="0x40028030" Authority="RW" Description="GMAC operation mode register" Name="CSR6" Width="32"/>
+      <Register Address="0x40028038" Authority="RW" Description="GMAC interrupt enable register" Name="CSR7" Width="32"/>
+      <Register Address="0x40028040" Authority="RW" Description="For future usage" Name="RESERVED" Width="32"/>
+      <Register Address="0x40028048" Authority="RW" Description="GMAC software MII serial management register" Name="CSR9" Width="32"/>
+      <Register Address="0x40028050" Authority="RW" Description="GMAC MII serial management register" Name="CSR10" Width="32"/>
+      <Register Address="0x40028058" Authority="RW" Description="GMAC timer and interrupt mitigation control register" Name="CSR11" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="M2M_DMA0">
+      <Register Address="0x4001E000" Authority="RW" Description="DMA control register" Name="DMA0_CON" Width="32"/>
+      <Register Address="0x4001E004" Authority="RW" Description="DMA Send Action Interrput Enable register" Name="DMA0_SAIE" Width="32"/>
+      <Register Address="0x4001E008" Authority="RW" Description="DMA Data register" Name="DMA0_DATA" Width="32"/>
+      <Register Address="0x4001E00C" Authority="RW" Description="DMA Source Address register" Name="DMA0_SADR" Width="32"/>
+      <Register Address="0x4001E010" Authority="RW" Description="DMA Target Address register" Name="DMA0_TADR" Width="32"/>
+      <Register Address="0x4001E014" Authority="RW" Description="DMA length register" Name="DMA0_DLEN" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="M2M_DMA1">
+      <Register Address="0x4001E018" Authority="RW" Description="DMA control register" Name="DMA1_CON" Width="32"/>
+      <Register Address="0x4001E01C" Authority="RW" Description="DMA Send Action Interrput Enable register" Name="DMA1_SAIE" Width="32"/>
+      <Register Address="0x4001E020" Authority="RW" Description="DMA Data register" Name="DMA1_DATA" Width="32"/>
+      <Register Address="0x4001E024" Authority="RW" Description="DMA Source Address register" Name="DMA1_SADR" Width="32"/>
+      <Register Address="0x4001E028" Authority="RW" Description="DMA Target Address register" Name="DMA1_TADR" Width="32"/>
+      <Register Address="0x4001E02C" Authority="RW" Description="DMA length register" Name="DMA1_DLEN" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SYSMNT">
+      <Register Address="0x40029000" Authority="RW" Description="System Monitor Control register" Name="CTRL" Width="32"/>
+      <Register Address="0x40029004" Authority="RW" Description="System Monitor Pending register" Name="PND" Width="32"/>
+      <Register Address="0x40029008" Authority="WO" Description="System monitor write 0 to clear RD,WR,PND register, bit number correspond channel number" Name="CLR" Width="32"/>
+      <Register Address="0x4002900C" Authority="RO" Description="System monitor Read flag register" Name="RD" Width="32"/>
+      <Register Address="0x40029010" Authority="RO" Description="System monitor Write flag register" Name="WR" Width="32"/>
+      <Register Address="0x40029020" Authority="RO" Description="System monitor current excuted PC register" Name="CPU_PC0" Width="32"/>
+      <Register Address="0x40029024" Authority="RO" Description="System monitor excuted PC register when error register" Name="CPU_PC1" Width="32"/>
+      <Register Address="0x40029028" Authority="RO" Description="System monitor pre1-excuted PC register when error register" Name="CPU_PC2" Width="32"/>
+      <Register Address="0x4002902C" Authority="RO" Description="System monitor pre2-excuted PC register when error register" Name="CPU_PC3" Width="32"/>
+      <Register Name="CH0_LMT_L" Authority="RW" Address="0x40029040" Width="32" Description="Ch0 limit low register"/>
+      <Register Name="CH0_LMT_H" Authority="RW" Address="0x40029044" Width="32" Description="Ch0 limit high register"/>
+      <Register Name="CH0_ERR_ADR" Authority="RW" Address="0x40029048" Width="32" Description="Ch0 acess error address register"/>
+      <Register Name="CH1_LMT_L" Authority="RW" Address="0x40029050" Width="32" Description="Ch1 limit low register"/>
+      <Register Name="CH1_LMT_H" Authority="RW" Address="0x40029054" Width="32" Description="Ch1 limit high register"/>
+      <Register Name="CH1_ERR_ADR" Authority="RW" Address="0x40029058" Width="32" Description="Ch1 acess error address register"/>
+      <Register Name="CH2_LMT_L" Authority="RW" Address="0x40029060" Width="32" Description="Ch2 limit low register"/>
+      <Register Name="CH2_LMT_H" Authority="RW" Address="0x40029064" Width="32" Description="Ch2 limit high register"/>
+      <Register Name="CH2_ERR_ADR" Authority="RW" Address="0x40029068" Width="32" Description="Ch2 acess error address register"/>
+      <Register Name="CH3_LMT_L" Authority="RW" Address="0x40029070" Width="32" Description="Ch3 limit low register"/>
+      <Register Name="CH3_LMT_H" Authority="RW" Address="0x40029074" Width="32" Description="Ch3 limit high register"/>
+      <Register Name="CH3_ERR_ADR" Authority="RW" Address="0x40029078" Width="32" Description="Ch3 acess error address register"/>
+      <Register Name="CH4_LMT_L" Authority="RW" Address="0x40029080" Width="32" Description="Ch4 limit low register"/>
+      <Register Name="CH4_LMT_H" Authority="RW" Address="0x40029084" Width="32" Description="Ch4 limit high register"/>
+      <Register Name="CH4_ERR_ADR" Authority="RW" Address="0x40029088" Width="32" Description="Ch4 acess error address register"/>
+      <Register Name="CH5_LMT_L" Authority="RW" Address="0x40029090" Width="32" Description="Ch5 limit low register"/>
+      <Register Name="CH5_LMT_H" Authority="RW" Address="0x40029094" Width="32" Description="Ch5 limit high register"/>
+      <Register Name="CH5_ERR_ADR" Authority="RW" Address="0x40029098" Width="32" Description="Ch5 acess error address register"/>
+      <Register Name="CH6_LMT_L" Authority="RW" Address="0x400290A0" Width="32" Description="Ch6 limit low register"/>
+      <Register Name="CH6_LMT_H" Authority="RW" Address="0x400290A4" Width="32" Description="Ch6 limit high register"/>
+      <Register Name="CH6_ERR_ADR" Authority="RW" Address="0x400290A8" Width="32" Description="Ch6 acess error address register"/>
+      <Register Name="CH7_LMT_L" Authority="RW" Address="0x400290B0" Width="32" Description="Ch7 limit low register"/>
+      <Register Name="CH7_LMT_H" Authority="RW" Address="0x400290B4" Width="32" Description="Ch7 limit high register"/>
+      <Register Name="CH7_ERR_ADR" Authority="RW" Address="0x400290B8" Width="32" Description="Ch7 acess error address register"/>
+      <Register Name="CH8_LMT_L" Authority="RW" Address="0x400290C0" Width="32" Description="Ch8 limit low register"/>
+      <Register Name="CH8_LMT_H" Authority="RW" Address="0x400290C4" Width="32" Description="Ch8 limit high register"/>
+      <Register Name="CH8_ERR_ADR" Authority="RW" Address="0x400290C8" Width="32" Description="Ch8 acess error address register"/>
+      <Register Name="CH9_LMT_L" Authority="RW" Address="0x400290D0" Width="32" Description="Ch9 limit low register"/>
+      <Register Name="CH9_LMT_H" Authority="RW" Address="0x400290D4" Width="32" Description="Ch9 limit high register"/>
+      <Register Name="CH9_ERR_ADR" Authority="RW" Address="0x400290D8" Width="32" Description="Ch9 acess error address register"/>
+      <Register Name="CH10_LMT_L" Authority="RW" Address="0x400290E0" Width="32" Description="Ch10 limit low register"/>
+      <Register Name="CH10_LMT_H" Authority="RW" Address="0x400290E4" Width="32" Description="Ch10 limit high register"/>
+      <Register Name="CH10_ERR_ADR" Authority="RW" Address="0x400290E8" Width="32" Description="Ch10 acess error address register"/>
+      <Register Name="CH11_LMT_L" Authority="RW" Address="0x400290F0" Width="32" Description="Ch11 limit low register"/>
+      <Register Name="CH11_LMT_H" Authority="RW" Address="0x400290F4" Width="32" Description="Ch11 limit high register"/>
+      <Register Name="CH11_ERR_ADR" Authority="RW" Address="0x400290F8" Width="32" Description="Ch11 acess error address register"/>
+      <Register Name="CH12_LMT_L" Authority="RW" Address="0x40029100" Width="32" Description="Ch12 limit low register"/>
+      <Register Name="CH12_LMT_H" Authority="RW" Address="0x40029104" Width="32" Description="Ch12 limit high register"/>
+      <Register Name="CH12_ERR_ADR" Authority="RW" Address="0x40029108" Width="32" Description="Ch12 acess error address register"/>
+      <Register Name="CH13_LMT_L" Authority="RW" Address="0x40029110" Width="32" Description="Ch13 limit low register"/>
+      <Register Name="CH13_LMT_H" Authority="RW" Address="0x40029114" Width="32" Description="Ch13 limit high register"/>
+      <Register Name="CH13_ERR_ADR" Authority="RW" Address="0x40029118" Width="32" Description="Ch13 acess error address register"/>
+      <Register Name="CH14_LMT_L" Authority="RW" Address="0x40029120" Width="32" Description="Ch14 limit low register"/>
+      <Register Name="CH14_LMT_H" Authority="RW" Address="0x40029124" Width="32" Description="Ch14 limit high register"/>
+      <Register Name="CH14_ERR_ADR" Authority="RW" Address="0x40029128" Width="32" Description="Ch14 acess error address register"/>
+      <Register Name="CH15_LMT_L" Authority="RW" Address="0x40029130" Width="32" Description="Ch15 limit low register"/>
+      <Register Name="CH15_LMT_H" Authority="RW" Address="0x40029134" Width="32" Description="Ch15 limit high register"/>
+      <Register Name="CH15_ERR_ADR" Authority="RW" Address="0x40029138" Width="32" Description="Ch15 acess error address register"/>
+      <Register Name="CH16_LMT_L" Authority="RW" Address="0x40029140" Width="32" Description="Ch16 limit low register"/>
+      <Register Name="CH16_LMT_H" Authority="RW" Address="0x40029144" Width="32" Description="Ch16 limit high register"/>
+      <Register Name="CH16_ERR_ADR" Authority="RW" Address="0x40029148" Width="32" Description="Ch16 acess error address register"/>
+      <Register Name="CH17_LMT_L" Authority="RW" Address="0x40029150" Width="32" Description="Ch17 limit low register"/>
+      <Register Name="CH17_LMT_H" Authority="RW" Address="0x40029154" Width="32" Description="Ch17 limit high register"/>
+      <Register Name="CH17_ERR_ADR" Authority="RW" Address="0x40029158" Width="32" Description="Ch17 acess error address register"/>
+      <Register Name="CH18_LMT_L" Authority="RW" Address="0x40029160" Width="32" Description="Ch18 limit low register"/>
+      <Register Name="CH18_LMT_H" Authority="RW" Address="0x40029164" Width="32" Description="Ch18 limit high register"/>
+      <Register Name="CH18_ERR_ADR" Authority="RW" Address="0x40029168" Width="32" Description="Ch18 acess error address register"/>
+      <Register Name="CH19_LMT_L" Authority="RW" Address="0x40029170" Width="32" Description="Ch19 limit low register"/>
+      <Register Name="CH19_LMT_H" Authority="RW" Address="0x40029174" Width="32" Description="Ch19 limit high register"/>
+      <Register Name="CH19_ERR_ADR" Authority="RW" Address="0x40029178" Width="32" Description="Ch19 acess error address register"/>
+      <Register Name="CH20_LMT_L" Authority="RW" Address="0x40029180" Width="32" Description="Ch20 limit low register"/>
+      <Register Name="CH20_LMT_H" Authority="RW" Address="0x40029184" Width="32" Description="Ch20 limit high register"/>
+      <Register Name="CH20_ERR_ADR" Authority="RW" Address="0x40029188" Width="32" Description="Ch20 acess error address register"/>
+    </Peripheral>
+    <Peripheral Name="EFUSE">
+      <Register Address="0x4000A000" Authority="RW" Description="Efuse Control register" Name="EFUSE_CON" Width="32"/>
+      <Register Address="0x4000A004" Authority="RW" Description="Efuse Timing Configuration register 0" Name="EFUSE_TIME_CON0" Width="32"/>
+      <Register Address="0x4000A008" Authority="RW" Description="Efuse Timing Configuration register 1" Name="EFUSE_TIME_CON1" Width="32"/>
+      <Register Address="0x4000A00C" Authority="RW" Description="Efuse Status register" Name="EFUSE_STATUS" Width="32"/>
+      <Register Address="0x4000A010" Authority="RW" Description="Efuse Address and Counter configuration register" Name="EFUSE_ADDR_CNT" Width="32"/>
+      <Register Address="0x4000A014" Authority="RW" Description="Efuse Data register" Name="EFUSE_DATA" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="PWRDMCTL">
+      <Register Address="0x40018000" Authority="RW" Description="LVD Control register" Name="LVD_CON" Width="32"/>
+      <Register Address="0x40018004" Authority="RW" Description="LVD Control register 1" Name="LVD_CON1" Width="32"/>
+      <Register Address="0x40018008" Authority="RW" Description="LVD Control register 2" Name="LVD_CON2" Width="32"/>
+      <Register Address="0x4001800C" Authority="RW" Description="For future usage" Name="RESERVED" Width="32"/>
+      <Register Address="0x40018010" Authority="RW" Description="Core PMU Control register 0" Name="CORE_PMUCON0" Width="32"/>
+      <Register Address="0x40018014" Authority="RW" Description="Core PMU Control register 1" Name="CORE_PMUCON1" Width="32"/>
+      <Register Address="0x40018018" Authority="RW" Description="Core PMU Control register 2" Name="CORE_PMUCON2" Width="32"/>
+      <Register Address="0x4001801C" Authority="RW" Description="Core PMU Control register 3" Name="CORE_PMUCON3" Width="32"/>
+      <Register Address="0x40018020" Authority="RW" Description="Core PMU Control register 4" Name="CORE_PMUCON4" Width="32"/>
+      <Register Address="0x40018024" Authority="RW" Description="Core PMU Control register 5" Name="CORE_PMUCON5" Width="32"/>
+      <Register Address="0x40018028" Authority="RW" Description="Core XOSC Control register 0" Name="CORE_RFCON0" Width="32"/>
+      <Register Address="0x4001802C" Authority="RW" Description="Core XOSC Control register 1" Name="CORE_RFCON1" Width="32"/>
+      <Register Address="0x40018030" Authority="RW" Description="Core PMU Control register 6" Name="CORE_PMUCON6" Width="32"/>
+      <Register Address="0x40018034" Authority="RW" Description="Core PMU Control register 7" Name="CORE_PMUCON7" Width="32"/>
+      <Register Address="0x40018038" Authority="RW" Description="Core PMU Control register 8" Name="CORE_PMUCON8" Width="32"/>
+      <Register Address="0x4001803C" Authority="RW" Description="For future usage" Name="RESERVED1" Width="32"/>
+      <Register Address="0x40018040" Authority="RW" Description="For future usage" Name="RESERVED2" Width="32"/>
+      <Register Address="0x40018044" Authority="RW" Description="For future usage" Name="RESERVED3" Width="32"/>
+      <Register Address="0x40018048" Authority="RW" Description="For future usage" Name="RESERVED4" Width="32"/>
+      <Register Address="0x4001804C" Authority="RW" Description="For future usage" Name="RESERVED5" Width="32"/>
+      <Register Address="0x40018050" Authority="RW" Description="For future usage" Name="RESERVED6" Width="32"/>
+      <Register Address="0x40018054" Authority="RW" Description="For future usage" Name="RESERVED7" Width="32"/>
+      <Register Address="0x40018058" Authority="RW" Description="For future usage" Name="RESERVED8" Width="32"/>
+      <Register Address="0x4001805C" Authority="RW" Description="For future usage" Name="RESERVED9" Width="32"/>
+      <Register Address="0x40018060" Authority="RW" Description="For future usage" Name="RESERVED10" Width="32"/>
+      <Register Address="0x40018064" Authority="RW" Description="For future usage" Name="RESERVED11" Width="32"/>
+      <Register Address="0x40018068" Authority="RW" Description="For future usage" Name="RESERVED12" Width="32"/>
+      <Register Address="0x4001806C" Authority="RW" Description="For future usage" Name="RESERVED13" Width="32"/>
+      <Register Address="0x40018070" Authority="RW" Description="For future usage" Name="RESERVED14" Width="32"/>
+      <Register Address="0x40018074" Authority="RW" Description="For future usage" Name="RESERVED15" Width="32"/>
+      <Register Address="0x40018078" Authority="RW" Description="For future usage" Name="RESERVED16" Width="32"/>
+      <Register Address="0x4001807C" Authority="RW" Description="For future usage" Name="RESERVED17" Width="32"/>
+      <Register Address="0x40018080" Authority="RW" Description="Core wakeup Timer Control register" Name="CORE_TMRCON" Width="32"/>
+      <Register Address="0x40018084" Authority="RW" Description="Core wakeup Timer PR Control register" Name="CORE_TMRPR" Width="32"/>
+      <Register Address="0x40018088" Authority="RW" Description="Core wakeup Timer PRT Control register" Name="CORE_TMRPRT" Width="32"/>
+      <Register Address="0x4001808C" Authority="RW" Description="Core wakeup Timer Trim Control register" Name="CORE_TMRTRIM" Width="32"/>
+      <Register Address="0x40018090" Authority="RW" Description="For future usage" Name="RESERVED18" Width="32"/>
+      <Register Address="0x40018094" Authority="RW" Description="For future usage" Name="RESERVED19" Width="32"/>
+      <Register Address="0x40018098" Authority="RW" Description="For future usage" Name="RESERVED20" Width="32"/>
+      <Register Address="0x4001809C" Authority="RW" Description="For future usage" Name="RESERVED21" Width="32"/>
+      <Register Address="0x400180A0" Authority="RW" Description="Wakeup Control register" Name="CORE_WKCON" Width="32"/>
+      <Register Address="0x400180A4" Authority="RW" Description="For future usage" Name="RESERVED22" Width="32"/>
+      <Register Address="0x400180A8" Authority="RW" Description="For future usage" Name="RESERVED23" Width="32"/>
+      <Register Address="0x400180AC" Authority="RW" Description="For future usage" Name="RESERVED24" Width="32"/>
+      <Register Address="0x400180B0" Authority="RW" Description="Core Security Control register" Name="CORE_SECCON" Width="32"/>
+      <Register Address="0x400180B4" Authority="RW" Description="Core Security Data register" Name="CORE_SECDAT" Width="32"/>
+      <Register Address="0x400180B8" Authority="RW" Description="Core Security Address register" Name="CORE_SECADR" Width="32"/>
+      <Register Address="0x400180BC" Authority="RW" Description="Core Security Key register, wrtie 0xC053781B to unlock" Name="CORE_SECKEY" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SDIO">
+      <Register Address="0x40040000" Authority="RW" Description="SDIO Data port register" Name="DATA_PORT" Width="32"/>
+      <Register Address="0x40040004" Authority="RO" Description="Interrupt Identification register, IP original register. (SDIO device not read and write,but just only SDIO HOST send CMD read)" Name="INT_ID" Width="32"/>
+      <Register Address="0x40040008" Authority="RW" Description="CIS Function 0 Address register" Name="CIS_FUNC0_ADDR" Width="32"/>
+      <Register Address="0x4004000C" Authority="RW" Description="CIS Function 1 Address register" Name="CIS_FUNC1_ADDR" Width="32"/>
+      <Register Address="0x40040010" Authority="RW" Description="CSA Address register" Name="CSA_ADDR" Width="32"/>
+      <Register Address="0x40040014" Authority="RW" Description="Read Address register" Name="READ_ADDR" Width="32"/>
+      <Register Address="0x40040018" Authority="RW" Description="Write Address register" Name="WRITE_ADDR" Width="32"/>
+      <Register Address="0x4004001C" Authority="RW" Description="AHB Transmit Counter register" Name="AHB_TRANS_CNT" Width="32"/>
+      <Register Address="0x40040020" Authority="RW" Description="SDIO Transmit Counter register" Name="SDIO_TRANS_CNT" Width="32"/>
+      <Register Address="0x40040024" Authority="RW" Description="CIA register" Name="CIA" Width="32"/>
+      <Register Address="0x40040028" Authority="RW" Description="Program register" Name="PROGRAM" Width="32"/>
+      <Register Address="0x4004002C" Authority="RW" Description="Interrput Status register, IP original register. (SDIO host not read and write,but just only SDIO device can read and write)" Name="INT_STATUS" Width="32"/>
+      <Register Address="0x40040030" Authority="RW" Description="Interrput Enable register, IP original register. (SDIO host not read and write,but just only SDIO device can read and write)" Name="INT_ENABLE" Width="32"/>
+      <Register Address="0x40040034" Authority="RW" Description="OCR register" Name="OCR" Width="32"/>
+      <Register Address="0x40040038" Authority="RW" Description="Clock Wakeup register" Name="CLK_WK" Width="32"/>
+      <Register Address="0x4004003C" Authority="RW" Description="AHB Brust size register" Name="AHB_BURST_SIZE" Width="32"/>
+      <Register Address="0x40040040" Authority="RW" Description="AHB Software reset register" Name="AHB_SOFT_RESET" Width="32"/>
+      <Register Address="0x40040044" Authority="RW" Description="SDIO host cmd address" Name="SDIO_TRANS_ADDR" Width="32"/>
+      <Register Address="0x40040048" Authority="RW" Description="SDIO User define register" Name="SDIO_USER0" Width="32"/>
+      <Register Address="0x4004004C" Authority="RW" Description="SDIO User define register" Name="SDIO_USER1" Width="32"/>
+      <Register Address="0x40040050" Authority="RW" Description="SDIO User define register" Name="SDIO_USER2" Width="32"/>
+      <Register Address="0x40040054" Authority="RW" Description="SDIO User define register" Name="SDIO_USER3" Width="32"/>
+      <Register Address="0x40040058" Authority="RW" Description="SDIO DMA Count Control register" Name="SDIO_BCNTLEN" Width="32"/>
+      <Register Address="0x4004005C" Authority="RW" Description="SDIO DMA Finish Counter register" Name="SDIO_CMPLET_BCNT" Width="32"/>
+      <Register Address="0x40040060" Authority="RO" Description="SDIO write data Block Size register" Name="SDIO_BLOCK_SIZE" Width="32"/>
+      <Register Address="0x40040064" Authority="RO" Description="SDIO write data Block Number register" Name="SDIO_BLOCK_NUM" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="WDT">
+      <Register Address="0x40013000" Authority="RW" Description="Watchdog Configuration register" Name="WDT_CON" Width="32"/>
+      <Register Address="0x40013004" Authority="RW" Description="Watchdog Key register" Name="WDT_KEY" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="IIC0">
+      <Register Address="0x40000000" Authority="RW" Description="IIC Configuration register" Name="CON" Width="32"/>
+      <Register Address="0x40000004" Authority="RW" Description="IIC Target Address Register" Name="TAR" Width="32"/>
+      <Register Address="0x40000008" Authority="RW" Description="IIC Slave Address Register" Name="SAR" Width="32"/>
+      <Register Address="0x4000000C" Authority="RW" Description="IIC High Speed Master mode code Address register" Name="HS_MADDR" Width="32"/>
+      <Register Address="0x40000010" Authority="RW" Description="IIC Data or Command register" Name="DATA_CMD" Width="32"/>
+      <Register Address="0x40000014" Authority="RW" Description="Standard Speed IIC Clock SCL High Count register" Name="SS_SCL_HCNT" Width="32"/>
+      <Register Address="0x40000018" Authority="RW" Description="Standard Speed IIC Clock SCL Low Count register" Name="SS_SCL_LCNT" Width="32"/>
+      <Register Address="0x4000001C" Authority="RW" Description="Fast Mode or Fast Mode Plus IIC Clock SCL High Count register" Name="FS_SCL_HCNT" Width="32"/>
+      <Register Address="0x40000020" Authority="RW" Description="Fast Mode or Fast Mode Plus IIC Clock SCL Low Count register" Name="FS_SCL_LCNT" Width="32"/>
+      <Register Address="0x40000024" Authority="RW" Description="High Speed IIC Clock SCL High Count register" Name="HS_SCL_HCNT" Width="32"/>
+      <Register Address="0x40000028" Authority="RW" Description="High Speed IIC Clock SCL Low Count register" Name="HS_SCL_LCNT" Width="32"/>
+      <Register Address="0x4000002C" Authority="RW" Description="IIC Interrupt Status register" Name="INTR_STAT" Width="32"/>
+      <Register Address="0x40000030" Authority="RW" Description="IIC Interrupt Mask register" Name="INTR_MASK" Width="32"/>
+      <Register Address="0x40000034" Authority="RW" Description="IIC Raw Interrupt Status register" Name="RAW_INTR_STAT" Width="32"/>
+      <Register Address="0x40000038" Authority="RW" Description="IIC Receive FIFO Threshold register" Name="RX_TL" Width="32"/>
+      <Register Address="0x4000003C" Authority="RW" Description="IIC Transmit FIFO Threshold register" Name="TX_TL" Width="32"/>
+      <Register Address="0x40000040" Authority="RW" Description="IIC Clear Interrupt Register" Name="CLR_INTR" Width="32"/>
+      <Register Address="0x40000044" Authority="RW" Description="IIC Clear RX_UNDER Interrupt Register" Name="CLR_RX_UNDER" Width="32"/>
+      <Register Address="0x40000048" Authority="RW" Description="IIC Clear RX_OVER Interrupt Register" Name="CLR_RX_OVER" Width="32"/>
+      <Register Address="0x4000004C" Authority="RW" Description="IIC Clear TX_OVER Interrupt Register" Name="CLR_TX_OVER" Width="32"/>
+      <Register Address="0x40000050" Authority="RW" Description="IIC Clear RD_REQ Interrupt Register" Name="CLR_RD_REQ" Width="32"/>
+      <Register Address="0x40000054" Authority="RW" Description="IIC Clear TX_ABRT Interrupt Register" Name="CLR_TX_ABRT" Width="32"/>
+      <Register Address="0x40000058" Authority="RW" Description="IIC Clear RX_DONE Interrupt Register" Name="CLR_RX_DONE" Width="32"/>
+      <Register Address="0x4000005C" Authority="RW" Description="IIC Clear ACTIVITY Interrupt Register" Name="CLR_ACTIVITY" Width="32"/>
+      <Register Address="0x40000060" Authority="RW" Description="IIC Clear STOP_DET Interrupt Register" Name="CLR_STOP_DET" Width="32"/>
+      <Register Address="0x40000064" Authority="RW" Description="IIC Clear START_DET Interrupt Register" Name="CLR_START_DET" Width="32"/>
+      <Register Address="0x40000068" Authority="RW" Description="IIC Clear GEN_CALL Interrupt Register" Name="CLR_GEN_CALL" Width="32"/>
+      <Register Address="0x4000006C" Authority="RW" Description="IIC ENABLE register" Name="ENABLE" Width="32"/>
+      <Register Address="0x40000070" Authority="RO" Description="IIC STATUS register" Name="STATUS" Width="32"/>
+      <Register Address="0x40000074" Authority="RW" Description="IIC TXFLR register" Name="TXFLR" Width="32"/>
+      <Register Address="0x40000078" Authority="RW" Description="IIC RXFLR register" Name="RXFLR" Width="32"/>
+      <Register Address="0x4000007C" Authority="RW" Description="IIC SDA_HOLD register" Name="SDA_HOLD" Width="32"/>
+      <Register Address="0x40000080" Authority="RW" Description="IIC Tx Abort Source register" Name="TX_ABRT_SOURCE" Width="32"/>
+      <Register Address="0x40000084" Authority="RW" Description="IIC Slave Data No Ack Only register" Name="SLV_DATA_NACK_ONLY" Width="32"/>
+      <Register Address="0x40000088" Authority="RW" Description="IIC DMA Control Register" Name="DMA_CR" Width="32"/>
+      <Register Address="0x4000008C" Authority="RW" Description="IIC DMA Transmit Data Level Register" Name="DMA_TDLR" Width="32"/>
+      <Register Address="0x40000090" Authority="RW" Description="IIC DMA Receive Data Level Register" Name="DMA_RDLR" Width="32"/>
+      <Register Address="0x40000094" Authority="RW" Description="IIC SDA Setup register" Name="SDA_SETUP" Width="32"/>
+      <Register Address="0x40000098" Authority="RW" Description="IIC ACK General Call register" Name="ACK_GENERAL_CALL" Width="32"/>
+      <Register Address="0x4000009C" Authority="RW" Description="IIC Enable Status register" Name="ENABLE_STATUS" Width="32"/>
+      <Register Address="0x400000A0" Authority="RW" Description="IIC SS and FS Spike Suppression Limit register" Name="FS_SPKLEN" Width="32"/>
+      <Register Address="0x400000A4" Authority="RW" Description="IIC HS Spike Suppression Limit register" Name="HS_SPKLEN" Width="32"/>
+      <Register Address="0x400000A8" Authority="RW" Description="IIC Clear RESTART_DET Interrupt register" Name="CLR_RESTART_DET" Width="32"/>
+      <Register Address="0x400000AC" Authority="RW" Description="IIC SCL Stuck At Low Timeout register" Name="SCL_STUCK_AT_LOW_TIMEOUT" Width="32"/>
+      <Register Address="0x400000B0" Authority="RW" Description="IIC SDA Stuck At Low Timeout register" Name="SDA_STUCK_AT_LOW_TIMEOUT" Width="32"/>
+      <Register Address="0x400000B4" Authority="RW" Description="IIC Clear SCL_STUCK_DET Interrupt register" Name="CLR_SCL_STUCK_DET" Width="32"/>
+      <Register Address="0x400000B8" Authority="RW" Description="IIC Device ID register" Name="DEVICE_ID" Width="32"/>
+      <Register Address="0x400000BC" Authority="RW" Description="IIC SMBUS Slave Clock Extend timeout register" Name="SMBUS_CLOCK_LOW_SEXT" Width="32"/>
+      <Register Address="0x400000C0" Authority="RW" Description="IIC SMBUS Master Clock Extend timeout register" Name="SMBUS_CLOCK_LOW_MEXT" Width="32"/>
+      <Register Address="0x400000C4" Authority="RW" Description="IIC SMBus Thigh MAX Bus-Idle count register" Name="SMBUS_THIGH_MAX_IDLE_COUNT" Width="32"/>
+      <Register Address="0x400000C8" Authority="RW" Description="IIC SMBus Interrupt Status register" Name="SMBUS_INTR_STAT" Width="32"/>
+      <Register Address="0x400000CC" Authority="RW" Description="IIC SMBus Interrupt Mask register" Name="SMBUS_INTR_MASK" Width="32"/>
+      <Register Address="0x400000D0" Authority="RW" Description="IIC SMBus Raw Interrupt Status register" Name="SMBUS_INTR_RAW_STATUS" Width="32"/>
+      <Register Address="0x400000D4" Authority="RW" Description="IIC Clear SMBUS Interrupt register" Name="CLR_SMBUS_INTR" Width="32"/>
+      <Register Address="0x400000D8" Authority="RW" Description="IIC Optional Slave Address register" Name="OPTIONAL_SAR" Width="32"/>
+      <Register Address="0x400000DC" Authority="RW" Description="IIC SMBUS ARP UDID LSB register" Name="SMBUS_UDID_LSB" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TDMA">
+      <Register Address="0x40001000" Authority="RW" Description="TDMA Control register" Name="CTRL" Width="32"/>
+      <Register Address="0x40001004" Authority="RW" Description="TDMA Status register" Name="STATUS" Width="32"/>
+      <Register Address="0x40001008" Authority="RW" Description="TDMA Start Address register" Name="STADDR" Width="32"/>
+      <Register Address="0x4000100C" Authority="RW" Description="TDMA data Length register" Name="LEN" Width="32"/>
+      <Register Address="0x40001010" Authority="RW" Description="TDMA REM register" Name="REM" Width="32"/>
+      <Register Address="0x40001014" Authority="RW" Description="TDMA Transmit Length register" Name="TRLEN" Width="32"/>
+      <Register Address="0x40001018" Authority="RW" Description="TDMA Target Address register" Name="TRADDR" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TDMA2">
+      <Register Address="0x4000B000" Authority="RW" Description="TDMA Control register" Name="CTRL" Width="32"/>
+      <Register Address="0x4000B004" Authority="RW" Description="TDMA Status register" Name="STATUS" Width="32"/>
+      <Register Address="0x4000B008" Authority="RW" Description="TDMA Start Address register" Name="STADDR" Width="32"/>
+      <Register Address="0x4000B00C" Authority="RW" Description="TDMA data Length register" Name="LEN" Width="32"/>
+      <Register Address="0x4000B010" Authority="RW" Description="TDMA REM register" Name="REM" Width="32"/>
+      <Register Address="0x4000B014" Authority="RW" Description="TDMA Transmit Length register" Name="TRLEN" Width="32"/>
+      <Register Address="0x4000B018" Authority="RW" Description="TDMA Target Address register" Name="TRADDR" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="USART0">
+      <Register Address="0x40003000" Authority="RW" Description="USART Receive Buffer Register" Name="RBR" Width="32"/>
+      <Register Address="0x40003000" Authority="RW" Description="USART Transmit Holding Register" Name="THR" Width="32"/>
+      <Register Address="0x40003000" Authority="RW" Description="USART Divisor Latch Low" Name="DLL" Width="32"/>
+      <Register Address="0x40003004" Authority="RW" Description="USART Interrupt Enable Register" Name="IER" Width="32"/>
+      <Register Address="0x40003004" Authority="RW" Description="USART Divisor Latch High Register" Name="DLH" Width="32"/>
+      <Register Address="0x40003008" Authority="RW" Description="USART FIFO Control Register" Name="FCR" Width="32"/>
+      <Register Address="0x40003008" Authority="RW" Description="USART Interrupt Identity Register" Name="IIR" Width="32"/>
+      <Register Address="0x4000300C" Authority="RW" Description="USART Line Control Register" Name="LCR" Width="32"/>
+      <Register Address="0x40003010" Authority="RW" Description="USART Modem Control Register" Name="MCR" Width="32"/>
+      <Register Address="0x40003014" Authority="RW" Description="USART Line Status Register" Name="LSR" Width="32"/>
+      <Register Address="0x40003018" Authority="RW" Description="USART Modem Status Register" Name="MSR" Width="32"/>
+      <Register Address="0x4000301C" Authority="RW" Description="USART Scratchpad Register" Name="SCR" Width="32"/>
+      <Register Address="0x40003020" Authority="RW" Description="USART Low Power Divisor Latch Low Register" Name="LPDLL" Width="32"/>
+      <Register Address="0x40003024" Authority="RW" Description="USART Low Power Divisor Latch High Register" Name="LPDLH" Width="32"/>
+      <Register Address="0x40003028" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[1]" Width="32"/>
+      <Register Address="0x4000302C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[2]" Width="32"/>
+      <Register Address="0x40003030" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[3]" Width="32"/>
+      <Register Address="0x40003034" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[4]" Width="32"/>
+      <Register Address="0x40003038" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[5]" Width="32"/>
+      <Register Address="0x4000303C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[6]" Width="32"/>
+      <Register Address="0x40003040" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[7]" Width="32"/>
+      <Register Address="0x40003044" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[8]" Width="32"/>
+      <Register Address="0x40003048" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[9]" Width="32"/>
+      <Register Address="0x4000304C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[10]" Width="32"/>
+      <Register Address="0x40003050" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[11]" Width="32"/>
+      <Register Address="0x40003054" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[12]" Width="32"/>
+      <Register Address="0x40003058" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[13]" Width="32"/>
+      <Register Address="0x4000305C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[14]" Width="32"/>
+      <Register Address="0x40003060" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[15]" Width="32"/>
+      <Register Address="0x40003064" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[16]" Width="32"/>
+      <Register Address="0x40003068" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[17]" Width="32"/>
+      <Register Address="0x4000306C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[18]" Width="32"/>
+      <Register Address="0x40003070" Authority="RW" Description="USART FIFO Access Register" Name="FAR" Width="32"/>
+      <Register Address="0x40003074" Authority="RW" Description="USART Transmit FIFO Read Register" Name="TFR" Width="32"/>
+      <Register Address="0x40003078" Authority="RW" Description="USART Transmit FIFO Write Register" Name="RFW" Width="32"/>
+      <Register Address="0x4000307C" Authority="RW" Description="USART Status Register" Name="USR" Width="32"/>
+      <Register Address="0x40003080" Authority="RW" Description="USART Transmit FIFO Register" Name="TFL" Width="32"/>
+      <Register Address="0x40003084" Authority="RW" Description="USART Receive FIFO Register" Name="RFL" Width="32"/>
+      <Register Address="0x40003088" Authority="RW" Description="USART Software Reset Register" Name="SRR" Width="32"/>
+      <Register Address="0x4000308C" Authority="RW" Description="USART Shadow Request to Send Register" Name="SRTS" Width="32"/>
+      <Register Address="0x40003090" Authority="RW" Description="USART Shadow Break Control Register" Name="SBCR" Width="32"/>
+      <Register Address="0x40003094" Authority="RW" Description="USART Shadow DMA Mode Register" Name="SDMAM" Width="32"/>
+      <Register Address="0x40003098" Authority="RW" Description="USART Shadow FIFO Enable Register" Name="SFE" Width="32"/>
+      <Register Address="0x4000309C" Authority="RW" Description="USART Shadow RCVR Trigger Register" Name="SRT" Width="32"/>
+      <Register Address="0x400030A0" Authority="RW" Description="USART Shadow TX Empty Trigger Register" Name="STET" Width="32"/>
+      <Register Address="0x400030A4" Authority="RW" Description="USART Halt TX Register" Name="HTX" Width="32"/>
+      <Register Address="0x400030A8" Authority="RW" Description="USART DMA Software Acknowledge Register" Name="DMASA" Width="32"/>
+      <Register Address="0x400030AC" Authority="RW" Description="USART Transceiver Control Register" Name="TCR" Width="32"/>
+      <Register Address="0x400030B0" Authority="RW" Description="USART Driver Output Enable Register" Name="DE_EN" Width="32"/>
+      <Register Address="0x400030B4" Authority="RW" Description="USART Receiver Output Enable Register" Name="RE_EN" Width="32"/>
+      <Register Address="0x400030B8" Authority="RW" Description="USART Driver Output Enable Timing Register" Name="DET" Width="32"/>
+      <Register Address="0x400030BC" Authority="RW" Description="USART TurnAround Timing Register" Name="TAT" Width="32"/>
+      <Register Address="0x400030C0" Authority="RW" Description="USART Divisor Latch Fraction Register" Name="DLF" Width="32"/>
+      <Register Address="0x400030C4" Authority="RW" Description="USART Receive Address Register" Name="RAR" Width="32"/>
+      <Register Address="0x400030C8" Authority="RW" Description="USART Transmit Address Register" Name="TAR" Width="32"/>
+      <Register Address="0x400030CC" Authority="RW" Description="USART Line Extended Control Register" Name="LCR_EXT" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="USART1">
+      <Register Address="0x40004000" Authority="RW" Description="USART Receive Buffer Register" Name="RBR" Width="32"/>
+      <Register Address="0x40004000" Authority="RW" Description="USART Transmit Holding Register" Name="THR" Width="32"/>
+      <Register Address="0x40004000" Authority="RW" Description="USART Divisor Latch Low" Name="DLL" Width="32"/>
+      <Register Address="0x40004004" Authority="RW" Description="USART Interrupt Enable Register" Name="IER" Width="32"/>
+      <Register Address="0x40004004" Authority="RW" Description="USART Divisor Latch High Register" Name="DLH" Width="32"/>
+      <Register Address="0x40004008" Authority="RW" Description="USART FIFO Control Register" Name="FCR" Width="32"/>
+      <Register Address="0x40004008" Authority="RW" Description="USART Interrupt Identity Register" Name="IIR" Width="32"/>
+      <Register Address="0x4000400C" Authority="RW" Description="USART Line Control Register" Name="LCR" Width="32"/>
+      <Register Address="0x40004010" Authority="RW" Description="USART Modem Control Register" Name="MCR" Width="32"/>
+      <Register Address="0x40004014" Authority="RW" Description="USART Line Status Register" Name="LSR" Width="32"/>
+      <Register Address="0x40004018" Authority="RW" Description="USART Modem Status Register" Name="MSR" Width="32"/>
+      <Register Address="0x4000401C" Authority="RW" Description="USART Scratchpad Register" Name="SCR" Width="32"/>
+      <Register Address="0x40004020" Authority="RW" Description="USART Low Power Divisor Latch Low Register" Name="LPDLL" Width="32"/>
+      <Register Address="0x40004024" Authority="RW" Description="USART Low Power Divisor Latch High Register" Name="LPDLH" Width="32"/>
+      <Register Address="0x40004028" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[1]" Width="32"/>
+      <Register Address="0x4000402C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[2]" Width="32"/>
+      <Register Address="0x40004030" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[3]" Width="32"/>
+      <Register Address="0x40004034" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[4]" Width="32"/>
+      <Register Address="0x40004038" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[5]" Width="32"/>
+      <Register Address="0x4000403C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[6]" Width="32"/>
+      <Register Address="0x40004040" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[7]" Width="32"/>
+      <Register Address="0x40004044" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[8]" Width="32"/>
+      <Register Address="0x40004048" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[9]" Width="32"/>
+      <Register Address="0x4000404C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[10]" Width="32"/>
+      <Register Address="0x40004050" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[11]" Width="32"/>
+      <Register Address="0x40004054" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[12]" Width="32"/>
+      <Register Address="0x40004058" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[13]" Width="32"/>
+      <Register Address="0x4000405C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[14]" Width="32"/>
+      <Register Address="0x40004060" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[15]" Width="32"/>
+      <Register Address="0x40004064" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[16]" Width="32"/>
+      <Register Address="0x40004068" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[17]" Width="32"/>
+      <Register Address="0x4000406C" Authority="RW" Description="USART Shadow Receive/Transmit FIFO Buffer Register" Name="FIFO[18]" Width="32"/>
+      <Register Address="0x40004070" Authority="RW" Description="USART FIFO Access Register" Name="FAR" Width="32"/>
+      <Register Address="0x40004074" Authority="RW" Description="USART Transmit FIFO Read Register" Name="TFR" Width="32"/>
+      <Register Address="0x40004078" Authority="RW" Description="USART Transmit FIFO Write Register" Name="RFW" Width="32"/>
+      <Register Address="0x4000407C" Authority="RW" Description="USART Status Register" Name="USR" Width="32"/>
+      <Register Address="0x40004080" Authority="RW" Description="USART Transmit FIFO Register" Name="TFL" Width="32"/>
+      <Register Address="0x40004084" Authority="RW" Description="USART Receive FIFO Register" Name="RFL" Width="32"/>
+      <Register Address="0x40004088" Authority="RW" Description="USART Software Reset Register" Name="SRR" Width="32"/>
+      <Register Address="0x4000408C" Authority="RW" Description="USART Shadow Request to Send Register" Name="SRTS" Width="32"/>
+      <Register Address="0x40004090" Authority="RW" Description="USART Shadow Break Control Register" Name="SBCR" Width="32"/>
+      <Register Address="0x40004094" Authority="RW" Description="USART Shadow DMA Mode Register" Name="SDMAM" Width="32"/>
+      <Register Address="0x40004098" Authority="RW" Description="USART Shadow FIFO Enable Register" Name="SFE" Width="32"/>
+      <Register Address="0x4000409C" Authority="RW" Description="USART Shadow RCVR Trigger Register" Name="SRT" Width="32"/>
+      <Register Address="0x400040A0" Authority="RW" Description="USART Shadow TX Empty Trigger Register" Name="STET" Width="32"/>
+      <Register Address="0x400040A4" Authority="RW" Description="USART Halt TX Register" Name="HTX" Width="32"/>
+      <Register Address="0x400040A8" Authority="RW" Description="USART DMA Software Acknowledge Register" Name="DMASA" Width="32"/>
+      <Register Address="0x400040AC" Authority="RW" Description="USART Transceiver Control Register" Name="TCR" Width="32"/>
+      <Register Address="0x400040B0" Authority="RW" Description="USART Driver Output Enable Register" Name="DE_EN" Width="32"/>
+      <Register Address="0x400040B4" Authority="RW" Description="USART Receiver Output Enable Register" Name="RE_EN" Width="32"/>
+      <Register Address="0x400040B8" Authority="RW" Description="USART Driver Output Enable Timing Register" Name="DET" Width="32"/>
+      <Register Address="0x400040BC" Authority="RW" Description="USART TurnAround Timing Register" Name="TAT" Width="32"/>
+      <Register Address="0x400040C0" Authority="RW" Description="USART Divisor Latch Fraction Register" Name="DLF" Width="32"/>
+      <Register Address="0x400040C4" Authority="RW" Description="USART Receive Address Register" Name="RAR" Width="32"/>
+      <Register Address="0x400040C8" Authority="RW" Description="USART Transmit Address Register" Name="TAR" Width="32"/>
+      <Register Address="0x400040CC" Authority="RW" Description="USART Line Extended Control Register" Name="LCR_EXT" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="LMAC">
+      <Register Address="0x40008000" Authority="RW" Description="LMAC Address Low register" Name="MACADDRL" Width="32"/>
+      <Register Address="0x40008004" Authority="RW" Description="LMAC Address High register" Name="MACADDRH" Width="32"/>
+      <Register Address="0x40008008" Authority="RW" Description="LMAC AID register" Name="AID" Width="32"/>
+      <Register Address="0x40008010" Authority="RW" Description="LMAC TSFL register" Name="TSFL" Width="32"/>
+      <Register Address="0x40008014" Authority="RW" Description="LMAC TSFH register" Name="TSFH" Width="32"/>
+      <Register Address="0x40008018" Authority="RW" Description="LMAC NAV Counter register" Name="NAV_CNT" Width="32"/>
+      <Register Address="0x4000801C" Authority="RW" Description="LMAC SIFS Initialization register" Name="SIFS_INIT" Width="32"/>
+      <Register Address="0x40008020" Authority="RW" Description="LMAC BO Counter0 register" Name="BO_CNT0" Width="32"/>
+      <Register Address="0x40008024" Authority="RW" Description="LMAC BO Counter1 register" Name="BO_CNT1" Width="32"/>
+      <Register Address="0x4000802C" Authority="RO" Description="LMAC FSM_TSF register" Name="FSM_TSF" Width="32"/>
+      <Register Address="0x40008030" Authority="RW" Description="LMAC FSM Configuration register" Name="FSM_CFG" Width="32"/>
+      <Register Address="0x40008034" Authority="RO" Description="LMAC FSM Status register" Name="FSM_STAT" Width="32"/>
+      <Register Address="0x40008038" Authority="RO" Description="LMAC FSM_TSF1 register" Name="FSM_TSF1" Width="32"/>
+      <Register Address="0x4000803C" Authority="RW" Description="LMAC Random number Generator register" Name="RAND_GEN" Width="32"/>
+      <Register Address="0x40008040" Authority="RW" Description="LMAC COMN Control register" Name="COMN_CTRL" Width="32"/>
+      <Register Address="0x40008044" Authority="RW" Description="LMAC Interrupt Enable register" Name="IRQ_EN" Width="32"/>
+      <Register Address="0x40008048" Authority="RW" Description="LMAC Interrupt Pending register" Name="IRQ_PD" Width="32"/>
+      <Register Address="0x4000804C" Authority="RW" Description="LMAC AC Pending register" Name="AC_PD" Width="32"/>
+      <Register Address="0x40008054" Authority="RO" Description="LMAC FCS Result register" Name="FCS_RES" Width="32"/>
+      <Register Address="0x40008058" Authority="RW" Description="LMAC AGGR Control register" Name="AGGR_CTRL" Width="32"/>
+      <Register Address="0x4000805C" Authority="RW" Description="LMAC End To Limit" Name="END_TO_LIMIT" Width="32"/>
+      <Register Address="0x40008064" Authority="RW" Description="LMAC Tx Vector" Name="TXVEC[1]" Width="32"/>
+      <Register Address="0x40008068" Authority="RW" Description="LMAC Tx Vector" Name="TXVEC[2]" Width="32"/>
+      <Register Address="0x4000806C" Authority="RW" Description="LMAC Tx Vector" Name="TXVEC[3]" Width="32"/>
+      <Register Address="0x40008070" Authority="RW" Description="LMAC Tx Vector" Name="TXVEC[4]" Width="32"/>
+      <Register Address="0x40008074" Authority="RW" Description="LMAC Tx Status register" Name="TX_STAT" Width="32"/>
+      <Register Address="0x40008078" Authority="RW" Description="LMAC Tx Delay register 1" Name="TX_DLY1" Width="32"/>
+      <Register Address="0x4000807C" Authority="RW" Description="LMAC Tx Byte Count register" Name="TX_BYTCNT" Width="32"/>
+      <Register Address="0x40008080" Authority="RW" Description="LMAC Tx End of Byte register" Name="TX_EOFBYT" Width="32"/>
+      <Register Address="0x40008084" Authority="RW" Description="LMAC Tx Delay register 2" Name="TX_DLY2" Width="32"/>
+      <Register Address="0x40008088" Authority="RW" Description="LMAC Tx PRBS Generator register" Name="TX_PRBS_GEN" Width="32"/>
+      <Register Address="0x4000808C" Authority="RW" Description="LMAC Tx Delay register 3" Name="TX_DLY3" Width="32"/>
+      <Register Address="0x400080A0" Authority="RW" Description="LMAC Rx Control register" Name="RX_CTRL" Width="32"/>
+      <Register Address="0x400080A4" Authority="RO" Description="LMAC Rx Vector" Name="RXVEC[1]" Width="32"/>
+      <Register Address="0x400080A8" Authority="RO" Description="LMAC Rx Vector" Name="RXVEC[2]" Width="32"/>
+      <Register Address="0x400080AC" Authority="RO" Description="LMAC Rx Vector" Name="RXVEC[3]" Width="32"/>
+      <Register Address="0x400080B0" Authority="RO" Description="LMAC Rx Vector" Name="RXVEC[4]" Width="32"/>
+      <Register Address="0x400080B4" Authority="RW" Description="LMAC Rx Status register" Name="RX_STAT" Width="32"/>
+      <Register Address="0x400080BC" Authority="RW" Description="LMAC CCA Status register" Name="CCA_STAT" Width="32"/>
+      <Register Address="0x400080C0" Authority="RW" Description="LMAC HF Timer1 register" Name="HF_TIMER1" Width="32"/>
+      <Register Address="0x400080C4" Authority="RW" Description="LMAC HF Timer2 register" Name="HF_TIMER2" Width="32"/>
+      <Register Address="0x400080C8" Authority="RW" Description="LMAC LF Timer register" Name="LF_TIMER" Width="32"/>
+      <Register Address="0x400080CC" Authority="RW" Description="LMAC Timer Control register" Name="TIMER_CTL" Width="32"/>
+      <Register Address="0x400080D0" Authority="RW" Description="LMAC HF Timer3 register" Name="HF_TIMER3" Width="32"/>
+      <Register Address="0x400080D4" Authority="RW" Description="LMAC HF Timer4 register" Name="HF_TIMER4" Width="32"/>
+      <Register Address="0x400080D8" Authority="RW" Description="LMAC HF Timer5 register" Name="HF_TIMER5" Width="32"/>
+      <Register Address="0x400080DC" Authority="RW" Description="LMAC HF Timer6 register" Name="HF_TIMER6" Width="32"/>
+      <Register Address="0x400080F8" Authority="RW" Description="LMAC Test Control register" Name="TEST_CTRL" Width="32"/>
+      <Register Address="0x400080FC" Authority="RW" Description="LMAC Debug Control register" Name="DBG_CTRL" Width="32"/>
+      <Register Address="0x40008100" Authority="RW" Description="LMAC Tx DMA Control register" Name="TXDMACTL" Width="32"/>
+      <Register Address="0x40008104" Authority="RO" Description="LMAC Current Tx DMA Count register" Name="CURTXDMACNT" Width="32"/>
+      <Register Address="0x40008108" Authority="RO" Description="LMAC Tx DMA Start Address register" Name="TXDMASTAT" Width="32"/>
+      <Register Address="0x40008400" Authority="RW" Description="LMAC Rx DMA Control register" Name="RXDMACTL" Width="32"/>
+      <Register Address="0x40008404" Authority="RW" Description="LMAC Rx Start Address register" Name="RXFSTADDR" Width="32"/>
+      <Register Address="0x40008408" Authority="RW" Description="LMAC Rx End Address register" Name="RXFENADDR" Width="32"/>
+      <Register Address="0x40008410" Authority="RO" Description="LMAC Current Rx DMA Count register" Name="CURRXDMACNT" Width="32"/>
+      <Register Address="0x40008414" Authority="RO" Description="LMAC Rx DMA Status register" Name="RXDMASTAT" Width="32"/>
+      <Register Address="0x40008418" Authority="RO" Description="LMAC Rx FCS register" Name="RXFCS[1]" Width="32"/>
+      <Register Address="0x4000841C" Authority="RO" Description="LMAC Rx FCS register" Name="RXFCS[2]" Width="32"/>
+      <Register Address="0x40008620" Authority="RW" Description="LMAC Rx FSTADDR_SEC register" Name="RXFSTADDR_SEC" Width="32"/>
+      <Register Address="0x40008624" Authority="RW" Description="LMAC Rx FENADDR_SEC register" Name="RXFENADDR_SEC" Width="32"/>
+      <Register Address="0x40008630" Authority="RW" Description="LMAC CCA Debug Control register" Name="CCADBGCTL" Width="32"/>
+      <Register Address="0x40008634" Authority="RO" Description="LMAC CCA Info register" Name="CCAINFO[1]" Width="32"/>
+      <Register Address="0x40008638" Authority="RO" Description="LMAC CCA Info register" Name="CCAINFO[2]" Width="32"/>
+      <Register Address="0x4000863C" Authority="RO" Description="LMAC CCA Info register" Name="CCAINFO[3]" Width="32"/>
+      <Register Address="0x40008640" Authority="RO" Description="LMAC CCA Info register" Name="CCAINFO[4]" Width="32"/>
+      <Register Address="0x40008644" Authority="RO" Description="LMAC CCA Info register" Name="CCAINFO[5]" Width="32"/>
+      <Register Address="0x40008648" Authority="RW" Description="LMAC Dummy register" Name="DUMMY[1]" Width="32"/>
+      <Register Address="0x4000864C" Authority="RW" Description="LMAC Dummy register" Name="DUMMY[2]" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="CIPHER_ENGINE">
+      <Register Address="0x40010000" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[1]" Width="32"/>
+      <Register Address="0x40010004" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[2]" Width="32"/>
+      <Register Address="0x40010008" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[3]" Width="32"/>
+      <Register Address="0x4001000C" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[4]" Width="32"/>
+      <Register Address="0x40010010" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[5]" Width="32"/>
+      <Register Address="0x40010014" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[6]" Width="32"/>
+      <Register Address="0x40010018" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[7]" Width="32"/>
+      <Register Address="0x4001001C" Authority="RW" Description="Chiper Engine Key Register" Name="KEY[8]" Width="32"/>
+      <Register Address="0x40010020" Authority="RW" Description="Chiper Engine IV Register" Name="IV[1]" Width="32"/>
+      <Register Address="0x40010024" Authority="RW" Description="Chiper Engine IV Register" Name="IV[2]" Width="32"/>
+      <Register Address="0x40010028" Authority="RW" Description="Chiper Engine PN Register" Name="PN[1]" Width="32"/>
+      <Register Address="0x4001002C" Authority="RW" Description="Chiper Engine PN Register" Name="PN[2]" Width="32"/>
+      <Register Address="0x40010030" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[1]" Width="32"/>
+      <Register Address="0x40010034" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[2]" Width="32"/>
+      <Register Address="0x40010038" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[3]" Width="32"/>
+      <Register Address="0x4001003C" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[4]" Width="32"/>
+      <Register Address="0x40010040" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[5]" Width="32"/>
+      <Register Address="0x40010044" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[6]" Width="32"/>
+      <Register Address="0x40010048" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[7]" Width="32"/>
+      <Register Address="0x4001004C" Authority="RW" Description="Chiper Engine AAD Register" Name="AAD[8]" Width="32"/>
+      <Register Address="0x40010050" Authority="RW" Description="Chiper Engine Data Length Register" Name="ENC_DATA_LEN" Width="32"/>
+      <Register Address="0x40010054" Authority="RW" Description="Chiper Engine Source Address Register" Name="ENC_SADDR" Width="32"/>
+      <Register Address="0x40010058" Authority="RW" Description="Chiper Engine Destination Address Register" Name="ENC_DADDR" Width="32"/>
+      <Register Address="0x40010060" Authority="RW" Description="Chiper Engine Control Register" Name="CIPHER_CTRL[1]" Width="32"/>
+      <Register Address="0x40010064" Authority="RW" Description="Chiper Engine Control Register" Name="CIPHER_CTRL[2]" Width="32"/>
+      <Register Address="0x40010068" Authority="RW" Description="Chiper Engine Status Register" Name="CIPHER_STATUS" Width="32"/>
+      <Register Address="0x40010070" Authority="RO" Description="Chiper Engine MIC Register" Name="MIC[1]" Width="32"/>
+      <Register Address="0x40010074" Authority="RO" Description="Chiper Engine MIC Register" Name="MIC[2]" Width="32"/>
+      <Register Address="0x40010078" Authority="RO" Description="Chiper Engine MIC Register" Name="MIC[3]" Width="32"/>
+      <Register Address="0x4001007C" Authority="RO" Description="Chiper Engine MIC Register" Name="MIC[4]" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="SYS_AES">
+      <Register Address="0x40012000" Authority="RW" Description="SYS_AES Key Register" Name="KEY[1]" Width="32"/>
+      <Register Address="0x40012004" Authority="RW" Description="SYS_AES Key Register" Name="KEY[2]" Width="32"/>
+      <Register Address="0x40012008" Authority="RW" Description="SYS_AES Key Register" Name="KEY[3]" Width="32"/>
+      <Register Address="0x4001200C" Authority="RW" Description="SYS_AES Key Register" Name="KEY[4]" Width="32"/>
+      <Register Address="0x40012010" Authority="RW" Description="SYS_AES Key Register" Name="KEY[5]" Width="32"/>
+      <Register Address="0x40012014" Authority="RW" Description="SYS_AES Key Register" Name="KEY[6]" Width="32"/>
+      <Register Address="0x40012018" Authority="RW" Description="SYS_AES Key Register" Name="KEY[7]" Width="32"/>
+      <Register Address="0x4001201C" Authority="RW" Description="SYS_AES Key Register" Name="KEY[8]" Width="32"/>
+      <Register Address="0x40012024" Authority="RW" Description="SYS_AES Source Address Register" Name="SADDR" Width="32"/>
+      <Register Address="0x40012028" Authority="RW" Description="SYS_AES Destination Address Register" Name="DADDR" Width="32"/>
+      <Register Address="0x4001202C" Authority="RW" Description="SYS_AES Block Number Register" Name="BLOCK_NUM" Width="32"/>
+      <Register Address="0x40012040" Authority="RW" Description="SYS_AES Control Register" Name="AES_CTRL" Width="32"/>
+      <Register Address="0x40012044" Authority="RW" Description="SYS_AES Status Register" Name="AES_STAT" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TIMER0">
+      <Register Address="0x40015000" Authority="RW" Description="Timer Configuration Register" Name="CON" Width="32"/>
+      <Register Address="0x40015004" Authority="RW" Description="Timer Prescaler Register" Name="PR" Width="32"/>
+      <Register Address="0x40015008" Authority="RW" Description="Timer Counter Register" Name="CNT" Width="32"/>
+      <Register Address="0x4001500C" Authority="RW" Description="Timer PWM Register" Name="PWM" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TIMER1">
+      <Register Address="0x40015010" Authority="RW" Description="Timer Configuration Register" Name="CON" Width="32"/>
+      <Register Address="0x40015014" Authority="RW" Description="Timer Prescaler Register" Name="PR" Width="32"/>
+      <Register Address="0x40015018" Authority="RW" Description="Timer Counter Register" Name="CNT" Width="32"/>
+      <Register Address="0x4001501C" Authority="RW" Description="Timer PWM Register" Name="PWM" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TIMER2">
+      <Register Address="0x40015020" Authority="RW" Description="Timer Configuration Register" Name="CON" Width="32"/>
+      <Register Address="0x40015024" Authority="RW" Description="Timer Prescaler Register" Name="PR" Width="32"/>
+      <Register Address="0x40015028" Authority="RW" Description="Timer Counter Register" Name="CNT" Width="32"/>
+      <Register Address="0x4001502C" Authority="RW" Description="Timer PWM Register" Name="PWM" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="TIMER3">
+      <Register Address="0x40015030" Authority="RW" Description="Timer Configuration Register" Name="CON" Width="32"/>
+      <Register Address="0x40015034" Authority="RW" Description="Timer Prescaler Register" Name="PR" Width="32"/>
+      <Register Address="0x40015038" Authority="RW" Description="Timer Counter Register" Name="CNT" Width="32"/>
+      <Register Address="0x4001503C" Authority="RW" Description="Timer PWM Register" Name="PWM" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="DMAC">
+      <Register Address="0x40020160" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[1]" Width="32"/>
+      <Register Address="0x40020164" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[2]" Width="32"/>
+      <Register Address="0x40020168" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[3]" Width="32"/>
+      <Register Address="0x4002016C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[4]" Width="32"/>
+      <Register Address="0x40020170" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[5]" Width="32"/>
+      <Register Address="0x40020174" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[6]" Width="32"/>
+      <Register Address="0x40020178" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[7]" Width="32"/>
+      <Register Address="0x4002017C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[8]" Width="32"/>
+      <Register Address="0x40020180" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[9]" Width="32"/>
+      <Register Address="0x40020184" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[10]" Width="32"/>
+      <Register Address="0x40020188" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[11]" Width="32"/>
+      <Register Address="0x4002018C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[12]" Width="32"/>
+      <Register Address="0x40020190" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[13]" Width="32"/>
+      <Register Address="0x40020194" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[14]" Width="32"/>
+      <Register Address="0x40020198" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[15]" Width="32"/>
+      <Register Address="0x4002019C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[16]" Width="32"/>
+      <Register Address="0x400201A0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[17]" Width="32"/>
+      <Register Address="0x400201A4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[18]" Width="32"/>
+      <Register Address="0x400201A8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[19]" Width="32"/>
+      <Register Address="0x400201AC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[20]" Width="32"/>
+      <Register Address="0x400201B0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[21]" Width="32"/>
+      <Register Address="0x400201B4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[22]" Width="32"/>
+      <Register Address="0x400201B8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[23]" Width="32"/>
+      <Register Address="0x400201BC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[24]" Width="32"/>
+      <Register Address="0x400201C0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[25]" Width="32"/>
+      <Register Address="0x400201C4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[26]" Width="32"/>
+      <Register Address="0x400201C8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[27]" Width="32"/>
+      <Register Address="0x400201CC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[28]" Width="32"/>
+      <Register Address="0x400201D0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[29]" Width="32"/>
+      <Register Address="0x400201D4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[30]" Width="32"/>
+      <Register Address="0x400201D8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[31]" Width="32"/>
+      <Register Address="0x400201DC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[32]" Width="32"/>
+      <Register Address="0x400201E0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[33]" Width="32"/>
+      <Register Address="0x400201E4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[34]" Width="32"/>
+      <Register Address="0x400201E8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[35]" Width="32"/>
+      <Register Address="0x400201EC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[36]" Width="32"/>
+      <Register Address="0x400201F0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[37]" Width="32"/>
+      <Register Address="0x400201F4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[38]" Width="32"/>
+      <Register Address="0x400201F8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[39]" Width="32"/>
+      <Register Address="0x400201FC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[40]" Width="32"/>
+      <Register Address="0x40020200" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[41]" Width="32"/>
+      <Register Address="0x40020204" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[42]" Width="32"/>
+      <Register Address="0x40020208" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[43]" Width="32"/>
+      <Register Address="0x4002020C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[44]" Width="32"/>
+      <Register Address="0x40020210" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[45]" Width="32"/>
+      <Register Address="0x40020214" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[46]" Width="32"/>
+      <Register Address="0x40020218" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[47]" Width="32"/>
+      <Register Address="0x4002021C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[48]" Width="32"/>
+      <Register Address="0x40020220" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[49]" Width="32"/>
+      <Register Address="0x40020224" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[50]" Width="32"/>
+      <Register Address="0x40020228" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[51]" Width="32"/>
+      <Register Address="0x4002022C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[52]" Width="32"/>
+      <Register Address="0x40020230" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[53]" Width="32"/>
+      <Register Address="0x40020234" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[54]" Width="32"/>
+      <Register Address="0x40020238" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[55]" Width="32"/>
+      <Register Address="0x4002023C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[56]" Width="32"/>
+      <Register Address="0x40020240" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[57]" Width="32"/>
+      <Register Address="0x40020244" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[58]" Width="32"/>
+      <Register Address="0x40020248" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[59]" Width="32"/>
+      <Register Address="0x4002024C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[60]" Width="32"/>
+      <Register Address="0x40020250" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[61]" Width="32"/>
+      <Register Address="0x40020254" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[62]" Width="32"/>
+      <Register Address="0x40020258" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[63]" Width="32"/>
+      <Register Address="0x4002025C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[64]" Width="32"/>
+      <Register Address="0x40020260" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[65]" Width="32"/>
+      <Register Address="0x40020264" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[66]" Width="32"/>
+      <Register Address="0x40020268" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[67]" Width="32"/>
+      <Register Address="0x4002026C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[68]" Width="32"/>
+      <Register Address="0x40020270" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[69]" Width="32"/>
+      <Register Address="0x40020274" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[70]" Width="32"/>
+      <Register Address="0x40020278" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[71]" Width="32"/>
+      <Register Address="0x4002027C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[72]" Width="32"/>
+      <Register Address="0x40020280" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[73]" Width="32"/>
+      <Register Address="0x40020284" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[74]" Width="32"/>
+      <Register Address="0x40020288" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[75]" Width="32"/>
+      <Register Address="0x4002028C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[76]" Width="32"/>
+      <Register Address="0x40020290" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[77]" Width="32"/>
+      <Register Address="0x40020294" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[78]" Width="32"/>
+      <Register Address="0x40020298" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[79]" Width="32"/>
+      <Register Address="0x4002029C" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[80]" Width="32"/>
+      <Register Address="0x400202A0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[81]" Width="32"/>
+      <Register Address="0x400202A4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[82]" Width="32"/>
+      <Register Address="0x400202A8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[83]" Width="32"/>
+      <Register Address="0x400202AC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[84]" Width="32"/>
+      <Register Address="0x400202B0" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[85]" Width="32"/>
+      <Register Address="0x400202B4" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[86]" Width="32"/>
+      <Register Address="0x400202B8" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[87]" Width="32"/>
+      <Register Address="0x400202BC" Authority="RW" Description="DMAC FIFO0 Register" Name="FIFO0[88]" Width="32"/>
+      <Register Address="0x400202C0" Authority="RW" Description="DMAC RawTfrL Register" Name="RawTfrL" Width="32"/>
+      <Register Address="0x400202C4" Authority="RW" Description="DMAC RawTfrH Register" Name="RawTfrH" Width="32"/>
+      <Register Address="0x400202C8" Authority="RW" Description="DMAC RawBlockL Register" Name="RawBlockL" Width="32"/>
+      <Register Address="0x400202CC" Authority="RW" Description="DMAC RawBlockH Register" Name="RawBlockH" Width="32"/>
+      <Register Address="0x400202D0" Authority="RW" Description="DMAC RawSrcTranL Register" Name="RawSrcTranL" Width="32"/>
+      <Register Address="0x400202D4" Authority="RW" Description="DMAC RawSrcTranH Register" Name="RawSrcTranH" Width="32"/>
+      <Register Address="0x400202D8" Authority="RW" Description="DMAC RawBloRawDstTranLckL Register" Name="RawDstTranL" Width="32"/>
+      <Register Address="0x400202DC" Authority="RW" Description="DMAC RawDstTranH Register" Name="RawDstTranH" Width="32"/>
+      <Register Address="0x400202E0" Authority="RW" Description="DMAC RawErrL Register" Name="RawErrL" Width="32"/>
+      <Register Address="0x400202E4" Authority="RW" Description="DMAC RawErrH Register" Name="RawErrH" Width="32"/>
+      <Register Address="0x400202E8" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[1]" Width="32"/>
+      <Register Address="0x400202EC" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[2]" Width="32"/>
+      <Register Address="0x400202F0" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[3]" Width="32"/>
+      <Register Address="0x400202F4" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[4]" Width="32"/>
+      <Register Address="0x400202F8" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[5]" Width="32"/>
+      <Register Address="0x400202FC" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[6]" Width="32"/>
+      <Register Address="0x40020300" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[7]" Width="32"/>
+      <Register Address="0x40020304" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[8]" Width="32"/>
+      <Register Address="0x40020308" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[9]" Width="32"/>
+      <Register Address="0x4002030C" Authority="RW" Description="DMAC FIFO1 Register" Name="FIFO1[10]" Width="32"/>
+      <Register Address="0x40020310" Authority="RW" Description="DMAC MaskTfrL Register" Name="MaskTfrL" Width="32"/>
+      <Register Address="0x40020314" Authority="RW" Description="DMAC MaskTfrH Register" Name="MaskTfrH" Width="32"/>
+      <Register Address="0x40020318" Authority="RW" Description="DMAC MaskBlockL Register" Name="MaskBlockL" Width="32"/>
+      <Register Address="0x4002031C" Authority="RW" Description="DMAC MaskBlockH Register" Name="MaskBlockH" Width="32"/>
+      <Register Address="0x40020320" Authority="RW" Description="DMAC MaskSrcTranL Register" Name="MaskSrcTranL" Width="32"/>
+      <Register Address="0x40020324" Authority="RW" Description="DMAC MaskSrcTranH Register" Name="MaskSrcTranH" Width="32"/>
+      <Register Address="0x40020328" Authority="RW" Description="DMAC MaskDstTranL Register" Name="MaskDstTranL" Width="32"/>
+      <Register Address="0x4002032C" Authority="RW" Description="DMAC MaskDstTranH Register" Name="MaskDstTranH" Width="32"/>
+      <Register Address="0x40020330" Authority="RW" Description="DMAC MaskErrL Register" Name="MaskErrL" Width="32"/>
+      <Register Address="0x40020334" Authority="RW" Description="DMAC MaskErrH Register" Name="MaskErrH" Width="32"/>
+      <Register Address="0x40020338" Authority="RW" Description="DMAC ClearTfrL Register" Name="ClearTfrL" Width="32"/>
+      <Register Address="0x4002033C" Authority="RW" Description="DMAC ClearTfrH Register" Name="ClearTfrH" Width="32"/>
+      <Register Address="0x40020340" Authority="RW" Description="DMAC ClearBlockL Register" Name="ClearBlockL" Width="32"/>
+      <Register Address="0x40020344" Authority="RW" Description="DMAC ClearBlockH Register" Name="ClearBlockH" Width="32"/>
+      <Register Address="0x40020348" Authority="RW" Description="DMAC ClearSrcTranL Register" Name="ClearSrcTranL" Width="32"/>
+      <Register Address="0x4002034C" Authority="RW" Description="DMAC ClearSrcTranH Register" Name="ClearSrcTranH" Width="32"/>
+      <Register Address="0x40020350" Authority="RW" Description="DMAC ClearDstTranL Register" Name="ClearDstTranL" Width="32"/>
+      <Register Address="0x40020354" Authority="RW" Description="DMAC ClearDstTranH Register" Name="ClearDstTranH" Width="32"/>
+      <Register Address="0x40020358" Authority="RW" Description="DMAC ClearErrL Register" Name="ClearErrL" Width="32"/>
+      <Register Address="0x4002035C" Authority="RW" Description="DMAC ClearErrH Register" Name="ClearErrH" Width="32"/>
+      <Register Address="0x40020360" Authority="RW" Description="DMAC FIFO2 Register" Name="FIFO2[1]" Width="32"/>
+      <Register Address="0x40020364" Authority="RW" Description="DMAC FIFO2 Register" Name="FIFO2[2]" Width="32"/>
+      <Register Address="0x40020368" Authority="RW" Description="DMAC ReqSrcRegL Register" Name="ReqSrcRegL" Width="32"/>
+      <Register Address="0x4002036C" Authority="RW" Description="DMAC ReqSrcRegH Register" Name="ReqSrcRegH" Width="32"/>
+      <Register Address="0x40020370" Authority="RW" Description="DMAC ReqDstRegL Register" Name="ReqDstRegL" Width="32"/>
+      <Register Address="0x40020374" Authority="RW" Description="DMAC ReqDstRegH Register" Name="ReqDstRegH" Width="32"/>
+      <Register Address="0x40020378" Authority="RW" Description="DMAC SglReqSrcRegL Register" Name="SglReqSrcRegL" Width="32"/>
+      <Register Address="0x4002037C" Authority="RW" Description="DMAC SglReqSrcRegH Register" Name="SglReqSrcRegH" Width="32"/>
+      <Register Address="0x40020380" Authority="RW" Description="DMAC SglReqDstRegL Register" Name="SglReqDstRegL" Width="32"/>
+      <Register Address="0x40020384" Authority="RW" Description="DMAC SglReqDstRegH Register" Name="SglReqDstRegH" Width="32"/>
+      <Register Address="0x40020388" Authority="RW" Description="DMAC LstSrcRegL Register" Name="LstSrcRegL" Width="32"/>
+      <Register Address="0x4002038C" Authority="RW" Description="DMAC LstSrcRegH Register" Name="LstSrcRegH" Width="32"/>
+      <Register Address="0x40020390" Authority="RW" Description="DMAC LstDstRegL Register" Name="LstDstRegL" Width="32"/>
+      <Register Address="0x40020394" Authority="RW" Description="DMAC LstDstRegH Register" Name="LstDstRegH" Width="32"/>
+      <Register Address="0x40020398" Authority="RW" Description="DMAC DmaCfgRegL Register" Name="DmaCfgRegL" Width="32"/>
+      <Register Address="0x4002039C" Authority="RW" Description="DMAC DmaCfgRegH Register" Name="DmaCfgRegH" Width="32"/>
+      <Register Address="0x400203A0" Authority="RW" Description="DMAC ChEnRegL Register" Name="ChEnRegL" Width="32"/>
+      <Register Address="0x400203A4" Authority="RW" Description="DMAC ChEnRegH Register" Name="ChEnRegH" Width="32"/>
+      <Register Address="0x400203A8" Authority="RW" Description="DMAC FIFO3 Register" Name="FIFO3[1]" Width="32"/>
+      <Register Address="0x400203AC" Authority="RW" Description="DMAC FIFO3 Register" Name="FIFO3[2]" Width="32"/>
+      <Register Address="0x400203B0" Authority="RW" Description="DMAC DmaTestRegL Register" Name="DmaTestRegL" Width="32"/>
+      <Register Address="0x400203B4" Authority="RW" Description="DMAC DmaTestRegH Register" Name="DmaTestRegH" Width="32"/>
+    </Peripheral>
+    <Peripheral Name="MODEM">
+      <Register Address="0x40024000" Authority="RW" Description="Modem PHY_CTL Register" Name="PHY_CTL" Width="32"/>
+      <Register Address="0x40024004" Authority="RW" Description="Modem PHY_TXCTL Register" Name="PHY_TXCTL" Width="32"/>
+      <Register Address="0x40024008" Authority="RO" Description="Modem PHY_TXCRC Register" Name="PHY_TXCRC" Width="32"/>
+      <Register Address="0x4002400C" Authority="RW" Description="Modem PHY_RXCTL0 Register" Name="PHY_RXCTL0" Width="32"/>
+      <Register Address="0x40024010" Authority="RO" Description="Modem ERR_CODE Register" Name="ERR_CODE" Width="32"/>
+      <Register Address="0x40024014" Authority="RO" Description="Modem PHY_INFO_IND Register" Name="PHY_INFO_IND" Width="32"/>
+      <Register Address="0x40024018" Authority="RO" Description="Modem PHY_EST_INIT_DC Register" Name="PHY_EST_INIT_DC" Width="32"/>
+      <Register Address="0x4002401C" Authority="RO" Description="Modem PHY_CFO1_ESTIMATE Register" Name="PHY_CFO0_ESTIMATE" Width="32"/>
+      <Register Address="0x40024020" Authority="RO" Description="Modem PHY_STS_SYNC_POS Register" Name="PHY_STS_SYNC_POS" Width="32"/>
+      <Register Address="0x40024024" Authority="RO" Description="Modem PHY_CFO2_ESTIMATE Register" Name="PHY_CFO1_ESTIMATE" Width="32"/>
+      <Register Address="0x40024028" Authority="RW" Description="Modem PHY_SYNC_TIME_TH Register" Name="PHY_SYNC_TIME_TH" Width="32"/>
+      <Register Address="0x4002402C" Authority="RW" Description="Modem PHY_RXCTL1 Register" Name="PHY_RXCTL1" Width="32"/>
+      <Register Address="0x40024030" Authority="RW" Description="Modem PHY_RXCTL2 Register" Name="PHY_RXCTL2" Width="32"/>
+      <Register Address="0x40024034" Authority="RW" Description="Modem DC_I Register" Name="DC_I_3_0" Width="32"/>
+      <Register Address="0x40024038" Authority="RW" Description="Modem DC_I Register" Name="DC_I_5_4" Width="32"/>
+      <Register Address="0x4002403C" Authority="RW" Description="" Name="reserved0" Width="32"/>
+      <Register Address="0x40024040" Authority="RW" Description="" Name="reserved1" Width="32"/>
+      <Register Address="0x40024044" Authority="RW" Description="" Name="reserved2" Width="32"/>
+      <Register Address="0x40024048" Authority="RW" Description="" Name="reserved3" Width="32"/>
+      <Register Address="0x4002404C" Authority="RW" Description="" Name="reserved4" Width="32"/>
+      <Register Address="0x40024050" Authority="RW" Description="" Name="reserved5" Width="32"/>
+      <Register Address="0x40024054" Authority="RW" Description="Modem DC_Q Register" Name="DC_Q_3_0" Width="32"/>
+      <Register Address="0x40024058" Authority="RW" Description="Modem DC_Q Register" Name="DC_Q_5_4" Width="32"/>
+      <Register Address="0x4002405C" Authority="RW" Description="" Name="reserved6" Width="32"/>
+      <Register Address="0x40024060" Authority="RW" Description="" Name="reserved7" Width="32"/>
+      <Register Address="0x40024064" Authority="RW" Description="" Name="reserved8" Width="32"/>
+      <Register Address="0x40024068" Authority="RW" Description="" Name="reserved9" Width="32"/>
+      <Register Address="0x4002406C" Authority="RW" Description="" Name="reserved10" Width="32"/>
+      <Register Address="0x40024070" Authority="RW" Description="" Name="reserved11" Width="32"/>
+      <Register Address="0x40024074" Authority="RW" Description="Modem INCREASEGAINTH_3_0 Register" Name="INCREASEGAINTH_3_0" Width="32"/>
+      <Register Address="0x40024078" Authority="RW" Description="Modem INCREASEGAINTH_4 Register" Name="INCREASEGAINTH_4" Width="32"/>
+      <Register Address="0x4002407C" Authority="RW" Description="Modem REDUCEGAINTH_3_0 Register" Name="REDUCEGAINTH_3_0" Width="32"/>
+      <Register Address="0x40024080" Authority="RW" Description="Modem REDUCEGAINTH4 Register" Name="REDUCEGAINTH4" Width="32"/>
+      <Register Address="0x40024084" Authority="RW" Description="Modem MCS1GAINTH_3_0 Register" Name="MCS1GAINTH_3_0" Width="32"/>
+      <Register Address="0x40024088" Authority="RW" Description="Modem MCS1GAINTH_4 Register" Name="MCS1GAINTH_4" Width="32"/>
+      <Register Address="0x4002408C" Authority="RW" Description="Modem MCS2GAINTH_3_0 Register" Name="MCS2GAINTH_3_0" Width="32"/>
+      <Register Address="0x40024090" Authority="RW" Description="Modem MCS2GAINTH_4 Register" Name="MCS2GAINTH_4" Width="32"/>
+      <Register Address="0x40024094" Authority="RW" Description="Modem MCS3GAINTH_3_0 Register" Name="MCS3GAINTH_3_0" Width="32"/>
+      <Register Address="0x40024098" Authority="RW" Description="Modem MCS3GAINTH_4 Register" Name="MCS3GAINTH_4" Width="32"/>
+      <Register Address="0x4002409C" Authority="RW" Description="Modem MCS4GAINTH_3_0 Register" Name="MCS4GAINTH_3_0" Width="32"/>
+      <Register Address="0x400240A0" Authority="RW" Description="Modem MCS4GAINTH_4 Register" Name="MCS4GAINTH_4" Width="32"/>
+      <Register Address="0x400240A4" Authority="RW" Description="Modem MCS5GAINTH_3_0 Register" Name="MCS5GAINTH_3_0" Width="32"/>
+      <Register Address="0x400240A8" Authority="RW" Description="Modem MCS5GAINTH_4 Register" Name="MCS5GAINTH_4" Width="32"/>
+      <Register Address="0x400240AC" Authority="RW" Description="Modem MCS6GAINTH_3_0 Register" Name="MCS6GAINTH_3_0" Width="32"/>
+      <Register Address="0x400240B0" Authority="RW" Description="Modem MCS6GAINTH_4 Register" Name="MCS6GAINTH_4" Width="32"/>
+      <Register Address="0x400240B4" Authority="RW" Description="Modem MCS7GAINTH_3_0 Register" Name="MCS7GAINTH_3_0" Width="32"/>
+      <Register Address="0x400240B8" Authority="RW" Description="Modem MCS7GAINTH_4 Register" Name="MCS7GAINTH_4" Width="32"/>
+      <Register Address="0x400240BC" Authority="RW" Description="Modem MCS0RXGAIN_3_0 Register" Name="MCS0RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240C0" Authority="RW" Description="Modem MCS0RXGAIN_5_4 Register" Name="MCS0RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240C4" Authority="RW" Description="Modem MCS1RXGAIN_3_0 Register" Name="MCS1RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240C8" Authority="RW" Description="Modem MCS1RXGAIN_5_4 Register" Name="MCS1RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240CC" Authority="RW" Description="Modem MCS2RXGAIN_3_0 Register" Name="MCS2RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240D0" Authority="RW" Description="Modem MCS1RXGAIN_5_4 Register" Name="MCS2RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240D4" Authority="RW" Description="Modem MCS3RXGAIN_3_0 Register" Name="MCS3RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240D8" Authority="RW" Description="Modem MCS3RXGAIN_5_4 Register" Name="MCS3RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240DC" Authority="RW" Description="Modem MCS4RXGAIN_3_0 Register" Name="MCS4RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240E0" Authority="RW" Description="Modem MCS4RXGAIN_5_4 Register" Name="MCS4RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240E4" Authority="RW" Description="Modem MCS5RXGAIN_3_0 Register" Name="MCS5RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240E8" Authority="RW" Description="Modem MCS5RXGAIN_5_4 Register" Name="MCS5RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240EC" Authority="RW" Description="Modem MCS6RXGAIN_3_0 Register" Name="MCS6RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240F0" Authority="RW" Description="Modem MCS6RXGAIN_5_4 Register" Name="MCS6RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240F4" Authority="RW" Description="Modem MCS7RXGAIN_3_0 Register" Name="MCS7RXGAIN_3_0" Width="32"/>
+      <Register Address="0x400240F8" Authority="RW" Description="Modem MCS7RXGAIN_5_4 Register" Name="MCS7RXGAIN_5_4" Width="32"/>
+      <Register Address="0x400240FC" Authority="RW" Description="Modem MCS0RXGAININDEX_3_0 Register" Name="MCS0RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024100" Authority="RW" Description="Modem MCS0RXGAININDEX_5_4 Register" Name="MCS0RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x40024104" Authority="RW" Description="Modem MCS1RXGAININDEX_3_0 Register" Name="MCS1RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024108" Authority="RW" Description="Modem MCS1RXGAININDEX_5_4 Register" Name="MCS1RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x4002410C" Authority="RW" Description="Modem MCS2RXGAININDEX_3_0 Register" Name="MCS2RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024110" Authority="RW" Description="Modem MCS2RXGAININDEX_5_4 Register" Name="MCS2RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x40024114" Authority="RW" Description="Modem MCS3RXGAININDEX_3_0 Register" Name="MCS3RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024118" Authority="RW" Description="Modem MCS3RXGAININDEX_5_4 Register" Name="MCS3RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x4002411C" Authority="RW" Description="Modem MCS4RXGAININDEX_3_0 Register" Name="MCS4RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024120" Authority="RW" Description="Modem MCS4RXGAININDEX_5_4 Register" Name="MCS4RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x40024124" Authority="RW" Description="Modem MCS5RXGAININDEX_3_0 Register" Name="MCS5RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024128" Authority="RW" Description="Modem MCS5RXGAININDEX_5_4 Register" Name="MCS5RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x4002412C" Authority="RW" Description="Modem MCS6RXGAININDEX_3_0 Register" Name="MCS6RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024130" Authority="RW" Description="Modem MCS6RXGAININDEX_5_4 Register" Name="MCS6RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x40024134" Authority="RW" Description="Modem MCS7RXGAININDEX_3_0 Register" Name="MCS7RXGAININDEX_3_0" Width="32"/>
+      <Register Address="0x40024138" Authority="RW" Description="Modem MCS7RXGAININDEX_5_4 Register" Name="MCS7RXGAININDEX_5_4" Width="32"/>
+      <Register Address="0x4002413C" Authority="RO" Description="Modem PHY_RXINFO Register" Name="PHY_RXINFO0" Width="32"/>
+      <Register Address="0x40024140" Authority="RO" Description="Modem PHY_RXINFO Register" Name="PHY_RXINFO1" Width="32"/>
+      <Register Address="0x40024144" Authority="RW" Description="Modem PHY_RXCTL3 Register" Name="PHY_RXCTL3" Width="32"/>
+      <Register Address="0x40024148" Authority="RW" Description="Modem CCA_START_DET_TH Register" Name="CCA_START_DET_TH" Width="32"/>
+      <Register Address="0x4002414C" Authority="RW" Description="Modem CCA_MID_DET_TH Register" Name="CCA_MID_DET_TH" Width="32"/>
+      <Register Address="0x40024150" Authority="RW" Description="Modem CCA_ED_TH Register" Name="CCA_ED_TH" Width="32"/>
+      <Register Address="0x40024154" Authority="RO" Description="Modem PHY_RXPOWERINFO Register" Name="PHY_RXPOWERINFO0" Width="32"/>
+      <Register Address="0x40024158" Authority="RO" Description="Modem PHY_RXPOWERINFO Register" Name="PHY_RXPOWERINFO1" Width="32"/>
+      <Register Address="0x4002415C" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP0" Width="32"/>
+      <Register Address="0x40024160" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP1" Width="32"/>
+      <Register Address="0x40024164" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP2" Width="32"/>
+      <Register Address="0x40024168" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP3" Width="32"/>
+      <Register Address="0x4002416C" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP4" Width="32"/>
+      <Register Address="0x40024170" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="PHY_RXIQCOMP5" Width="32"/>
+      <Register Address="0x40024174" Authority="RW" Description="" Name="reserved12" Width="32"/>
+      <Register Address="0x40024178" Authority="RW" Description="" Name="reserved13" Width="32"/>
+      <Register Address="0x4002417C" Authority="RW" Description="" Name="reserved14" Width="32"/>
+      <Register Address="0x40024180" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="reserved15" Width="32"/>
+      <Register Address="0x40024184" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="reserved16" Width="32"/>
+      <Register Address="0x40024188" Authority="RW" Description="Modem PHY_RXIQCOMP Register" Name="reserved17" Width="32"/>
+      <Register Address="0x4002418C" Authority="RW" Description="" Name="reserved18" Width="32"/>
+      <Register Address="0x40024190" Authority="RW" Description="" Name="reserved19" Width="32"/>
+      <Register Address="0x40024194" Authority="RW" Description="" Name="reserved20" Width="32"/>
+      <Register Address="0x40024198" Authority="RW" Description="" Name="reserved21" Width="32"/>
+      <Register Address="0x4002419C" Authority="RW" Description="" Name="reserved22" Width="32"/>
+      <Register Address="0x400241A0" Authority="RW" Description="" Name="reserved23" Width="32"/>
+      <Register Address="0x400241A4" Authority="RW" Description="" Name="reserved24" Width="32"/>
+      <Register Address="0x400241A8" Authority="RW" Description="" Name="reserved25" Width="32"/>
+      <Register Address="0x400241AC" Authority="RW" Description="" Name="reserved26" Width="32"/>
+      <Register Address="0x400241B0" Authority="RW" Description="" Name="reserved27" Width="32"/>
+      <Register Address="0x400241B4" Authority="RW" Description="" Name="reserved28" Width="32"/>
+      <Register Address="0x400241B8" Authority="RW" Description="" Name="reserved29" Width="32"/>
+      <Register Address="0x400241BC" Authority="RW" Description="" Name="reserved30" Width="32"/>
+      <Register Address="0x400241C0" Authority="RW" Description="" Name="reserved31" Width="32"/>
+      <Register Address="0x400241C4" Authority="RW" Description="" Name="reserved32" Width="32"/>
+      <Register Address="0x400241C8" Authority="RW" Description="" Name="reserved33" Width="32"/>
+      <Register Address="0x400241CC" Authority="RW" Description="" Name="reserved34" Width="32"/>
+      <Register Address="0x400241D0" Authority="RW" Description="" Name="reserved35" Width="32"/>
+      <Register Address="0x400241D4" Authority="RW" Description="" Name="reserved36" Width="32"/>
+      <Register Address="0x400241D8" Authority="RW" Description="" Name="reserved37" Width="32"/>
+      <Register Address="0x400241DC" Authority="RW" Description="Modem RXIQCALIB Register" Name="RXIQCALIB0" Width="32"/>
+      <Register Address="0x400241E0" Authority="RW" Description="Modem RXIQCALIB Register" Name="RXIQCALIB1" Width="32"/>
+      <Register Address="0x400241E4" Authority="RW" Description="Modem RXIQCALIB Register" Name="RXIQCALIB2" Width="32"/>
+      <Register Address="0x400241E8" Authority="RO" Description="" Name="PHY_RXINFO2" Width="32"/>
+      <Register Name="PHY_RXCTL4" Authority="RW" Address="0x400241EC" Width="32" Description=""/>
+      <Register Name="PHY_RXCTL5" Authority="RW" Address="0x400241F0" Width="32" Description=""/>
+      <Register Name="PHY_RXCTL6" Authority="RW" Address="0x400241F4" Width="32" Description=""/>
+      <Register Name="PHY_LTF_SYNC_POS" Authority="RW" Address="0x400241F8" Width="32" Description=""/>
+      <Register Name="RETREG" Authority="RW" Address="0x400241FC" Width="32" Description="Modem RETREG Register"/>
+      <Register Name="PHY_CFO2_ESTIMATE" Authority="RO" Address="0x40024200" Width="32" Description=""/>
+      <Register Name="PHY_UNUSED" Authority="RW" Address="0x40024204" Width="32" Description=""/>
+      <Register Name="PHY_RXCTL7" Authority="RW" Address="0x40024208" Width="32" Description=""/>
+      <Register Name="PHY_DPD_INFO" Authority="RO" Address="0x4002420C" Width="32" Description=""/>
+      <Register Name="PHY_DPD_CTL" Authority="RW" Address="0x40024210" Width="32" Description=""/>
+      <Register Name="DPD_RAM_WR_CTL" Authority="RW" Address="0x40024214" Width="32" Description=""/>
+      <Register Name="DPD_RAM_RD_CTL" Authority="RW" Address="0x40024218" Width="32" Description=""/>
+      <Register Name="PHY_DMA_ABORT_CFG" Authority="RW" Address="0x4002421C" Width="32" Description=""/>
+      <Register Name="PHY_DPD_INFO2" Authority="RO" Address="0x40024220" Width="32" Description=""/>
+      <Register Name="PHY_RXCTL8" Authority="RW" Address="0x40024224" Width="32" Description=""/>
+      <Register Name="PHY_STATE_INFO0" Authority="RO" Address="0x40024228" Width="32" Description=""/>
+      <Register Name="PHY_STATE_INFO1" Authority="RO" Address="0x4002422C" Width="32" Description=""/>
+      <Register Name="PHYPSDUCRC" Authority="RO" Address="0x40024230" Width="32" Description=""/>
+      <Register Name="PHY_RXINFO3" Authority="RO" Address="0x40024238" Width="32" Description=""/>
+      <Register Name="PHY_TXINFO0" Authority="RO" Address="0x40024234" Width="32" Description=""/>
+    </Peripheral>
+    <Peripheral Name="USB">
+      <Register Address="0x40027000" Authority="RW" Description="USB SIEM_FADDR Register" Name="SIEM_FADDR" Width="8"/>
+      <Register Address="0x40027001" Authority="RW" Description="USB SIEM_POWER Register" Name="SIEM_POWER" Width="8"/>
+      <Register Address="0x40027002" Authority="RW" Description="USB SIEM_INTRTX1 Register" Name="SIEM_INTRTX1" Width="8"/>
+      <Register Address="0x40027003" Authority="RW" Description="USB SIEM_INTRTX2 Register" Name="SIEM_INTRTX2" Width="8"/>
+      <Register Address="0x40027004" Authority="RW" Description="USB SIEM_INTRRX1 Register" Name="SIEM_INTRRX1" Width="8"/>
+      <Register Address="0x40027005" Authority="RW" Description="USB SIEM_INTRRX2 Register" Name="SIEM_INTRRX2" Width="8"/>
+      <Register Address="0x40027006" Authority="RW" Description="USB SIEM_INTRUSB Register" Name="SIEM_INTRUSB" Width="8"/>
+      <Register Address="0x40027007" Authority="RW" Description="USB SIEM_INTRTX1E Register" Name="SIEM_INTRTX1E" Width="8"/>
+      <Register Address="0x40027008" Authority="RW" Description="USB SIEM_INTRTX2E Register" Name="SIEM_INTRTX2E" Width="8"/>
+      <Register Address="0x40027009" Authority="RW" Description="USB SIEM_INTRRX1E Register" Name="SIEM_INTRRX1E" Width="8"/>
+      <Register Address="0x4002700A" Authority="RW" Description="USB SIEM_INTRRX2E Register" Name="SIEM_INTRRX2E" Width="8"/>
+      <Register Address="0x4002700B" Authority="RW" Description="USB SIEM_INTRUSBE Register" Name="SIEM_INTRUSBE" Width="8"/>
+      <Register Address="0x4002700C" Authority="RW" Description="USB SIEM_FRAMENUM1 Register" Name="SIEM_FRAMENUM1" Width="8"/>
+      <Register Address="0x4002700D" Authority="RW" Description="USB SIEM_FRAMENUM2 Register" Name="SIEM_FRAMENUM2" Width="8"/>
+      <Register Address="0x4002700E" Authority="RW" Description="USB SIEM_INDEX Register" Name="SIEM_INDEX" Width="8"/>
+      <Register Address="0x4002700F" Authority="RW" Description="USB SIEM_DEVCTL Register" Name="SIEM_DEVCTL" Width="8"/>
+      <Register Address="0x40027010" Authority="RW" Description="USB SIEM_TXMAXP Register" Name="SIEM_TXMAXP" Width="8"/>
+      <Register Address="0x40027011" Authority="RW" Description="USB SIEM_TXCSR1 Register" Name="SIEM_TXCSR1" Width="8"/>
+      <Register Address="0x40027012" Authority="RW" Description="USB SIEM_TXCSR2 Register" Name="SIEM_TXCSR2" Width="8"/>
+      <Register Address="0x40027013" Authority="RW" Description="USB SIEM_RXMAXP Register" Name="SIEM_RXMAXP" Width="8"/>
+      <Register Address="0x40027014" Authority="RW" Description="USB SIEM_RXCSR1 Register" Name="SIEM_RXCSR1" Width="8"/>
+      <Register Address="0x40027015" Authority="RW" Description="USB SIEM_RXCSR2 Register" Name="SIEM_RXCSR2" Width="8"/>
+      <Register Address="0x40027016" Authority="RW" Description="USB SIEM_RXCOUNT1 Register" Name="SIEM_RXCOUNT1" Width="8"/>
+      <Register Address="0x40027017" Authority="RW" Description="USB SIEM_RXCOUNT2 Register" Name="SIEM_RXCOUNT2" Width="8"/>
+      <Register Address="0x40027018" Authority="RW" Description="USB SIEM_TXTYPE Register" Name="SIEM_TXTYPE" Width="8"/>
+      <Register Address="0x40027019" Authority="RW" Description="USB SIEM_TXINTERVAL Register" Name="SIEM_TXINTERVAL" Width="8"/>
+      <Register Address="0x4002701A" Authority="RW" Description="USB SIEM_RXTYPE Register" Name="SIEM_RXTYPE" Width="8"/>
+      <Register Address="0x4002701B" Authority="RW" Description="USB SIEM_RXINTERVAL Register" Name="SIEM_RXINTERVAL" Width="8"/>
+      <Register Address="0x4002701C" Authority="RW" Description="USB SIEreserved0 Register" Name="SIEreserved0[1]" Width="8"/>
+      <Register Address="0x4002701D" Authority="RW" Description="USB SIEreserved0 Register" Name="SIEreserved0[2]" Width="8"/>
+      <Register Address="0x4002701E" Authority="RW" Description="USB SIEreserved0 Register" Name="SIEreserved0[3]" Width="8"/>
+      <Register Address="0x4002701F" Authority="RW" Description="USB SIEM_FIFOSIZE Register" Name="SIEM_FIFOSIZE" Width="8"/>
+      <Register Address="0x40027020" Authority="RW" Description="USB SIEM_FIFO0 Register" Name="SIEM_FIFO0" Width="8"/>
+      <Register Address="0x40027021" Authority="RW" Description="USB SIEreserved1 Register" Name="SIEreserved1[1]" Width="8"/>
+      <Register Address="0x40027022" Authority="RW" Description="USB SIEreserved1 Register" Name="SIEreserved1[2]" Width="8"/>
+      <Register Address="0x40027023" Authority="RW" Description="USB SIEreserved1 Register" Name="SIEreserved1[3]" Width="8"/>
+      <Register Address="0x40027024" Authority="RW" Description="USB SIEM_FIFO1 Register" Name="SIEM_FIFO1" Width="8"/>
+      <Register Address="0x40027025" Authority="RW" Description="USB SIEreserved2 Register" Name="SIEreserved2[1]" Width="8"/>
+      <Register Address="0x40027026" Authority="RW" Description="USB SIEreserved2 Register" Name="SIEreserved2[2]" Width="8"/>
+      <Register Address="0x40027027" Authority="RW" Description="USB SIEreserved2 Register" Name="SIEreserved2[3]" Width="8"/>
+      <Register Address="0x40027028" Authority="RW" Description="USB SIEM_FIFO2 Register" Name="SIEM_FIFO2" Width="8"/>
+      <Register Address="0x40027029" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[1]" Width="8"/>
+      <Register Address="0x4002702A" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[2]" Width="8"/>
+      <Register Address="0x4002702B" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[3]" Width="8"/>
+      <Register Address="0x4002702C" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[4]" Width="8"/>
+      <Register Address="0x4002702D" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[5]" Width="8"/>
+      <Register Address="0x4002702E" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[6]" Width="8"/>
+      <Register Address="0x4002702F" Authority="RW" Description="USB SIEreserved3 Register" Name="SIEreserved3[7]" Width="8"/>
+      <Register Address="0x40027200" Authority="RW" Description="USB DMA_INT Register" Name="DMA_INT" Width="32"/>
+      <Register Address="0x40027300" Authority="RW" Description="USB UCFG0 Register" Name="UCFG0" Width="32"/>
+      <Register Address="0x40027304" Authority="RW" Description="USB UCFG1 Register" Name="UCFG1" Width="32"/>
+      <Register Address="0x40027308" Authority="RW" Description="USB UCFG2 Register" Name="UCFG2" Width="32"/>
+      <Register Address="0x4002730C" Authority="RW" Description="USB UCFG3 Register" Name="UCFG3" Width="32"/>
+      <Register Address="0x40027310" Authority="RW" Description="USB EP_STATUS Register" Name="EP_STATUS" Width="32"/>
+      <Register Address="0x40027314" Authority="RW" Description="USB EP_KICK Register" Name="EP_KICK" Width="32"/>
+      <Register Address="0x40027318" Authority="RW" Description="USB EP_CTL Register" Name="EP_CTL" Width="32"/>
+      <Register Address="0x40027320" Authority="RW" Description="USB EP0_TXSTARTADR Register" Name="EP0_TXSTARTADR" Width="32"/>
+      <Register Address="0x40027324" Authority="RW" Description="USB EP0_RXSTARTADR Register" Name="EP0_RXSTARTADR" Width="32"/>
+      <Register Address="0x40027328" Authority="RW" Description="USB EP0_TXLEN Register" Name="EP0_TXLEN" Width="32"/>
+      <Register Address="0x40027330" Authority="RW" Description="USB EP1_TXSTARTADR Register" Name="EP1_TXSTARTADR" Width="32"/>
+      <Register Address="0x40027334" Authority="RW" Description="USB EP1_RXSTARTADR Register" Name="EP1_RXSTARTADR" Width="32"/>
+      <Register Address="0x40027338" Authority="RW" Description="USB EP1_TXLEN Register" Name="EP1_TXLEN" Width="32"/>
+      <Register Address="0x4002733C" Authority="RW" Description="USB EP1_RXLEN Register" Name="EP1_RXLEN" Width="32"/>
+      <Register Address="0x40027340" Authority="RW" Description="USB EP2_TXSTARTADR Register" Name="EP2_TXSTARTADR" Width="32"/>
+      <Register Address="0x40027344" Authority="RW" Description="USB EP2_RXSTARTADR Register" Name="EP2_RXSTARTADR" Width="32"/>
+      <Register Address="0x40027348" Authority="RW" Description="USB EP2_TXLEN Register" Name="EP2_TXLEN" Width="32"/>
+      <Register Address="0x4002734C" Authority="RW" Description="USB EP2_RXLEN Register" Name="EP2_RXLEN" Width="32"/>
+      <Register Address="0x40027350" Authority="RO" Description="USB EP0_TXADR Register" Name="EP0_TXADR" Width="32"/>
+      <Register Address="0x40027354" Authority="RO" Description="USB EP0_RXADR Register" Name="EP0_RXADR" Width="32"/>
+      <Register Address="0x40027358" Authority="RO" Description="USB EP1_TXADR Register" Name="EP1_TXADR" Width="32"/>
+      <Register Address="0x4002735C" Authority="RO" Description="USB EP1_RXADR Register" Name="EP1_RXADR" Width="32"/>
+      <Register Address="0x40027360" Authority="RO" Description="USB EP2_TXADR Register" Name="EP2_TXADR" Width="32"/>
+      <Register Address="0x40027364" Authority="RO" Description="USB EP2_RXADR Register" Name="EP2_RXADR" Width="32"/>
+    </Peripheral>
+  </config>
+</com.csky.cds.peripheral>
