@@ -6,8 +6,11 @@
 #include <stdio.h>
 #include <string.h>
 
-const char *ssid = "xinyuandianzi";
-const char *password = "AA15994823428";
+const char *ssid = "dgx_admin";
+const char *password = "q63=380O";
+
+void startCameraServer();
+void setupLedFlash(int pin);
 
 void startCameraServer();
 camera_config_t config;
@@ -33,27 +36,12 @@ void camera_init(void)
     config.pin_reset = CAMERA_PIN_RESET;
     config.xclk_freq_hz = XCLK_FREQ_HZ;
     config.pixel_format = PIXFORMAT_JPEG;
-    config.frame_size = FRAMESIZE_96X96;
+    // config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
+    config.frame_size = FRAMESIZE_240X240;
     config.jpeg_quality = 12;
     config.fb_count = 1;
     config.fb_location = CAMERA_FB_IN_DRAM;
     config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-
-    if (config.pixel_format == PIXFORMAT_JPEG)
-    {
-        if (psramFound())
-        {
-            config.jpeg_quality = 10;
-            config.fb_count = 2;
-            config.grab_mode = CAMERA_GRAB_LATEST;
-        }
-        else
-        {
-            // Limit the frame size when PSRAM is not available
-            config.frame_size = FRAMESIZE_SVGA;
-            config.fb_location = CAMERA_FB_IN_DRAM;
-        }
-    }
 
     // camera init
     esp_err_t err = esp_camera_init(&config);
@@ -78,6 +66,10 @@ void camera_init(void)
         {
             s->set_vflip(s, 0);
             s->set_hmirror(s, 0);
+        }
+        if (s->id.PID == OV5640_PID)
+        {
+            s->set_vflip(s, 1);
         }
     }
 
