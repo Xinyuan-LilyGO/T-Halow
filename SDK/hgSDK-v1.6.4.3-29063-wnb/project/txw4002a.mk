@@ -10,8 +10,8 @@ ProjectPath            :=./
 IntermediateDirectory  :=Obj
 OutDir                 :=$(IntermediateDirectory)
 User                   :=lyy
-Date                   :=20/08/2024
-CDKPath                :=../../../../../../../app1/C-Sky/CDK
+Date                   :=24/08/2024
+CDKPath                :=../../../../../../app1/C-Sky/CDK
 ToolchainPath          :=D:/app1/C-Sky/CDKRepo/Toolchain/CKV2ElfMinilib/V3.10.29/R/
 LinkerName             :=csky-elfabiv2-gcc
 LinkerNameoption       :=
@@ -95,7 +95,7 @@ Objects=$(Objects0) $(Objects1)
 all: $(IntermediateDirectory)/$(OutputFile)
 
 $(IntermediateDirectory)/$(OutputFile):  $(Objects) Always_Link 
-	$(LinkerName) $(OutputSwitch) $(IntermediateDirectory)/$(OutputFile)$(ExeSuffix) $(LinkerNameoption) -Wl,--ckmap=$(ProjectPath)/Lst/$(OutputFile).map  @$(ObjectsFileList) $(LibraryPathSwitch)D:/dgx/code/T-Halow/SDK/hgSDK-v1.6.4.3-29063-wnb/hgSDK-v1.6.4.3-29063-wnb/sdk  -Wl,--whole-archive $(LibrarySwitch)txw4002a   -Wl,--no-whole-archive  $(LinkOptions) $(LibPath) $(Libs) $(LinkOtherFlagsOption)
+	$(LinkerName) $(OutputSwitch) $(IntermediateDirectory)/$(OutputFile)$(ExeSuffix) $(LinkerNameoption) -Wl,--ckmap=$(ProjectPath)/Lst/$(OutputFile).map  @$(ObjectsFileList) $(LibraryPathSwitch)D:/dgx/code/T-Halow/SDK/hgSDK-v1.6.4.3-29063-wnb/sdk  -Wl,--whole-archive $(LibrarySwitch)txw4002a   -Wl,--no-whole-archive  $(LinkOptions) $(LibPath) $(Libs) $(LinkOtherFlagsOption)
 	-@mv $(ProjectPath)/Lst/$(OutputFile).map $(ProjectPath)/Lst/$(OutputFile).temp && $(READELF) $(ElfInfoSwitch) $(ProjectPath)/Obj/$(OutputFile)$(ExeSuffix) > $(ProjectPath)/Lst/$(OutputFile).map && echo ====================================================================== >> $(ProjectPath)/Lst/$(OutputFile).map && cat $(ProjectPath)/Lst/$(OutputFile).temp >> $(ProjectPath)/Lst/$(OutputFile).map && rm -rf $(ProjectPath)/Lst/$(OutputFile).temp
 	$(OBJCOPY) $(ObjcopySwitch) $(ProjectPath)/$(IntermediateDirectory)/$(OutputFile)$(ExeSuffix)  $(ProjectPath)/Obj/$(OutputFile)$(IHexSuffix) 
 	$(OBJDUMP) $(ObjdumpSwitch) $(ProjectPath)/$(IntermediateDirectory)/$(OutputFile)$(ExeSuffix)  > $(ProjectPath)/Lst/$(OutputFile)$(DisassemSuffix) 

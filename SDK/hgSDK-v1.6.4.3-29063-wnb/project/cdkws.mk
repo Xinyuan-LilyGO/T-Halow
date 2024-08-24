@@ -10,7 +10,7 @@ Project_Build:
 
 Project_PostBuild:
 	@echo Executing Post Build commands ...
-	@export CDKPath="D:/app1/C-Sky/CDK" CDK_VERSION="V2.24.0" ProjectName="txw4002a" ProjectPath="D:/dgx/code/T-Halow/SDK/hgSDK-v1.6.4.3-29063-wnb/hgSDK-v1.6.4.3-29063-wnb/project/" && cmd /c BuildBIN.bat
+	@export CDKPath="D:/app1/C-Sky/CDK" CDK_VERSION="V2.24.0" ProjectName="txw4002a" ProjectPath="D:/dgx/code/T-Halow/SDK/hgSDK-v1.6.4.3-29063-wnb/project/" && cmd /c BuildBIN.bat
 	@echo Done
 
 
