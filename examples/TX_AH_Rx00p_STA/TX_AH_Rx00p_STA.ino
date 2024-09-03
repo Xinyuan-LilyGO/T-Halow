@@ -314,13 +314,15 @@ uint32_t rssi_tick = 0;
 
 String recv_str = "";
 int indx = 0;
+bool led_flag = 0;
 
 void loop()
 {
-    if (millis() - last_tick > 5000)
+    if (millis() - last_tick > 1000)
     {
         last_tick = millis();
-        
+        digitalWrite(BOARD_LED, led_flag);
+        led_flag = !led_flag;
     }
 
     if (millis() - rssi_tick > 3000)

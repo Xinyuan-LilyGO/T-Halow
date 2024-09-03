@@ -105,9 +105,20 @@ void setup()
     }
 
     camera_init();
+
+    bool led_flag = 0;
 }
+
+uint32_t last_tick = 0;
 
 void loop()
 {
-    delay(100000);
+    if (millis() - last_tick > 1000)
+    {
+        last_tick = millis();
+        digitalWrite(BOARD_LED, led_flag);
+        led_flag = !led_flag;
+    }
+
+    delay(1);
 }

@@ -304,6 +304,7 @@ void setup()
     // {
         lcd_info_show();
     // }
+    pinMode(BOARD_LED, OUTPUT);
 }
 
 uint32_t last_tick = 0;
@@ -311,13 +312,15 @@ uint32_t rssi_tick = 0;
 
 String str;
 int send_indx = 1;
+bool led_flag = 0;
 
 void loop()
 {
-    if (millis() - last_tick > 5000)
+    if (millis() - last_tick > 1000)
     {
         last_tick = millis();
-        
+        digitalWrite(BOARD_LED, led_flag);
+        led_flag = !led_flag;
     }
 
     if (millis() - rssi_tick > 3000)

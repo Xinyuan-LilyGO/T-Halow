@@ -28,6 +28,8 @@
 #define SerialAT      Serial1
 #define SERIAL_AT_RXD 5
 #define SERIAL_AT_TXD 4
+
+#define BOARD_LED      38
 //
 
 

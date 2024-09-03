@@ -38,10 +38,13 @@ MODE2: Send AT command control via micro-USB
 
 ### Other documents;
 
-| T-Halow mode_1 test  |[docs](./docs/mode1_test.md)|
-| -------------------- | --- |
-| T-Halow mode_2 test  |[docs](./docs/mode2_test.md)|
-| TX-AH module pairing |[docs](./docs/module_pair.md)|
+
+| T-Halow starts with MODE 1 | [docs](./docs/mode1_test.md)  | ![alt text](./hardware/image/image-3.png) |
+| -------------------------- | ----------------------------- | ------------------------ |
+| T-Halow starts with MODE 2 | [docs](./docs/mode2_test.md)  | ![alt text](./hardware/image/image-2.png) |
+| TX-AH module pairing       | [docs](./docs/module_pair.md) |                          |
+
+### Firmware download
 
 If you need to download the TX AH firmware, you can use the following two methods:
 
