@@ -31,6 +31,8 @@
 
 #define BOARD_I2C_SDA  42
 #define BOARD_I2C_SCL  41
+
+#define BOARD_LED      38
 //
 
 
