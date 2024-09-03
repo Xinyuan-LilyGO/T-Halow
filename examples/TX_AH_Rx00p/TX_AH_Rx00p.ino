@@ -231,6 +231,9 @@ void setup()
     AH_RX00P_init();
 }
 
+uint32_t last_tick = 0;
+bool led_flag = 0;
+
 void loop()
 {
     // GetSerialCmd();
@@ -241,6 +244,13 @@ void loop()
     // while (Serial.available()) {
     //     str_dbg += SerialMon.read();
     // }
+    if (millis() - last_tick > 1000)
+    {
+        last_tick = millis();
+        digitalWrite(BOARD_LED, led_flag);
+        led_flag = !led_flag;
+    }
+
 
     while (SerialAT.available()) {
         Serial.write(SerialAT.read());
@@ -248,4 +258,5 @@ void loop()
     while (Serial.available()) {
         SerialAT.write(Serial.read());
     }
+    delay(1);
 }

@@ -106,10 +106,11 @@ void setup()
 
     camera_init();
 
-    bool led_flag = 0;
+    pinMode(BOARD_LED, OUTPUT);
 }
 
 uint32_t last_tick = 0;
+bool led_flag = 0;
 
 void loop()
 {
