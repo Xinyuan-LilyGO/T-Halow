@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         example: 
+          - examples/AT_test
           - examples/CameraWebServer
           - examples/factory
           - examples/TF_card

@@ -7,42 +7,20 @@
   <a href=""> <img src="https://img.shields.io/badge/language-c++-brightgreen" height="20px"></a>
 </p>
 
-
-* [切换到中文版](./README_CN.md)
-
-❗❗❗ More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)；❗❗❗ 
+<!-- * [切换到中文版](./README_CN.md) -->
 
 T-Halow is WiFi Halow, an optimized Wi-Fi solution for iot devices, which has a longer transmission distance while providing the same transmission power of 2.4GHz and 5GHz. T-Halow is equipped with the TX-AH module, which can operate in the 730M-950MHz band, the module can operate in the channel width of 1/2/4/8MHz, and can provide a physical throughput of 150 Kbps to 32.5Mbps.
 
-T-Halow operates in two modes:
+There are two different versions of T-Halow, which differ in the way they are paired;
 
-![alt text](./hardware/image/image.png)
+It is important to confirm the version of T-Halow you have.
 
-The two modes differ：
+| - | TIME | LINK |
+| :---: | :---: | :---: |
+| VER1 | V1.0 24-08-23 | [VERSION1](./docs/ver1/readme.md) |
+| VER2 | V1.0 24-04-16 | [VERSION2](./docs/ver2/readme.md) |
 
-~~~
-MODE1: Send AT command control to TX-AH via ESP32
-    TX-AH: Download huge-ic-ah_xxxxxxxxx_TAIXIN-usb.bin
-    ESP32: Download AP or STA
-    Notice：Debug using Type-C
-
-MODE2: Send AT command control via micro-USB
-    TX-AH: download huge-ic-ah_xxxxxxxxx_TAIXIN-WNB.bin
-    ESP32: No firmware download required
-    Notice：Debug using Micro-USB
-~~~
-
-![alt text](./hardware/image/image-1.png)
-
-## TX-AH documents
-
-### Other documents;
-
-
-| T-Halow starts with MODE 1 | [docs](./docs/mode1_test.md)  | ![alt text](./hardware/image/image-3.png) |
-| -------------------------- | ----------------------------- | ------------------------ |
-| T-Halow starts with MODE 2 | [docs](./docs/mode2_test.md)  | ![alt text](./hardware/image/image-2.png) |
-| TX-AH module pairing       | [docs](./docs/module_pair.md) |                          |
+More AT commands : [AT Commands](./docs/AT_cmd.md)
 
 ### Firmware download
 
