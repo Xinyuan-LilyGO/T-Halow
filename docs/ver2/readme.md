@@ -1,6 +1,9 @@
 
+# T_Halwo Version2
 
 
+
+![](../image/t_halow/t-halow-24-04-16.png)
 
 T-Halow operates in two modes:
 
@@ -19,6 +22,8 @@ MODE2: Send AT command control via micro-USB
     ESP32: No firmware download required
     Notice：Debug using Micro-USB
 ~~~
+
+Firmware file path `firmware\version2`.
 
 ![alt text](./image/image-1.png)
 
