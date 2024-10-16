@@ -14,3 +14,6 @@ The following networking modes are supported:
 2. [AP-Relay-STA](./network_mode/2_AP-Relay-STA.md) mode, adding relay nodes to the basic star network to extend the distance, but the maximum flow will be halved; `Currently only supports the first-level relay`.
 
 3. [AP-STA-net-AP-STA](./network_mode/3_AP-STA-net-SP-STA.md) mode, Extending communication distance via network cable.
+
+4. Use [AT+ROAM](../AT_cmd.md##`AT+ROAM`) to enable roaming. The roaming function supports STA roaming between APs. STA will automatically select a stronger AP based on the signal conditions.
+

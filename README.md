@@ -11,6 +11,7 @@
 
 T-Halow is WiFi Halow, an optimized Wi-Fi solution for iot devices, which has a longer transmission distance while providing the same transmission power of 2.4GHz and 5GHz. T-Halow is equipped with the TX-AH module, which can operate in the 730M-950MHz band, the module can operate in the channel width of 1/2/4/8MHz, and can provide a physical throughput of 150 Kbps to 32.5Mbps.
 
+# Project
 There are two different versions of T-Halow, which differ in the way they are paired;
 
 It is important to confirm the version of T-Halow you have.
@@ -20,9 +21,11 @@ It is important to confirm the version of T-Halow you have.
 | VER1 | V1.0 24-08-23 | [VERSION1](./docs/ver1/readme.md) |
 | VER2 | V1.0 24-04-16 | [VERSION2](./docs/ver2/readme.md) |
 
-More AT commands : [AT Commands](./docs/AT_cmd.md)
+Version 1 and version 2 of T-Halow use the same [AT commands](./docs/AT_cmd.md).
 
-### Firmware download
+Regarding the SDK of the TX-AH module, Taixin does not provide detailed API instructions. If you want to compile it yourself, you can use this project. [hgSDK](./SDK/hgSDK-v1.6.4.3-29063-wnb)
+
+# Firmware download
 
 If you need to download the TX AH firmware, you can use the following two methods:
 
@@ -30,7 +33,7 @@ If you need to download the TX AH firmware, you can use the following two method
 | -------------------- | --- |
 | Download firmware via esp32 flash_download_tool  | [docs](./docs/Firmware_burn_2.md) |
 
-### Official document;
+# Official document;
 TX-AH module official documentation is in Chinese, if you can speak Chinese, this may help you;
 
 More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)
@@ -45,7 +48,7 @@ More TX-AH module information can be found on the official website，[download](
 |            AH Performance test method             | [docs](./hardware/TX_AH/泰芯AH%20Performance%20test%20method_20230908122816.pdf)                                   |
 |           AH-RF EMC Certification guide           | [docs](./hardware/TX_AH/泰芯AH-RF EMC%20Certification%20guide_20230720140052.pdf)                                  |
 
-## TX-AH model comparison
+# TX-AH model comparison
 
 |        Module name       |     Front screen distinction     |    Overcertified condition     |                       remark                        |
 | :----------------: | :------------: | :----------: | :---------------------------------------------: |
