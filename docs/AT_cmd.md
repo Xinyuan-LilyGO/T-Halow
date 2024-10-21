@@ -401,3 +401,41 @@ example：
 AT+PS_MODE?
 ```
 
+# Other Command
+
+## `AT+VERSION=?`
+
+View the firmware version.
+
+## `AT+MAC_ADDR=?`
+
+View the MAC address of the device.
+
+## `AT+TXDATA`
+
+Send data instruction；AT+TXDATA\=[length,txbw,txmcs,priority]；
+
+Parameter description：
+
+* length: the length of the data to be sent [required]
+
+* txbw: specifies the tx bandwidth of the data [optional]
+
+* txmcs: specifies the tx mcs of the data [optional]
+
+* priority: specifies the priority of the data, 0~7 [optional]
+
+This command is used to send data through the serial port when the UART is in non-transparent mode.
+
+Execution steps:
+
+1. First execute the AT+TXDATA command to set the parameters for data transmission.
+2. After executing the at+txdata command and it returns OK, data transmission starts. The length of the transmitted data must meet the length specified by the parameter.
+
+The default firmware is 1-to-many mode. In 1-to-many mode, AT+TXDATA cannot send the original data directly. It needs to add 14Byte Ethernet frame header before the original data and then send it. The length setting should also include the Ethernet frame header length.
+
+example：
+
+~~~
+
+~~~

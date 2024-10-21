@@ -16,10 +16,10 @@ There are two different versions of T-Halow, which differ in the way they are pa
 
 It is important to confirm the version of T-Halow you have.
 
-| - | TIME | LINK |
-| :---: | :---: | :---: |
-| VER1 | V1.0 24-08-23 | [VERSION1](./docs/ver1/readme.md) |
-| VER2 | V1.0 24-04-16 | [VERSION2](./docs/ver2/readme.md) |
+| - | TIME | LINK | VIDEO |
+| :---: | :---: | :---: | :---: |
+| VER1 | V1.0 24-08-23 | [VERSION1](./docs/ver1/readme.md) | |
+| VER2 | V1.0 24-04-16 | [VERSION2](./docs/ver2/readme.md) | https://www.youtube.com/watch?v=nM2GE8Imshc |
 
 Version 1 and version 2 of T-Halow use the same [AT commands](./docs/AT_cmd.md).
 
