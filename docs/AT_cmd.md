@@ -436,6 +436,36 @@ The default firmware is 1-to-many mode. In 1-to-many mode, AT+TXDATA cannot send
 
 example：
 
-~~~
+### Test 1: Simple test
 
-~~~
+Send the command `at+txdata=24` first, then send the data `111111000000001234567890` after receiving OK.
+
+```txt
+at+txdata=24 					// 14 byte Ethernet frame header + 10 byte data
+111111000000001234567890		// The actual data sent
+```
+
+* 111111: 	Ethernet destination address
+
+* 000000: 	Ethernet source address
+
+* 00:	Ethernet protocol type, Can be filled with 0
+
+* 0123456789:	Data to be sent
+
+Write in hex: 31 31 31 31 31 31 30 30 30 30 30 30 30 30 31 32 33 34 35 36 37 38 39 30
+
+### Test 2: Specify the MAC address of the device to send data
+
+Assumption:
+
+* Destination MAC: 4a:06:59:a5:81:98
+
+* Source address MAC: 4a:06:59:7b:6c:98
+
+* Sent data: 1234567890
+
+```txt
+at+txdata=24 		// 14 byte Ethernet frame header + 10 byte data
+4A 06 59 A5 81 98 4A 06 59 7B 6C 98 30 30 31 32 33 34 35 36 37 38 39 30		// The actual data sent
+```
