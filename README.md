@@ -32,6 +32,7 @@ If you need to download the TX AH firmware, you can use the following two method
 | Download firmware via downloader  |[docs](./docs/Firmware_burn_1.md)|
 | -------------------- | --- |
 | Download firmware via esp32 flash_download_tool  | [docs](./docs/Firmware_burn_2.md) |
+| Download firmware via CH341A (Linux)  | [docs](./docs/Firmware_burn_3.md) |
 
 # Official document;
 TX-AH module official documentation is in Chinese, if you can speak Chinese, this may help you;
