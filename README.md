@@ -36,7 +36,7 @@ If you need to download the TX AH firmware, you can use the following two method
 # Official document;
 TX-AH module official documentation is in Chinese, if you can speak Chinese, this may help you;
 
-More TX-AH module information can be found on the official website，[download](https://en.taixin-semi.com/Product?prouctSubClass=33)
+More TX-AH module information can be found on the official website，[download](https://taixin-semi.com/en/products/modules#wifi-halow)
 
 |           Frequency setting description           | [docs](./hardware/TX_AH/泰芯802.11AH%20Frequency%20setting%20description_20231130110312.pdf)                       |
 |:-------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------ |
